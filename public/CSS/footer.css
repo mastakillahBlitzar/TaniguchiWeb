@@ -1,0 +1,15 @@
+footer ul{
+    list-style: none;
+    display: inline-block;
+}
+
+footer li{
+    display: block;
+}
+
+footer ul li a{
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    padding: 10px 15px;
+}

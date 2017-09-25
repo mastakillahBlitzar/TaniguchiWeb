@@ -33,7 +33,84 @@
 
     </div>
     
-    <div class="menu" id="myMenu">
+    <nav id="main" class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle dropdowService" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+   
+     
+    </div><!-- /.navbar-collapse -->
+  </div>
+        
+        
+        <style>
+            
+            #main {
+                margin: 0;
+                padding: 0px;
+                border: 0px;
+            }
+        
+            #main > .container-fluid
+            {
+               background-color: dodgerblue;
+                color: white; 
+            }
+    
+            #main > .container-fluid > .collapse>  .nav > li > a
+            {
+                color:white;
+            }
+            
+            
+            
+            
+            #main > .container-fluid > .collapse>  .nav > li.active > a,
+            #main > .container-fluid > .collapse>  .nav > li > a:hover,
+            #main > .container-fluid > .collapse>  .nav > li > a:focus
+            {
+                color: black;
+                background-color: white;
+            }
+            
+            #bs-example-navbar-collapse-1 > ul > li.dropdown.open > .dropdown-toggle
+            {
+                color: black;
+                background-color: white;
+            }
+
+        
+        </style><!-- /.container-fluid -->
+</nav>
+    
+   <!-- <div class="menu" id="myMenu">
     <nav>
     
     <ul>
@@ -48,7 +125,7 @@
     
     </nav>
         
-        </div>
+        </div>-->
     
     </header>
     
@@ -150,9 +227,10 @@
         
         <div class="about-section">
             
-            
-            <h1 class="section-title-bold">ABOUT</h1><h1 class="section-title"> OUR COMPANY</h1>
-            <p class="section-text">有限会社谷口板金工業所は、屋根・外壁工事を専門とする会社です。</p><h2>屋根・外壁のことならおまかせください。</h2><br><p class="section-text">住宅から工場やビル・神社仏閣などの大規模施設まで、あらゆる建築物に対応し工事いたします。<br>長年の実績と豊富な経験で培った技術、そして最新鋭の設備でお客様のあらゆるニーズにお応えします。</p>  
+            <div class="title-company" style="width: 100%">
+            <h1><span class="section-title-bold">ABOUT</span><span class="section-title"> OUR COMPANY</span></h1>
+            </div>
+               <p class="section-text">有限会社谷口板金工業所は、屋根・外壁工事を専門とする会社です。</p><h2>屋根・外壁のことならおまかせください。</h2><br><p class="section-text">住宅から工場やビル・神社仏閣などの大規模施設まで、あらゆる建築物に対応し工事いたします。<br>長年の実績と豊富な経験で培った技術、そして最新鋭の設備でお客様のあらゆるニーズにお応えします。</p>  
             <div class="about-content">
                 <div class="left">
                     <p>There are many variations passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour or randomissed words which don't look even slightly belieavable if you are going to use a passage of Lorem Ipsum you need to be sure there isnt anything embarrasing hidden in the middle of text</p>
@@ -163,15 +241,18 @@
                 </div>
                 
                 <div class="right">
-                    <img src="R/Factorybluemachine.JPG" style="max-height: 100%;  width: 100%;" alt="Factory">
+                    <img src="R/Factorybluemachine.JPG" style="max-height: 100%;">
                 </div>
             
             </div>
+         
         
         </div>
         
         <div class="news-section">
-            <h1 class="section-title-bold">OUR </h1><h1 class="section-title">LATEST NEWS</h1>
+            <div class="title-company" style="width: 100%">
+            <h1><span class="section-title-bold">OUR</span><span class="section-title"> LATEST NEWS</span></h1>
+            </div>
             <p class="section-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some formby injected humour or randomised</p>
             
             <div class="article-box">
@@ -199,6 +280,28 @@
         </div>
             
              </div>
+        
+        
+        <script>
+        $(document).ready(readyDocument);
+            
+            
+            function readyDocument(){
+                  $(".dropdowService").click(function(){
+                $(this).parent().css({backgroundColor:"white",color:"black"}); 
+               $(this).animate({opacity:0,left:"80%"},5000,function(){
+                   console.log("termine");
+               });
+                console.log( $(this).parent().attr("class"));
+            });
+            $(".dropdowService").mouseover(function(){
+               $(this).css({backgroundColor:"white",color:"black"}); 
+            });
+            $(".dropdowService").mouseout(function(){
+               $(this).css({backgroundColor:"black",color:"white"}); 
+            });
+            }
+        </script>
     </body>
     
     <footer>

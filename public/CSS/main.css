@@ -3,17 +3,13 @@ header{
     position:relative;
 }
 
-h1.section-title{
-    text-align: center; 
-    float: left;
-    margin-bottom: 15px;
+.title-company > h1 > .section-title{ 
     font-size: 36px;
     color: darkgray;
 }
 
-h1.section-title-bold{
+.title-company > h1 > .section-title-bold{
     color: dodgerblue;
-    float: left;
     font-weight: bold;
 }
 

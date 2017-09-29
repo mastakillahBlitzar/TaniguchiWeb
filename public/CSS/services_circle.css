@@ -1,0 +1,97 @@
+@media only screen and (min-width: 350px) {
+    
+    
+    .circle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: powderblue;
+        color: #333;
+        border-radius: 50%;
+        box-sizing: border-box;
+        text-align: center;
+        display: block;
+      padding: 5px;
+        &:before {
+          content: '';
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+          margin-right: -2%;
+         }
+          border: 5px solid darken(powderblue, 5%);
+          -webkit-transition: all 1s ease-out;
+          -moz-transition: all 1s ease-out;
+          -o-transition: all 1s ease-out;
+          transition: all 1s ease-out;
+         &:hover {
+           background-color: maroon;
+           border: 5px solid darken(maroon, 10%);
+           color: #fff;
+           }
+     }
+     
+    
+      .outline {
+        border: 5px solid grey;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
+      
+    .circle {
+      h1 {
+        font-size: 0.9em;
+        line-height: 1em;
+    
+      }
+      p {
+        font-size: 0.8em;
+        line-height: 1em;
+        color:white;
+        text-align: center;
+      }
+      a {
+        color: inherit;
+      }
+      &>p, &>h1, &>.wrapcontent {
+        display: inline-block;
+        vertical-align: middle;
+        &>p, &>h1 {
+          display:block;
+        }
+      }
+    }
+    
+    
+    }
+    @media only screen and (min-width: 481px) {
+    .circle {
+      h1 {
+        font-size: 1.2em;
+        line-height: 1em;
+      }
+      p {
+        font-size: 1em;
+        line-height: 1em;
+      }
+    }
+    }
+    @media only screen and (min-width: 768px) {
+    .circle {
+      h1 {
+        font-size: 1.6em;
+        line-height: 1em;
+      }
+      p {
+        font-size: 1.2em;
+        line-height: 1em;
+      }
+    }
+    }

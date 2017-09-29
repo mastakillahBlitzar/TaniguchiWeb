@@ -145,31 +145,20 @@ body{
 }
 
 .main-body{
-    padding-left: 200px;
-    padding-right: 200px;
     text-align: center;
 }
 
 .options-section{
-    text-align: center;
+    margin-top: 50px;
+    width: 100%;
 }
 
 .services-box, .company-box{
-    margin-top: 50px;
     align-content: center;
-    position: relative;
-    width: 31%;
-    margin-right: 40px;
-    background-color: transparent;
     display: inline-block;
 }
 
 .contact-box{
-    margin-top: 50px;
-    align-content: center;
-    position: relative;
-    width: 30%;
-    background-color: transparent;
     display: inline-block;
 }
 
@@ -180,9 +169,10 @@ body{
     border-color: darkgray;
     position: absolute;
     text-align: center;
-    left: 31%;
     width: 140px;
     height: 140px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: white;
 }
 
@@ -233,7 +223,6 @@ p.box-content-info{
 
 .about-content > .left {
     height: 400px;
-    width: 50%;
     text-align: left;
     padding: 20px;
     float: left;
@@ -247,16 +236,13 @@ p.box-content-info{
 
 .about-content > .right {
     height: 400px;
-    width: 50%;
-    float: left;
 }
 
 
 
 .news-section{
-    text-align: center;
-    display: inline-block;
-    margin-top: 30px;
+    margin-top: 50px;
+    width: 100%;
 }
 
 .map{
@@ -266,6 +252,7 @@ p.box-content-info{
 footer{
     background-color: black;
 }
+
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {

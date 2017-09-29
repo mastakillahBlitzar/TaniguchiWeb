@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="CSS/main.css" type="text/css">
     <link rel="stylesheet" href="CSS/menu.css" type="text/css">
     <link rel="stylesheet" href="CSS/footer.css" type="text/css">
+    <link rel="stylesheet" href="CSS/article_box.css" type="text/css">
 <!--    <script src="scripts/responsivemenu.js"></script>-->
 </head>
     
@@ -189,14 +190,8 @@
                      data-cycle-title="<h1>確かな技術と最新鋭の設備。</h1>" 
                      data-cycle-desc="半世紀に渡る信頼に支えられて<br> 私たちは、あらゆるニーズに取り組み続けています。" 
                      alt="WE WORK FOR YOU">
-                
-                
-                
-            
-
-            </div>
-            
-        
+    
+            </div>       
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.js"></script>
@@ -210,7 +205,7 @@
                 <div class="box-icon"><img class="img-icon" src="R/services_black.png"></div>
                 <div class="box-content">
                     <div class="box-content-text">
-                    <h2>事業内容</h2>
+                    <h3>事業内容</h3>
                     <p class="box-content-info">It is a long establised fact that a reader will be distracted by the readable content of a page</p>
                     </div>
                 
@@ -222,7 +217,7 @@
                 <div class="box-icon"><img class="img-icon" src="R/company_black.png"></div>
                 <div class="box-content">
                     <div class="box-content-text">
-                    <h2>会社概要</h2>
+                    <h3>会社概要</h3>
                     <p class="box-content-info">It is a long establised fact that a reader will be distracted by the readable content of a page</p>
                     </div>
                 </div>
@@ -233,7 +228,7 @@
                 <div class="box-icon"><img class="img-icon" src="R/contact_black.png"></div>
                 <div class="box-content">
                     <div class="box-content-text">
-                    <h2>お問い合わせ</h2>
+                    <h3>お問い合わせ</h3>
                     <p class="box-content-info">It is a long establised fact that a reader will be distracted by the readable content of a page</p>
                     </div>
                 
@@ -275,14 +270,65 @@
             <p class="section-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some formby injected humour or randomised</p>
             
             <div class="article-box">
+                <div class="article-img">
+                    <img src="R/article1.JPG">
+
+                </div>
+
+                <div class="article-foot">
+                        <div class="date"></div>
+                        <div class="author">By: Sayuri San</div>
+
+                </div>
+
+                <div class="article-text">
+                        <h4>Lorem Ipsum is simply dummy text</h4>
+                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual thruth.</p>
+                
+
+                </div>
             
             </div>
             
             <div class="article-box">
+                    <div class="article-img">
+                            <img src="R/article2.JPG">
+                            
+                            
+                    </div>
+    
+                    <div class="article-foot">
+                        <div class="date"></div>
+                        <div class="author">By: Sayuri San</div>
+                    </div>
+    
+                    <div class="article-text">
+                        <h4>Lorem Ipsum is simply dummy text</h4>
+                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual thruth.</p>
+                </div>  
             
             </div>
             
             <div class="article-box">
+
+                    <div class="article-img">
+                            <img src="R/article3.JPG">
+                            
+                            
+                        </div>
+        
+                        <div class="article-foot">
+                                <div class="date"></div>
+                                <div class="author">By: Sayuri San</div>
+        
+                        </div>
+        
+                        <div class="article-text">
+                                <h4>Lorem Ipsum is simply dummy text</h4>
+                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual thruth.</p>
+                        
+        
+                        </div>
             
             </div>
         </div>
@@ -298,8 +344,7 @@
         
         </div>
             
-             </div>
-        
+        </div>
         
         <script>
         $(document).ready(readyDocument);
@@ -322,33 +367,58 @@
             }*/
         </script>
     </body>
-    
+
     <footer>
-        <ul>
-        <h3 class="pink">Header</h3>
-        <li>Some Link</li>
-        <li>Some Link</li>
-        </ul>
-      <ul>
-        <h3 class="red">Contact Us</h3>
-        <li><a>02012312 123 321</a></li>
-        <li><a>info@taniguchi.co.jp</a></li>
-        <li><a>Address is here</a></li>
-      </ul>
-      <ul>
-        <h3 class="orange">Useful Links</h3>
+    <div class="container">
+    	<div class="row">
+    		<div class="col-md-5 widget">
+                <img src="R/group_logo.jpg">
+                <article class="widget_content">
+                    <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form by injected humour or randomised words wich don't hook.</p>
+                 </article>
+    		</div>
+            <div class="col-md-3 widget">
+                <h2>Contact Us</h2>
+                <article class="widget_content">
+                    <ul>
+                            <li><a>02012312 123 321</a></li>
+                            <li><a>info@taniguchi.co.jp</a></li>
+                            <li><a>Address is here</a></li>
+                 </ul>
+                 </article>
+    		</div>
+            <div class="col-md-4 widget">
+                    <h2 class="orange">Useful Links</h2>
+                <ul>
+                        
         <li><a href="index.html">トップページ</a></li>
         <li><a href="business.html">事業内容</a></li>
         <li><a href="company.html">会社概要</a></li>
         <li><a href="contact.html">お問い合わせ</a></li>
         <li><a href="">NEWS</a></li>
-      </ul>
-      <ul>
-        <h3 class="green">Newsletter Signup</h3>
+                
+                
+                </ul>
+    		</div>
+            <div class="col-md-4 widget">
+                    <h3 class="green">Newsletter Signup</h3>
+        
+                <ul>
         <li>GET LATEST UPDATES, NEWS AND OFFERS</li>
         <li>Some Link</li>
-      </ul>
+    </ul>
+            
+            </div>
+    	</div>
+    </div>
+</div>
+<div class="footer-bottom">
+    <div class="container">
+        <div class="row">
+    		<div class="col-md-12 widget">© 2017 | COPYRIGHT. ALL RIGHTS RESERVED <span class="pull-right">Minimize your browser »</span>
+            </div>
+        </div>
+    </div>
+</footer>
     
-    </footer>
 </html>
-

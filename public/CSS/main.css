@@ -3,8 +3,24 @@ header{
     position:relative;
 }
 
+html{
+    background-color: white;
+}
+
+h1{
+    font-size: 38px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .title-company > h1 > .section-title{ 
-    font-size: 36px;
     color: darkgray;
 }
 
@@ -55,24 +71,6 @@ p.secondaryText {
     height: 2px;
     width: 100%;
     background-color: lightgray;
-}
-
-.carousel-inner {
-    height: 700px;
-}
-
-.carousel-inner > .item > img {
-    filter: brightness(40%);
-}
-
-.carousel-indicators li {
-    width: 30px;
-    border-radius: 0px;
-}
-
-.carousel-indicators .active {
-    width: 35px;
-    background-color: darkgray;
 }
 
 .img-container{
@@ -160,8 +158,8 @@ body{
     margin-top: 50px;
     align-content: center;
     position: relative;
-    width: 280px;
-    margin-right: 80px;
+    width: 31%;
+    margin-right: 40px;
     background-color: transparent;
     display: inline-block;
 }
@@ -170,7 +168,7 @@ body{
     margin-top: 50px;
     align-content: center;
     position: relative;
-    width: 250px;
+    width: 30%;
     background-color: transparent;
     display: inline-block;
 }
@@ -181,19 +179,26 @@ body{
     border-style: solid;
     border-color: darkgray;
     position: absolute;
-    left: 32%;
-    align-content: center;
-    width: 90px;
-    height: 90px;
+    text-align: center;
+    left: 31%;
+    width: 140px;
+    height: 140px;
     background-color: white;
 }
 
+.box-icon:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
 .img-icon{
-    border-radius: 0px;
+    display: inline-block;
+    vertical-align: middle;
     background-color: transparent;
-    margin-top: 23px;
-    width: 44px;
-    height: 44px;
+    width: 50%;
+    height: 50%;
 }
 
 p.box-content-info{
@@ -202,18 +207,17 @@ p.box-content-info{
 }
 
 .box-content-text{
-    margin-top: 70px;
+    margin-top: 100px;
 }
 
 .box-content{
-    margin-top: 40px;
-    width: 250px;
+    margin-top: 60px;
     padding: 8px;
+    padding-bottom: 12px;
     background-color: dodgerblue;
 }
 
-.box-content h2{
-    font-size: 20px;
+.box-content h3{
     color: white;
     font-weight: bold;
 }
@@ -255,12 +259,8 @@ p.box-content-info{
     margin-top: 30px;
 }
 
-.article-box{
-    width: 250px;
-    height: 200px;
-    margin-right: 60px;
-    background-color: gainsboro;
-    display: inline-block;
+.map{
+    margin-bottom: 40px;
 }
 
 footer{

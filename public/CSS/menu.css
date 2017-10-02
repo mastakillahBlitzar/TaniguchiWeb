@@ -1,0 +1,69 @@
+
+.menu{
+    position: relative;
+}
+
+#main-menu {
+    margin: 0;
+    padding: 0px;
+    border: 0px;
+}
+
+#main-menu > .container-fluid
+{
+   background-color: dodgerblue;
+    color: white; 
+}
+
+#main-menu > .container-fluid > .collapse>  .nav > li > a
+{
+    color:white;
+}
+
+#main-menu > .container-fluid > .collapse>  .nav > li.active > a,
+#main-menu > .container-fluid > .collapse>  .nav > li > a:hover,
+#main-menu > .container-fluid > .collapse>  .nav > li > a:focus
+{
+    color: black;
+    background-color: white;
+}
+
+#bs-example-navbar-collapse-1 > ul > li.dropdown.open > .dropdown-toggle
+{
+    color: black;
+    background-color: black;
+}
+
+#main-menu > .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a
+{
+    background: white;
+}
+
+#main-menu > .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
+    color: white;
+    margin-left: 70px;
+}
+
+#main-menu > .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: black;
+    color: white;
+}
+
+#main-menu > .navbar-default .navbar-toggle .collapsed {
+    border-color: dodgerblue;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    border-color: #5f9fff;
+}

@@ -1,6 +1,5 @@
 header{
-    background-color: white;
-    position:relative;
+    
 }
 
 html{
@@ -34,9 +33,7 @@ p.section-text{
     display: inline-block;
 }
 
-p.secondaryText {
-    color: darkgray;
-}
+
 
 .menu{
     background-color: dodgerblue;
@@ -46,31 +43,69 @@ p.secondaryText {
     margin-bottom: 0;
 }
 
-.logo{
+.social{
+    width: 100%;
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.social p.secondaryText {
+    color: darkgray;
+    margin: 0px;
+    float: left;
+}
+
+.social .social-icons{
+    float: right;
+}
+
+.social .social-icons img{
+    width: 29px;
+    height: 25px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-right: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+}
+
+.logo-header{
     position: relative;
     width: 100%;
+    display: inline-block;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .logo-img{
     position: relative;
-    margin: 10px 15px 15px 100px;
     width: 120px;
     height: 100px;
 }
 
-.social{
-    width: 100%;
-    height: 50px;
-    padding-left: 100px;
-    padding-right: 50px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+.info-header{
+    display: flex;
+    align-items: center;
 }
 
-.division{
-    height: 2px;
-    width: 100%;
-    background-color: lightgray;
+.info-header img{
+    width: 55px;
+    height: 45px;
+    padding-right: 10px;
+    border-right: 1px solid darkgray;
+}
+
+.info-header .info-content h5 {
+    color: darkblue;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.info-header .info-content p{
+    color: darkgray;
+    margin: 0px;
 }
 
 .img-container{
@@ -104,7 +139,6 @@ body{
 .cycle-slideshow img {
     filter: brightness(40%);
     width: 100%;
-    height: 700px;
 }
 
 /* overlay */
@@ -149,20 +183,34 @@ body{
 }
 
 .options-section{
-    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     width: 100%;
 }
 
-.services-box, .company-box{
+.options-box{
     align-content: center;
     display: inline-block;
+    margin-top: 50px;
 }
 
-.contact-box{
-    display: inline-block;
+.box-content:hover .box-icon{
+    -moz-box-shadow:    inset 0 0 10px #2A4BA7;
+    -webkit-box-shadow: inset 0 0 10px #2A4BA7;
+    box-shadow: inset 0 0 10px #2A4BA7;
 }
+
+.box-icon:hover{
+    -moz-box-shadow:    inset 0 0 10px #2A4BA7;
+    -webkit-box-shadow: inset 0 0 10px #2A4BA7;
+    box-shadow: inset 0 0 10px #2A4BA7;
+}
+
 
 .box-icon{
+    -moz-box-shadow:    inset 0 0 10px #757575;
+    -webkit-box-shadow: inset 0 0 10px #757575;
+    box-shadow: inset 0 0 10px #757575;
     border-radius: 50%;
     border: 1px;
     border-style: solid;
@@ -192,28 +240,57 @@ body{
 }
 
 p.box-content-info{
-    color: white;
-    
+    color: darkgray;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; 
 }
 
 .box-content-text{
-    margin-top: 100px;
+    padding-top: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid darkgray;
 }
 
-.box-content{
-    margin-top: 60px;
-    padding: 8px;
-    padding-bottom: 12px;
+.box-content:hover h3 {
+    color: white;
+}
+.box-content:hover p.box-content-info{
+    color: white;
+}
+
+
+.box-content:hover{
+    color: white;
     background-color: dodgerblue;
 }
 
+.box-content{
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; 
+    margin-top: 60px;
+    background-color: white;
+}
+
 .box-content h3{
-    color: white;
+    color: black;
     font-weight: bold;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; 
 }
 
 .about-section{
-    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .about-content{
@@ -236,12 +313,19 @@ p.box-content-info{
 
 .about-content > .right {
     height: 400px;
+    overflow: hidden;
+}
+
+.about-content .right img{
+    min-height: 100%;
+    min-width: 100%;
 }
 
 
 
 .news-section{
-    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     width: 100%;
 }
 
@@ -276,4 +360,33 @@ footer{
     display: block;
     text-align: left;
   }
+}
+
+@media screen and (min-device-width: 1200px) 
+and (max-width: 1600px) 
+and (-webkit-min-device-pixel-ratio: 1) { 
+    #middle-box{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    #middle-article-box{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+}
+
+
+@media (max-width: 978px){
+
+    #middle-box{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    #middle-article-box{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
 }

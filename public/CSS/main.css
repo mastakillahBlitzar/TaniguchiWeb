@@ -28,13 +28,6 @@ h4{
     font-weight: bold;
 }
 
-p.section-text{
-    color: darkgray;
-    display: inline-block;
-}
-
-
-
 .menu{
     background-color: dodgerblue;
 }
@@ -321,7 +314,21 @@ p.box-content-info{
     min-width: 100%;
 }
 
+p.news-text{
+    color: darkgray;
+    display: inline-block;
+    width: 620px;
+    margin-bottom: 18px;
+    margin-top: 10px;
+}
 
+p.about-text{
+    color: darkgray;
+    display: inline-block;
+    width: 1020px;
+    margin-bottom: 18px;
+    margin-top: 10px;
+}
 
 .news-section{
     padding-top: 30px;

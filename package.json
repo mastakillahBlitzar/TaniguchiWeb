@@ -4,8 +4,9 @@
   "description": "website for taniguchi corp",
   "main": "server.js",
   "dependencies": {
+    "express": "^4.15.4",
     "mongodb": "^2.2.31",
-    "express": "^4.15.4"
+    "mongoose": "^4.12.0"
   },
   "devDependencies": {},
   "scripts": {

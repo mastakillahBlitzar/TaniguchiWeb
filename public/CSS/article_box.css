@@ -20,18 +20,25 @@
     position: relative;
 }
 
-.date{
-    width: 40px;
-    height: 40px;
-    float: left;
-}
-
 .author{
     text-align: right;
 }
 
 .article-foot > .date {
     border: 1px solid gray;
+    padding: 5px;
+    float: left;
+}
+
+.article-foot .date p.day{
+    color: darkgray;
+    margin: 0px;
+}
+
+.article-foot .date p.year{
+    color: dodgerblue;
+    margin: 0px;
+    font-weight: bold;
 }
 
 .article-text{
@@ -43,7 +50,7 @@
 
 .article-box > .article-text h4 {
     margin: 0;
-    color: #2727D8;
+    color: dodgerblue;
 }
 
 .article-box > .article-text p {

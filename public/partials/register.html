@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1>Registre Usuario</h1>
+
+<div ng-controller="registerController">
+
+<form name="form" ng-submit="register()">
+    
+
+    <input type="text" name="email" placeholder="name" required=""
+    ng-model="registerForm.username">
+
+    <input type="password" name="password" placeholder="password" required=""
+    ng-model="registerForm.password">
+
+    <button type="submit">Register</button><br>
+</div>
+
+</form>
+</body>
+
+
+
+</html>

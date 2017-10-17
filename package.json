@@ -2,7 +2,7 @@
   "name": "taniguchibankin",
   "version": "1.0.0",
   "description": "website for taniguchi corp",
-  "main": "server.js",
+  "main": "core/server.js",
   "dependencies": {
     "express": "^4.15.4",
     "mongodb": "^2.2.31",
@@ -11,7 +11,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node core/server.js"
   },
   "author": "Juan Camilo Gonzalez",
   "license": "ISC"

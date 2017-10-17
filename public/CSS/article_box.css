@@ -36,7 +36,7 @@
 }
 
 .article-foot .date p.year{
-    color: dodgerblue;
+    color: #0C2043;
     margin: 0px;
     font-weight: bold;
 }
@@ -45,12 +45,13 @@
     background-color: white;
     margin-top: 5px;
     text-align: left;
-
+    height: 180px;
+    overflow: hidden;
 }
 
 .article-box > .article-text h4 {
     margin: 0;
-    color: dodgerblue;
+    color: #0C2043;
 }
 
 .article-box > .article-text p {

@@ -11,7 +11,7 @@
 
 #main-menu > .container-fluid
 {
-   background-color: dodgerblue;
+   background-color: #0C2043;
     color: white; 
 }
 
@@ -61,7 +61,7 @@
 }
 
 #main-menu > .navbar-default .navbar-toggle .collapsed {
-    border-color: dodgerblue;
+    border-color: #0C2043;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{

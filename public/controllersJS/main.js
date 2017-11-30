@@ -4,53 +4,47 @@ myApp.config(function ($routeProvider, $locationProvider) {
     $routeProvider
        .when('/', {
         templateUrl: '../partials/home.html',
-        resolve:  { 
-          access: function() {
-              return false;
-          }
-        }
+        isLoggedIn: false
       })
       .when('/home', {
         templateUrl: '../partials/home.html',
-        resolve:  { 
-          access: function() {
-              return false;
-          }
-        }
+        isLoggedIn: false
       })
       .when('/login', {
         templateUrl: '../partials/login.html',
         controller: 'loginController',
-        resolve:  { 
-          access: function() {
-              return false;
-          }
-        }
+        isLoggedIn: false
       })
       .when('/logout', {
         controller: 'logoutController',
-        resolve:  { 
-          access: function() {
-              return false;
-          }
-        }
+        isLoggedIn: true
       })
       .when('/register', {
         templateUrl: '../admin/register.html',
         controller: 'registerController',
-        resolve:  { 
-          access: function() {
-              return true;
-          }
-        }
+        isLoggedIn: false
       })
       .when('/adminprofile', {
         templateUrl: '../admin/adminprofile.html',
-        resolve:  { 
-          access: function() {
-              return true;
-          }
-        }
+        isLoggedIn: true
+      })
+      .when('/table', {
+        templateUrl: '../admin/table.html',
+        controller: 'ArticleController',
+        isLoggedIn: true
+      })
+      .when('/business', {
+        templateUrl: '../partials/business.html',
+        isLoggedIn: false
+      })
+      .when('/company', {
+        templateUrl: '../partials/company.html',
+        isLoggedIn: false
+      })
+      .when('/forms', {
+        templateUrl: '../admin/forms.html',
+        controller: 'ArticleDetailController',
+        isLoggedIn: true
       })
       .otherwise({
         redirectTo: '/'
@@ -60,12 +54,13 @@ myApp.config(function ($routeProvider, $locationProvider) {
   });
 
   myApp.run(function ($rootScope, $location, $route, AuthService) {
-    //debugger;
+   
     $rootScope.$on('$routeChangeStart',
       function (event, next, current) {
         AuthService.getUserStatus()
         .then(function(){
-          if (next.resolve.access && !AuthService.isLoggedIn()){
+         // debugger;
+          if (next.isLoggedIn && !AuthService.isLoggedIn()){
             $location.path('/login');
             $route.reload();
           }

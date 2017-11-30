@@ -1,0 +1,95 @@
+
+
+.main-page-header{
+    background-color: #272727;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-page-header h1{
+    color: #FFF;
+}
+
+
+.title-page{
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.title-page h3{
+    color: #FEFFFD;
+    font-family: mangaFont;
+    margin: 0;
+    margin-left: 12px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -60%);
+}
+
+.title-page .title-bg{
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.service{
+    height: 300px;
+    display: inline-flex;
+    margin-top: 50px;
+}
+
+.service .left{
+    width: 50%;
+    height: 100%;
+    margin-right: 10px;
+    display: inline-flex;
+}
+
+.service .right{
+    width: 50%;
+    height: 100%;
+    margin-left: 10px;
+    display: inline-flex;
+}
+
+.service .bullet-point-container .bulletpoint{
+    height: 2px;
+    margin-top: 55px;
+    margin-left: 20px;
+    margin-right: 8px;
+    background-color: #272727;
+    width: 40px;
+}
+
+.service img{
+    width: 100%;
+    height: 100%;
+}
+
+.service .service-title{
+    color: #0052A4;
+    font-size: 26px;
+    font-family: mangaFont;
+    font-weight: bold;
+}
+
+.service .service-body{
+    font-family: mangaFont;
+    margin-top: 10px;
+}
+
+.gallery .gallery-title{
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery .gallery-title h2{
+    color: #464646;
+    font-family: mangaFont;
+    font-size: 36px;
+}

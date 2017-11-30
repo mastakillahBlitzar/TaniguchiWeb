@@ -76,3 +76,131 @@ function ($scope, $location, AuthService) {
   };
 
 }]);
+
+myApp.controller('ArticleDetailController',
+['$scope', '$location', 'ArticleService',
+function($scope, $location, ArticleService){
+  
+  $scope.labels = [
+    {id: '1'},
+    {id: '2'},
+    {id: '3'},
+    {id: '4'},
+    {id: '5'}
+  ];
+
+  $scope.addArticle = function(){
+  
+
+        var array = $scope.article.title;
+        debugger;
+        ArticleService.addArticle($scope.article.title, $scope.article.content, $scope.article.url)
+    
+        .then(function(){
+          refresh();
+        })
+        .catch(function(){
+          $scope.error = true;
+          $scope.errorMessage = "Something went wrong!";
+          $scope.article = {};
+        });
+      }
+
+
+}]);
+
+myApp.controller('ArticleController',
+['$scope', '$location', 'ArticleService', 
+function($scope, $location, ArticleService){
+
+  refresh();
+
+  $scope.redirectToForm = function(){
+    $location.path('/forms');
+  }
+
+  $scope.remove = function(id){
+    ArticleService.deleteArticle(id)
+    .then(function(){
+      refresh();
+    });
+  }
+
+  function refresh() {
+    ArticleService.getArticles()
+
+    .then(function(data){
+      $scope.articleList = data;
+    })
+    .catch(function(){
+
+    });
+  }
+}]);
+
+
+myApp.controller('HomeNewsController', 
+['$scope', 'ArticleService', 
+function($scope, ArticleService){
+  refresh();
+
+  var months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", 
+  "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+
+  function refresh() {
+    ArticleService.getArticles()
+
+    .then(function(data){
+      //
+      data.forEach(function(element) {
+        //split the string
+        var dateArray = element.date.split("-");
+        //extract the month from the resulting array
+        var currentMonth = dateArray[1];
+        var month = months[currentMonth - 1];
+        //get day
+        var dayArray = dateArray[2].split("T");
+        day = dayArray[0];
+
+        element.daymonth = day.concat(" ").concat(month);
+      })
+      $scope.articleList = data;
+    
+    })
+    .catch(function(){
+
+    });
+  }
+
+  $scope.readMoreClicked = function(index){
+    $('.slider').bxSlider();
+  }
+
+
+
+}]);
+
+myApp.controller('redirectController',
+['$scope', '$location', 
+function($scope, $location){
+  $scope.home = function(){
+    $location.path('/home');
+  }
+
+  $scope.services = function(){
+    $location.path('/business');
+  }
+
+  $scope.company = function(){
+    $location.path('/company');
+  }
+
+  $scope.contact = function(){
+    $location.path('/contact');
+  }
+
+
+
+
+
+}]);

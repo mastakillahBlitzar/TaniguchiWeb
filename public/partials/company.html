@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="../CSS/menu.css" type="text/css">
+        <link rel="stylesheet" href="../CSS/footer.css" type="text/css">
+        <link rel="stylesheet" href="../CSS/main.css" type="text/css">
+        <link rel="stylesheet" href="../CSS/company_styles.css" type="text/css">
+
+        <link rel="stylesheet" href="../CSS/jquery.mThumbnailScroller.css" type="text/css">
+
+        <script src="../scripts/jquery.mThumbnailScroller.js" type="text/javascript"></script>
+</head>
+<header>
+
+        <div class="social">
+                <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+                <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
+                    
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6" style="padding-right: 0px; padding-left: 0px;">
+                            
+                        <p class="secondaryText">有限会社谷口板金工業所は屋根・外壁工事を専門とする会社です。</p>    
+                    
+                    </div> 
+                
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6" style="padding-right: 0px; padding-left: 0px;"> 
+                        
+                            <div class="social-icons">
+                                <img src="../R/face_gray.png" alt="F">
+                            
+                            </div>
+                            
+                    </div>
+    
+                </div>         
+            <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+        </div>
+        
+        <div class="logo-header">
+                <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+                <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; 
+                                                                        display: flex; align-items: center; ">
+                    
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-sm-12" style="padding-right: 0px; padding-left: 0px;">
+                            <div class="logos">
+                                    <img class="logo-img" src="../R/Metalplatelogo.jpg">
+                                    <img src="../R/title_logo.png">
+    
+                            </div>
+                            
+    
+                    </div> 
+                
+                    <div class="col-xs-12 col-md-3 col-lg-3 col-sm-12" style="padding-right: 0px; padding-left: 0px;"> 
+                        
+                            <div class="info-header">
+                                <img class="col-xs-12 col-sm-12 col-md-12 col-lg-4" style="padding-left: 0px;" src="../R/ic_phone.png" alt="Phone:">
+    
+                                <div class="info-content col-xs-12 col-sm-12 col-md-12 col-lg-8" style="padding-right: 0px; padding-left: 10px">
+                                    <h5>0125-23-3725</h5>
+                                    <p>FAX 0125-23-2250</p>
+    
+                                </div>
+                            
+                            </div>
+                            
+                    </div>
+    
+                    <div class="col-xs-12 col-md-3 col-lg-3 col-sm-12" style="padding-right: 0px; padding-left: 0px;"> 
+                            
+                                <div class="info-header">
+                                    <img src="../R/ic_location.png" alt="Location">
+    
+                                    <div class="info-content col-xs-12 col-sm-12 col-md-12 col-lg-8" style="padding-right: 0px; padding-left: 10px">
+                                            <h5>北海道滝川市本町2丁目3番5号</h5>
+                                            <p>ＴＳビル1階</p>
+            
+                                        </div>
+                                
+                                </div>
+                                
+                        </div>
+    
+                </div>         
+            <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+            
+    
+        </div>
+    
+        <div class="menu" ng-controller="redirectController">
+        
+            <nav id="main-menu" class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">トップページ</a>
+                    </div>
+    
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a ng-click="home()">事業内容 </a></li>
+                        <li><a ng-click="services()">会社概要</a></li>
+                        <li><a ng-click="company()">ニュース<span class="sr-only">(current)</span></a></li>
+                        <li><a ng-click="contact()">お問い合わせ</a></li>
+                    </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            <!-- /.container-fluid -->
+            </nav>
+    
+        </div>
+
+</header>
+
+
+    <body>
+
+        <div class="main-page-header">
+            <h1>会社概要</h1>
+        </div>
+
+        <div class="title-page">
+            <img class="title-bg" src="../R/title-bar.png"/>
+            <h3>COMPANY</h3>
+        </div>
+
+        <div class="info-container">
+
+                <div class="row" >
+                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
+                            <div class="info-row col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                <div class="icon">
+                                        <img src="../R/contacticons/1.png"/>
+                                </div>
+    
+                                <div class="description">
+                                    商号
+    
+                                </div>
+
+                                <div class="info-content">
+                                    有限会社谷口板金工業所
+                                </div>
+    
+                            </div>
+                            
+                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
+                        
+    
+                </div>
+
+                <div class="row" >
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                            <div class="info-row col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                <div class="icon">
+                                        <img src="../R/contacticons/2.png"/>
+                                </div>
+    
+                                <div class="description">
+                                        創業
+    
+                                </div>
+
+                                <div class="info-content">
+                                    昭和36年4月
+                                </div>
+    
+                            </div>
+                            
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                        
+    
+                </div>
+
+                <div class="row" >
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                            <div class="info-row col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                <div class="icon">
+                                        <img src="../R/contacticons/1.png"/>
+                                </div>
+    
+                                <div class="description">
+                                        設立
+    
+                                </div>
+
+                                <div class="info-content">
+                                    昭和47年7月
+                                </div>
+    
+                            </div>
+                            
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                        
+    
+                </div>
+
+                <div class="row" >
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                            <div class="info-row col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                <div class="icon">
+                                        <img src="../R/contacticons/4.png"/>
+                                </div>
+    
+                                <div class="description">
+                                        建築業登録
+    
+                                </div>
+
+                                <div class="info-content">
+                                    北海道知事許可（般-26）第01221号
+                                </div>
+    
+                            </div>
+                            
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                        
+    
+                </div>
+
+                <div class="row" >
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                            <div class="info-row col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                <div class="icon">
+                                        <img src="../R/contacticons/5.png"/>
+                                </div>
+    
+                                <div class="description">
+                                        資本金
+    
+                                </div>
+
+                                <div class="info-content">
+                                    2300万円
+                                </div>
+    
+                            </div>
+                            
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                        
+    
+                </div>
+
+                <div class="row" >
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                            <div class="info-row col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                <div class="icon">
+                                        <img src="../R/contacticons/6.png"/>
+                                </div>
+    
+                                <div class="description">
+                                        代表取締役
+    
+                                </div>
+
+                                <div class="info-content">
+                                    谷口　正樹
+                                </div>
+    
+                            </div>
+                            
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                        
+    
+                </div>
+
+                <div class="row" >
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                            <div class="info-row col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                <div class="icon">
+                                        <img src="../R/contacticons/7.png"/>
+                                </div>
+    
+                                <div class="description">
+                                        役員
+    
+                                </div>
+
+                                <div class="info-content">
+                                    専務取締役　1名 <br>常務取締役　2名 <br>取締役　2名
+                                </div>
+    
+                            </div>
+                            
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                        
+    
+                </div>
+
+                <div class="row" >
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                            <div class="info-row col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                <div class="icon">
+                                        <img src="../R/contacticons/8.png"/>
+                                </div>
+    
+                                <div class="description">
+                                        従業員数
+    
+                                </div>
+
+                                <div class="info-content">
+                                    27名（平成29年5月現在）
+                                </div>
+    
+                            </div>
+                            
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                        
+    
+                </div>
+
+                <div class="row" >
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                            <div class="info-row col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                                <div class="icon">
+                                        <img src="../R/contacticons/9.png"/>
+                                </div>
+    
+                                <div class="description">
+                                        技術者
+    
+                                </div>
+
+                                <div class="info-content">
+                                1級建築士　1名 <br>2級建築士　2名 <br>金属屋根工事技師　3名 <br>1級建築板金技能士　4名 <br>
+                                2級建築板金技能士　6名 <br>1級建築施工管理技士　1名 <br>2級建築施工管理技士（躯体）　1名 <br>2級建築施工管理技士（仕上げ）　1名 <br>
+                                基幹技能者　1名
+                                    
+                                </div>
+    
+                            </div>
+                            
+                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
+                        
+    
+                </div>
+
+            <div class="address-container">
+
+                <div class="row" ng-controller="HomeNewsController">
+                        <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+                        <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
+                            <div class="thumbnail-container col-sm-6 col-md-4 lg-4">
+                            <div class="thumbnail" style="margin-right: 30px;">
+                            
+                            <img src="../R/address-box-header.png" alt="...">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Name of the location</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img></td>
+                                        <td>Some weird number</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="caption">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="../R/addressbox/location.png"></td>
+                                            <td>Location Address</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="../R/addressbox/call.png"></td>
+                                            <td>Telephone number</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="../R/addressbox/fax.png"></td>
+                                            <td>FAX or alternative number</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="thumbnail-container col-sm-6 col-md-4 lg-4">
+                            <div class="thumbnail " style=" margin-left: 10px; margin-right: 10px;">
+                                    <img src="../R/address-box-header.png" alt="...">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>Name of the location</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img></td>
+                                                <td>Some weird number</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="caption">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="../R/addressbox/location.png"></td>
+                                                    <td>Location Address</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../R/addressbox/call.png"></td>
+                                                    <td>Telephone number</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../R/addressbox/fax.png"></td>
+                                                    <td>FAX or alternative number</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thumbnail-container col-sm-6 col-md-4 lg-4">
+                                <div class="thumbnail " style="margin-left: 30px;">
+                                        <img src="../R/address-box-header.png" alt="...">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Name of the location</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img></td>
+                                                    <td>Some weird number</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="caption">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><img src="../R/addressbox/location.png"></td>
+                                                        <td>Location Address</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="../R/addressbox/call.png"></td>
+                                                        <td>Telephone number</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="../R/addressbox/fax.png"></td>
+                                                        <td>FAX or alternative number</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+            
+                </div>
+
+                <div class="row">
+                        <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+                        <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
+                            <div class="thumbnail-container col-sm-6 col-md-4 lg-4">
+                                <div class="thumbnail" style="margin-right: 30px;">
+                                
+                                    <img src="../R/address-box-header.png" alt="...">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>Name of the location</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img></td>
+                                                <td>Some weird number</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="caption">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="../R/addressbox/location.png"></td>
+                                                    <td>Location Address</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../R/addressbox/call.png"></td>
+                                                    <td>Telephone number</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../R/addressbox/fax.png"></td>
+                                                    <td>FAX or alternative number</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="thumbnail-container col-sm-6 col-md-4 lg-4">
+                                    <div class="thumbnail" style="margin-left: 10px; margin-right: 10px;">
+                                    
+                                        <img src="../R/address-box-header.png" alt="...">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Name of the location</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img></td>
+                                                    <td>Some weird number</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="caption">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><img src="../R/addressbox/location.png"></td>
+                                                        <td>Location Address</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="../R/addressbox/call.png"></td>
+                                                        <td>Telephone number</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="../R/addressbox/fax.png"></td>
+                                                        <td>FAX or alternative number</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
+    <footer>
+        <div class="container">
+                <div class="row">
+                    <span class="col-lg-1 hidden-xs col-md-1 hidde-sm"></span>
+    
+                    <div class=" col-lg-4 col-md-4 widget">
+                        <img src="../R/group_logo.jpg">
+                        
+                    </div>
+                    <div class="col-lg-3 col-md-4  widget">
+                        <h2>お問い合わせ</h2>
+                        <article class="widget_content">
+                            <ul>
+                                <li><img src="../R/ic_phone_gray.png"><a>0125-23-3725</a></li>
+                                <li><img src="../R/ic_phone_gray.png"><a>FAX 0125-23-2250</a></li>
+                                <li><img src="../R/ic_location_gray.png"><a>北海道滝川市本町2丁目3番5号TSビル1階</a></li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-4  widget">
+                            <h2 class="orange">サイトマップ</h2>
+                        <ul>
+                                
+                            <li><a href="#">トップページ</a></li>
+                            <li><a href="business.html">事業内容</a></li>
+                            <li><a href="company.html">会社概要</a></li>
+                            <li><a href="contact.html">お問い合わせ</a></li>
+                            <li><a href="">NEWS</a></li>
+                        
+                        </ul>
+                    </div>
+                            <span class="col-lg-1 hidden-xs col-md-1 hidden-sm"></span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 widget" style="text-align: center;">© 2017 | COPYRIGHT. ALL RIGHTS RESERVED <span class="pull-right">Minimize your browser »</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </footer>
+</html>

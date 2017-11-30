@@ -64,6 +64,9 @@ passport.deserializeUser(User.deserializeUser());
 var routes = require('./routes/router');
 app.use('/user/', routes);
 
+var articleroutes = require('./routes/articlerouter');
+app.use('/user/edit/', articleroutes);
+
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../public', 'index.html'));
   });

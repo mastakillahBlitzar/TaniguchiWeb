@@ -1,0 +1,126 @@
+.main-page-header{
+    background-color: #272727;
+    padding: 40px;
+    text-align: center;
+}
+
+.main-page-header h1{
+    color: #FFF;
+}
+
+.title-page{
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.title-page h3{
+    font-family: mangaFont;
+    color: #FEFFFD;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -60%);
+}
+
+.title-page .title-bg{
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.info-container .row{
+    margin-bottom: 10px;
+}
+
+.info-container .row .icon{
+    margin-right: 16px;
+}
+
+.info-row{
+    display: inline-flex;
+    padding: 0px;
+    border: 1px solid #0052A4;
+}
+
+.info-row .icon .icon-inside{
+    position: absolute;
+    top: 0px;
+    transform: translate(50%, 50%);
+}
+
+.info-row .description{
+    width: 40%;
+    margin-top: 17px;
+    padding: 0px;
+    color: #0052A4;
+    font-weight: bold;
+    font-family: mangaFont;
+}
+
+.info-row .info-content{
+    color: #2C2C2C;
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    font-family: mangaFont;
+}
+
+.address-container{
+    margin-top: 60px;
+    background-color: #17897F;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.address-container .row .thumbnail{
+    padding: 0px;
+    color: #FFF;
+    border-color: transparent;
+}
+
+.address-container .row .thumbnail-container{
+    padding: 0px;
+    margin-bottom: 40px;
+}
+
+.address-container .row .thumbnail img{
+    width: 100%;
+}
+
+.address-container .row .thumbnail > table{
+    margin-left: 15px;
+    position: absolute;
+    top: 15%;
+}
+
+.address-container .row .thumbnail > table tr td{
+    font-size: 17px;
+    font-family: mangaFont;
+}
+
+
+.address-container .row .caption{
+    padding: 12px;
+    padding-left: 40px;
+    margin-top: 0px;
+    background-color: #343434;
+    color: #FFF;
+    border: 0px;
+    border-radius: 0px;
+}
+
+.address-container .row .caption img{
+    width: 60%;
+    height: auto;
+}
+
+.address-container .row .caption > table tr{
+    height: 30px;
+}
+
+.address-container .row .caption > table tr td{
+    font-family: mangaFont;
+}

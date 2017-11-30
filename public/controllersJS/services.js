@@ -4,7 +4,7 @@ myApp.factory('AuthService',
 ['$q', '$timeout', '$http',
 function ($q, $timeout, $http) {
  // create user variable
- var user = null;
+ var articles = [];
  
      // return available functions for use in the controllers
      return ({
@@ -16,6 +16,7 @@ function ($q, $timeout, $http) {
      });
 
      function isLoggedIn() {
+       //debugger;
       if(user) {
         return true;
       } else {
@@ -24,10 +25,11 @@ function ($q, $timeout, $http) {
     }
     
     function getUserStatus() {
+     // debugger;
       return $http.get('/user/status')
       // handle success
       .then(function(success){
-        if(success){
+        if(success.data.status){
           user = true;
         } else {
           user = false;

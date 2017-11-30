@@ -10,6 +10,7 @@ footer {
    }
 
    .widget h2 {
+    text-align: left;
     cursor:pointer;  
     font-size:28px;
     color: white;
@@ -29,7 +30,7 @@ footer {
        margin: 0;
        padding: 0;
        list-style: none;
-
+       text-align: left;
    }
 
    footer ul li {

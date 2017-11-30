@@ -9,18 +9,17 @@
     <title>Taniguchi Corp.</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../scripts/jquery.cycle2.min.js"></script>
-
+  
+    <link rel="stylesheet" href="../plugins/facebooklikeslider/css/jquery.bxslider.css">
     <link rel="stylesheet" href="../CSS/main.css" type="text/css">
     <link rel="stylesheet" href="../CSS/menu.css" type="text/css">
     <link rel="stylesheet" href="../CSS/footer.css" type="text/css">
     <link rel="stylesheet" href="../CSS/article_box.css" type="text/css">
     <link rel="stylesheet" href="../CSS/services_circle.css" type="text/css">
-<!--    <script src="scripts/responsivemenu.js"></script>-->
-</head>
     
+<!--    <script src="scripts/responsivemenu.js"></script>-->
+        
+</head>
 <header>
     
     <div class="social">
@@ -29,7 +28,7 @@
                 
                 <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6" style="padding-right: 0px; padding-left: 0px;">
                         
-                    <p class="secondaryText">It is a long established fact that</p>    
+                    <p class="secondaryText">有限会社谷口板金工業所は屋根・外壁工事を専門とする会社です。</p>    
                 
                 </div> 
             
@@ -64,11 +63,11 @@
                 <div class="col-xs-12 col-md-3 col-lg-3 col-sm-12" style="padding-right: 0px; padding-left: 0px;"> 
                     
                         <div class="info-header">
-                            <img class="col-xs-12 col-sm-12 col-md-12 col-lg-4" style="padding-left: 0px;" src="../R/ic_phone.png" alt="Phone:">
+                            <img style="padding-left: 0px;" src="../R/topsection/call.png" alt="Phone:">
 
                             <div class="info-content col-xs-12 col-sm-12 col-md-12 col-lg-8" style="padding-right: 0px; padding-left: 10px">
-                                <h5>000 255 3658</h5>
-                                <p>info@taniguchibanking.com</p>
+                                <h5>0125-23-3725</h5>
+                                <p>FAX 0125-23-2250</p>
 
                             </div>
                         
@@ -79,11 +78,11 @@
                 <div class="col-xs-12 col-md-3 col-lg-3 col-sm-12" style="padding-right: 0px; padding-left: 0px;"> 
                         
                             <div class="info-header">
-                                <img src="../R/ic_location.png" alt="Location">
+                                <img src="../R/topsection/ic_location.png" alt="Location">
 
                                 <div class="info-content col-xs-12 col-sm-12 col-md-12 col-lg-8" style="padding-right: 0px; padding-left: 10px">
-                                        <h5>123 Midori Machi</h5>
-                                        <p>Takikawa, Hokkaido</p>
+                                        <h5>北海道滝川市本町2丁目3番5号</h5>
+                                        <p>ＴＳビル1階</p>
         
                                     </div>
                             
@@ -97,7 +96,7 @@
 
     </div>
 
-    <div class="menu">
+    <div class="menu" ng-controller="redirectController">
     
         <nav id="main-menu" class="navbar navbar-default">
             <div class="container-fluid">
@@ -109,26 +108,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Home</a>
+                <a class="navbar-brand" href="#">トップページ</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle dropdowService" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                    </li>
+                    <li><a ng-click="home()">事業内容 <span class="sr-only">(current)</span></a></li>
+                    <li><a ng-click="services()">会社概要</a></li>
+                    <li><a ng-click="company()">ニュース</a></li>
+                    <li><a ng-click="contact()">お問い合わせ</a></li>
                 </ul>
                 </div><!-- /.navbar-collapse -->
             </div>
@@ -174,76 +163,53 @@
         
         <div class="main-body">
 
-                <div style="width: 100%">
-                        
-                       
-                    
-            
-                    </div>
-        
         <div class="options-section">
-            <div class="row" style="padding: 0px; margin: 0px">
+            
+            <div class="row">
                 <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
-                    <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
-                        <div class="col-xs-12 col-md-4 col-lg-4 col-sm-6" style="padding-right: 0px; padding-left: 0px;">
-                                <div class="options-box" >
-                                        <div class="box-icon">
-                                            <img class="img-icon" src="../R/services_black.png"></div>
-                                        <div class="box-content">
-                                            <div class="box-content-text">
-                                            <h3>事業内容</h3>
-                                            <p class="box-content-info">It is a long establised fact that a reader will be distracted by the readable content of a page</p>
-                                            </div>
-                                        
-                                        </div>
-                                    
-                                    </div>    
-                        
-                        
+                <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
+                <div class="col-sm-6 col-md-4 lg-4">
+                  <div class="thumbnail">
+                    <div class="box-icon">
+                        <img class="img-icon" src="../R/services_black.png">
+                    </div>
+                    <div class="caption" style="background-image: url('../R/service_content.jpg');">
+                      <h3 style="color: white; font-size: 45px;">事業内容</h3>
+                      <p>...</p>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 lg-4">
+                    <div class="thumbnail">
+                        <div class="box-icon">
+                            <img class="img-icon" src="../R/company_black.png">
                         </div>
-                        <div id="middle-box" class="col-xs-12 col-md-4 col-lg-4 col-sm-6">
-                                <div class="options-box">
-                                        <div class="box-icon">
-                                            <img class="img-icon" src="../R/company_black.png">
-                                        </div>
-                                        <div class="box-content">
-                                            <div class="box-content-text">
-                                            <h3>会社概要</h3>
-                                            <p class="box-content-info">It is a long establised fact that a reader will be distracted by the readable content of a page</p>
-                                            </div>
-                                        </div>
-                                    
-                                    </div>    
-                        
-                        
+                      <div class="caption" style="background-image: url('../R/service_content2.jpg');">
+                        <h3 style="color: white; font-size: 45px;">会社概要</h3>
+                        <p>...</p>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 lg-4">
+                    <div class="thumbnail">
+                        <div class="box-icon">
+                            <img class="img-icon" src="../R/contact_black.png">
                         </div>
-                        <div class="col-xs-12 col-md-4 col-lg-4 col-sm-6" style="padding-right: 0px; padding-left: 0px;"> 
-                            
-                                <div class="options-box">
-                                    <div class="box-icon">
-                                        <img class="img-icon" src="../R/contact_black.png">
-                                    </div>
-                                    <div class="box-content">
-                                        <div class="box-content-text">
-                                        <h3>お問い合わせ</h3>
-                                        <p class="box-content-info">It is a long establised fact that a reader will be distracted by the readable content of a page</p>
-                                        </div>
-                                    
-                                    </div>
-                                
-                                </div>
-                                
-                        </div>
-                    </div>         
+                      <div class="caption" style="background-image: url('../R/service_content3.jpg'); ">
+                        <h3 style="color: white; font-size: 45px;">お問い合わせ</h3>
+                        <p>...</p>
+                         </div>
+                    </div>
+                </div>
+                </div>
                 <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
             </div>
-        
         </div>
         
         <div class="about-section">
             
             <div class="title-company" style="width: 100%">
-            <h1><span class="section-title-bold">ABOUT</span><span class="section-title"> OUR COMPANY</span></h1>
+            <h1><span class="section-title-bold">谷口板金</span><span class="section-title">とは…</span></h1>
             </div>
                <p class="about-text">有限会社谷口板金工業所は、屋根・外壁工事を専門とする会社です。</p><h2>屋根・外壁のことならおまかせください。</h2><br><p class="about-text">住宅から工場やビル・神社仏閣などの大規模施設まで、あらゆる建築物に対応し工事いたします。<br>長年の実績と豊富な経験で培った技術、そして最新鋭の設備でお客様のあらゆるニーズにお応えします。</p>  
             
@@ -285,124 +251,113 @@
         </div>
         
         <div class="news-section">
-            <div class="title-company" style="width: 100%">
-            <h1><span class="section-title-bold">OUR</span><span class="section-title"> LATEST NEWS</span></h1>
+            <div class="title-company" style="width: 100%; margin-bottom: 80px;">
+                <h1><span class="section-title-bold">谷口板金</span><span class="section-title">NEWS</span></h1>
             </div>
-            <p class="news-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some formby injected humour or randomised</p>
-            
-            <div class="row" style="padding: 0px; margin: 0px">
+
+            <div class="row" ng-controller="HomeNewsController">
                     <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
-                        <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
-                            <div class="col-xs-12 col-md-4 col-lg-4 col-sm-6" style="padding-right: 0px; padding-left: 0px;">
+                    <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
+                    <div class="col-sm-6 col-md-4" ng-repeat="article in articleList | limitTo : 3">
+                        <div class="thumbnail">
+                        <!-- <img ng-src="{{article.imgUrl}}" alt="..."> -->
+                        <img ng-src="{{article.pictures[0].url}}" alt="...">
+                        <div class="caption">
+                            <div class="article-foot">
+                                    <div class="date">
+                                        <p class="day">{{article.daymonth}}</p>
+                                        <p class="year">{{article.date | limitTo : 4}}</p>
 
-                                    <div class="article-box">
-                                        <div class="article-img">
-                                                <img src="../R/article1thumb.JPG">
-                                                
-                            
-                                            </div>
-                            
-                                            <div class="article-foot">
-                                                    <div class="date">
-                                                        <p class="day">10 Jun</p>
-                                                        <p class="year">2017</p>
-
-
+                                    </div>
+                                    <div class="author">By: Sayuri San</div>
+                            </div>
+                            <h3>{{article.title}}</h3>
+                            <p>{{article.content}}</p>
+                            <a  class="btnClick"  data-toggle="modal"  id="btn{{article._id}}">Read More >></a>
+                           
+                            <!-- Modal -->
+                            <div class="modal fade" id="modal{{article._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" >Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                            
+                                            <div class="slider">
+                                                    <div ng-repeat="picture in article.pictures track by $index" >                                         
+                                                            <img ng-src="{{picture.url}}" />                                                          
                                                     </div>
-                                                    <div class="author">By: Sayuri San</div>
+                                                    
                                             </div>
-                            
-                                            <div class="article-text">
-                                                    <h4>Lorem Ipsum is simply dummy text</h4>
-                                                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual thruth.</p>
-                                            </div>
-                                        
-                                        </div>    
-                            
-                            </div>
-                            <div id="middle-article-box" class="col-xs-12 col-md-4 col-lg-4 col-sm-6">
-
-                                <div class="article-box">
-                                        <div class="article-img">
-                                                <img src="../R/article2thumb.JPG">
-                                        </div>
-                        
-                                        <div class="article-foot">
-                                            <div class="date">
-                                                <p class="day">10 Jun</p>
-                                                <p class="year">2017</p>
-
-                                            </div>
-                                            <div class="author">By: Sayuri San</div>
-                                        </div>
-                        
-                                        <div class="article-text">
-                                            <h4>Lorem Ipsum is simply dummy text</h4>
-                                            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual thruth.</p>
-                                        </div>  
-                                
+                                     
+                                    </div>
+                                   
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
                                 </div>
-                                           
-                            
-                            
-                            </div>
-                            <div class="col-xs-12 col-md-4 col-lg-4 col-sm-6" style="padding-right: 0px; padding-left: 0px;">
-                                
-                                <div class="article-box">
-                                        
-                                    <div class="article-img">
-                                            <img src="../R/article3thumb.JPG"> 
-                                    </div>
-                        
-                                    <div class="article-foot">
-                                            <div class="date">
-                                                <p class="day">10 Jun</p>
-                                                <p class="year">2017</p>
-
-                                            </div>
-                                            <div class="author">By: Sayuri San</div>
-                                    </div>
-                        
-                                    <div class="article-text">
-                                            <h4>Lorem Ipsum is simply dummy text</h4>
-                                            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual thruth.</p>
-                                    </div>
-                            
                                 </div>
-                                    
                             </div>
-                        </div>         
-                    <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+                            
+                            
+                        </div>
+                        </div>
+                    </div>
                 </div>
-
-            
+               
+                <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+                
             </div>
         
         </div>
-
+        
         <div class="bottom-box">
 
                 <div class="row" style="padding: 0px; margin: 0px">
-                        <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
-                        <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
+                        <span class="col-lg-2 hidden-xs col-md-2 col-sm-2"></span>
+                        <div class="col-lg-8 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
 
-                                <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6" style="padding-right: 0px; padding-left: 0px;">
+                                <div class="col-xs-12 col-md-4 col-lg-4 col-sm-8" style="padding-right: 0px; padding-left: 0px;">
                                         <div class="contact-box">
-                                                <span class="contact-title">WE WOULD LOVE TO HEAR FROM YOU</span>
-                                                <form name="contact-form">
-                                                    <input type="text" name="name" placeholder="*Name" >
-                                                    <input type="email" name="email" placeholder="Email*">
-                                                    <input type="text" name="message" placeholder="Message*">
-                                                    <button type="submit">SEND</button>
-                                                </form>
+                                                <span class="contact-title">お問い合わせ</span>
+    
+                                                    <form class="contact-form">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="content" placeholder="お問い合わせ内容＊" >
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="nameKanji" placeholder="お名前（漢字）＊" >
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="namekatakana" placeholder="お名前（カタカナ）＊" >
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="email" placeholder="E-mail＊" >
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="email" class="form-control" id="tel" placeholder="電話番号＊">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="fax" placeholder="FAX番号">
+                                                        </div>
+                                                    <button type="submit" class="btn btn-default">送信</button>
+                                                    </form>
+
                                             </div>
 
                                 </div>
 
-                                <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6" style="padding-right: 0px; padding-left: 0px;">
-                                        <div class="map">
+                                <div class="col-xs-12 col-md-8 col-lg-8 col-sm-12" style="padding-right: 0px; padding-left: 0px;">
+                                        <div class="map-container">
                                                 <iframe
-                                                  frameborder="0" style="border:0"
+                                                    class="map"
+                                                  frameborder="0"
                                                   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB3Dg5WXMBa21xvPSgdEzx-Q9aX42xgwt4
                                                     &q=Space+Needle,Seattle+WA" allowfullscreen>
                                                 </iframe>
@@ -411,20 +366,9 @@
 
                                 </div>
 
-
-
                         </div>
-
-
-
-                        <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
-
-
+                        <span class="col-lg-2 hidden-xs col-md-2 col-sm-2"></span>
                 </div>
-        </div>
-        
-        
-            
         </div>
         
         <!-- <script>
@@ -447,61 +391,85 @@
             });
             }
         </script> -->
+
+
+            <script>
+
+            $(document).ready(readyDocument);
+            
+            
+            function readyDocument(){
+                $('#myModal').on('show', function(){
+  alert('The modal is show');
+});
+                $(".btnClick").click(function(){
+
+                    var  idmodal = $(this).attr("id").replace("btn","#modal");
+                    $(idmodal).modal("show");
+                    setTimeout(function(){
+                        alert("Boom!");
+                      }, 500);
+
+                   
+                });
+            }
+            </script>
+       
         
+        <script type="text/javascript" src="../scripts/jquery.cycle2.min.js"></script>
+        <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
     </body>
 
     
     <footer>
-    <div class="container">
-    	<div class="row">
-            <span class="col-lg-1 hidden-xs col-md-1 hidde-sm"></span>
+        <div class="container">
+            <div class="row">
+                <span class="col-lg-1 hidden-xs col-md-1 hidde-sm"></span>
 
-    		<div class=" col-lg-3 col-md-3 widget">
-                <img src="../R/group_logo.jpg">
-                <article class="widget_content">
-                    <p>There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form by injected humour or randomised words wich don't hook.</p>
-                 </article>
-    		</div>
-            <div class="col-lg-2 col-md-2  widget">
-                <h2>Contact Us</h2>
-                <article class="widget_content">
+                <div class=" col-lg-4 col-md-4 widget">
+                    <img src="../R/group_logo.jpg">
+                    
+                </div>
+                <div class="col-lg-3 col-md-4  widget">
+                    <h2>お問い合わせ</h2>
+                    <article class="widget_content">
+                        <ul>
+                            <li><img src="../R/ic_phone_gray.png"><a>0125-23-3725</a></li>
+                            <li><img src="../R/ic_phone_gray.png"><a>FAX 0125-23-2250</a></li>
+                            <li><img src="../R/ic_location_gray.png"><a>北海道滝川市本町2丁目3番5号TSビル1階</a></li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-lg-3 col-md-4  widget">
+                        <h2 class="orange">サイトマップ</h2>
                     <ul>
-                        <li><img src="../R/ic_phone_gray.png"><a>02012312 123 321</a></li>
-                        <li><img src="../R/ic_email_gray.png" style="width:35px;"><a>info@taniguchi.co.jp</a></li>
-                        <li><img src="../R/ic_location_gray.png"><a>Address is here</a></li>
+                            
+                        <li><a href="#">トップページ</a></li>
+                        <li><a href="business.html">事業内容</a></li>
+                        <li><a href="company.html">会社概要</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="">NEWS</a></li>
+                    
                     </ul>
-                 </article>
-    		</div>
-            <div class="col-lg-2 col-md-2  widget">
-                    <h2 class="orange">Useful Links</h2>
-                <ul>
-                        
-                    <li><a href="index.html">トップページ</a></li>
-                    <li><a href="business.html">事業内容</a></li>
-                    <li><a href="company.html">会社概要</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
-                    <li><a href="">NEWS</a></li>
-                
-                </ul>
-    		</div>
-            <div class="col-lg-3 col-md-3  widget">
-                    <h2 class="green">Newsletter Signup</h2>
-        
-                <ul>
-                    <li>GET LATEST UPDATES, NEWS AND OFFERS</li>
-                    <li>Some Link</li>
-                </ul>
-    	    </div>
-        <span class="col-lg-1 hidden-xs col-md-1 hidden-sm"></span>
-    </div>
-</div>
-<div class="footer-bottom">
-    <div class="container">
-        <div class="row">
-    		<div class="col-md-12 widget" style="text-align: center;">© 2017 | COPYRIGHT. ALL RIGHTS RESERVED <span class="pull-right">Minimize your browser »</span>
+                </div>
+                        <span class="col-lg-1 hidden-xs col-md-1 hidden-sm"></span>
             </div>
         </div>
-    </div>
-</footer>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 widget" style="text-align: center;">© 2017 | COPYRIGHT. ALL RIGHTS RESERVED <span class="pull-right">Minimize your browser »</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+   
     
 </html>
+
+
+

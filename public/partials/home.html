@@ -273,7 +273,7 @@
                             </div>
                             <h3>{{article.title}}</h3>
                             <p>{{article.content}}</p>
-                            <a  class="btnClick"  data-toggle="modal"  id="btn{{article._id}}">Read More >></a>
+                            <a  class="btnClick"  data-toggle="modal"  data-target="#modal{{article._id}}">Read More >></a>
                            
                             <!-- Modal -->
                             <div class="modal fade" id="modal{{article._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -399,13 +399,13 @@
             
             
             function readyDocument(){
-                $('#myModal').on('show', function(){
-  alert('The modal is show');
-});
+                $('#modal{{article._id}}').on('show', function(){
+                alert('The modal is show');
+                });
                 $(".btnClick").click(function(){
 
                     var  idmodal = $(this).attr("id").replace("btn","#modal");
-                    $(idmodal).modal("show");
+                    $('#modal{{article._id}}').modal("show");
                     setTimeout(function(){
                         alert("Boom!");
                       }, 500);

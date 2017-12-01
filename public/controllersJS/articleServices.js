@@ -13,26 +13,32 @@ function($q, $timeout, $http){
 
     });
 
-    function addArticle(title, content, imgUrl){
+    function addArticle(title, content, mainUrl, url, des){
         var date = getDatetime();
 
         var deferred = $q.defer();
 
         debugger;
 
+        var pictures= [] ;
+        var picture = {
+            'url': mainUrl,
+            'description': " "
+        };
+        pictures.push(picture);
+        for(var i in url){
+            var item = url[i];
+            var item2 = des[i];
+            pictures.push({
+                'url': item,
+                'description' : item2
+            })
+        }
+
         var article = {
             title : title,
             content : content,
-            pictures: [
-                {
-                url: imgUrl,
-                description: "description"
-                },
-                {
-                url: imgUrl,
-                description: "description2"
-                }
-            ],
+            pictures: pictures,
             date
         }
 

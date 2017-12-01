@@ -93,8 +93,8 @@ function($scope, $location, ArticleService){
   
 
         var array = $scope.article.title;
-        debugger;
-        ArticleService.addArticle($scope.article.title, $scope.article.content, $scope.article.url)
+        var array2 = $scope.article.url;
+        ArticleService.addArticle($scope.article.title, $scope.article.content, $scope.article.mainUrl, $scope.article.url, $scope.article.des)
     
         .then(function(){
           refresh();

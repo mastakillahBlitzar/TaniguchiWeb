@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var settings = require('../settings');
 var httpMsgs = require('./httpMsgs');
 const path = require('path');
-var hash = require('bcrypt');
+var hash = require('bcryptjs');
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 

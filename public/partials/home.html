@@ -128,7 +128,7 @@
 
     </header>
     
-    <body>
+    <body onload="initializemap()">
         
         <div class="body-container">
             <div class="cycle-slideshow"
@@ -281,7 +281,7 @@
                                 <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                    <h5 class="modal-title" >Modal title</h5>
+                                    <h5 class="modal-title" >{{article.title}}</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -289,23 +289,26 @@
                                     <div class="modal-body">
                                             
                                             <div class="slider">
-                                                    <div ng-repeat="picture in article.pictures" >                                         
-                                                            <img ng-src="{{picture.url}}" />                                                          
+                                                    <div ng-repeat="picture in article.pictures | limitTo : 4 : 1">                                         
+                                                            <img ng-src="{{picture.url}}" ng-attr-title="{{picture.description}}" />                                                          
                                                     </div>
                                                     
                                             </div>
                                             <script>
                                                 $(".btnClick").click(function(){
                                                     setTimeout(function(){
-                                                        $('.slider').bxSlider();
-                                                    }, 700);
+                                                        $('.slider').bxSlider({
+                                                            mode: 'fade',
+                                                            captions: true,
+                                                            touchEnabled: true
+                                                        });
+                                                    }, 190);
                                                 });
                                             </script>
                                     </div>
                                    
                                     <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                 </div>
                                 </div>
@@ -362,10 +365,10 @@
                                 <div class="col-xs-12 col-md-8 col-lg-8 col-sm-12" style="padding-right: 0px; padding-left: 0px;">
                                         <div class="map-container">
                                                 <iframe
+                                                    id="map_canvas"
                                                     class="map"
-                                                  frameborder="0"
-                                                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB3Dg5WXMBa21xvPSgdEzx-Q9aX42xgwt4
-                                                    &q=Space+Needle,Seattle+WA" allowfullscreen>
+                                                    frameborder="0"
+                                                >
                                                 </iframe>
                                             
                                         </div>
@@ -376,6 +379,28 @@
                         <span class="col-lg-2 hidden-xs col-md-2 col-sm-2"></span>
                 </div>
         </div>
+
+        <script>
+
+            var taniguchiBuilding = new google.maps.LatLng();
+
+            function initialize() {
+                var myOptions = {
+                zoom: 12,
+                center: parliament ,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+                43.5594593,141.9066822
+                };
+                var map = new google.maps.Map(document.getElementById("map_canvas"),
+                    myOptions);
+                
+                var marker = new google.maps.Marker({
+                position: parliament, 
+                map: map, 
+                title:"Hello World!"
+            });   
+            }
+        </script>
         
         <!-- <script>
         $(document).ready(readyDocument);
@@ -398,30 +423,6 @@
             }
         </script> -->
 
-
-            <script>
-
-            $(document).ready(readyDocument);
-            
-            
-            function readyDocument(){
-                $('#modal{{article._id}}').on('show', function(){
-                alert('The modal is show');
-                });
-                $(".btnClick").click(function(){
-
-                    var  idmodal = $(this).attr("id").replace("btn","#modal");
-                    $('#modal{{article._id}}').modal("show");
-                    setTimeout(function(){
-                        alert("Boom!");
-                      }, 500);
-
-                   
-                });
-            }
-            </script>
-       
-        
         <script type="text/javascript" src="../scripts/jquery.cycle2.min.js"></script>
         <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
     </body>

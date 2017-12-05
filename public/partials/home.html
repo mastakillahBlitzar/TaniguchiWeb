@@ -289,12 +289,18 @@
                                     <div class="modal-body">
                                             
                                             <div class="slider">
-                                                    <div ng-repeat="picture in article.pictures track by $index" >                                         
+                                                    <div ng-repeat="picture in article.pictures" >                                         
                                                             <img ng-src="{{picture.url}}" />                                                          
                                                     </div>
                                                     
                                             </div>
-                                     
+                                            <script>
+                                                $(".btnClick").click(function(){
+                                                    setTimeout(function(){
+                                                        $('.slider').bxSlider();
+                                                    }, 700);
+                                                });
+                                            </script>
                                     </div>
                                    
                                     <div class="modal-footer">

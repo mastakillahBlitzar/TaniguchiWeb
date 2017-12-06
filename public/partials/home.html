@@ -128,7 +128,7 @@
 
     </header>
     
-    <body onload="initializemap()">
+    <body >
         
         <div class="body-container">
             <div class="cycle-slideshow"
@@ -363,13 +363,9 @@
                                 </div>
 
                                 <div class="col-xs-12 col-md-8 col-lg-8 col-sm-12" style="padding-right: 0px; padding-left: 0px;">
-                                        <div class="map-container">
-                                                <iframe
-                                                    id="map_canvas"
-                                                    class="map"
-                                                    frameborder="0"
-                                                >
-                                                </iframe>
+                                        <div class="map-container" >
+                                                
+                                                <iframe  class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d722.8132867177167!2d141.90654682920848!3d43.5596079705375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0c98d88d92de73%3A0x6893b993c8972458!2zSmFwYW4sIOOAkjA3My0wMDIxIEhva2thaWTFjSwgVGFraWthd2Etc2hpLCBIb25tYWNoaSwgMiBDaG9tZeKIkjPiiJI1LCDvvLTvvLPjg5Pjg6s!5e0!3m2!1sen!2sus!4v1512529915990" frameborder="0" style="border:0" allowfullscreen></iframe>
                                             
                                         </div>
 
@@ -380,27 +376,11 @@
                 </div>
         </div>
 
-        <script>
-
-            var taniguchiBuilding = new google.maps.LatLng();
-
-            function initialize() {
-                var myOptions = {
-                zoom: 12,
-                center: parliament ,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-                43.5594593,141.9066822
-                };
-                var map = new google.maps.Map(document.getElementById("map_canvas"),
-                    myOptions);
-                
-                var marker = new google.maps.Marker({
-                position: parliament, 
-                map: map, 
-                title:"Hello World!"
-            });   
-            }
+        
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnleYwXg3nbEGFus9O_9-4LnIjIhMuS4U&callback=initialize">
         </script>
+    
         
         <!-- <script>
         $(document).ready(readyDocument);

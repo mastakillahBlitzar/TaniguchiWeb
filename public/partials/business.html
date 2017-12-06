@@ -54,7 +54,7 @@
                     <div class="col-xs-12 col-md-3 col-lg-3 col-sm-12" style="padding-right: 0px; padding-left: 0px;"> 
                         
                             <div class="info-header">
-                                <img class="col-xs-12 col-sm-12 col-md-12 col-lg-4" style="padding-left: 0px;" src="../R/ic_phone.png" alt="Phone:">
+                                <img style="padding-left: 0px;" src="../R/topsection/call.png" alt="Phone:">
     
                                 <div class="info-content col-xs-12 col-sm-12 col-md-12 col-lg-8" style="padding-right: 0px; padding-left: 10px">
                                     <h5>0125-23-3725</h5>
@@ -69,7 +69,7 @@
                     <div class="col-xs-12 col-md-3 col-lg-3 col-sm-12" style="padding-right: 0px; padding-left: 0px;"> 
                             
                                 <div class="info-header">
-                                    <img src="../R/ic_location.png" alt="Location">
+                                    <img src="../R/topsection/ic_location.png" alt="Location">
     
                                     <div class="info-content col-xs-12 col-sm-12 col-md-12 col-lg-8" style="padding-right: 0px; padding-left: 10px">
                                             <h5>北海道滝川市本町2丁目3番5号</h5>
@@ -291,16 +291,20 @@
                                 <ul id="lightSlider">
                                         <li>
                                             <h3>First Slide</h3>
-                                            <p>Lorem ipsum Cupidatat quis pariatur anim.</p>
+                                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
                                         </li>
                                         <li>
                                             <h3>Second Slide</h3>
                                             <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
                                         </li>
                                         <li>
-                                                <h3>Second Slide</h3>
-                                                <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                                            </li>
+                                            <h3>Third Slide</h3>
+                                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                                        </li>
+                                        <li>
+                                            <h3>Fourth Slide</h3>
+                                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                                        </li>
                                     </ul>
                                 </div>
 
@@ -312,58 +316,60 @@
     
 
         <script type="text/javascript">
+
             $(document).ready(function() {
+
               $("#lightSlider").lightSlider({
-                item: 3,
-            autoWidth: false,
-            slideMove: 1, // slidemove will be 1 if loop is true
-            slideMargin: 10,
-    
-            addClass: '',
-            mode: "slide",
-            useCSS: true,
-            cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
-            easing: 'linear', //'for jquery animation',////
-    
-            speed: 400, //ms'
-            auto: false,
-            loop: false,
-            slideEndAnimation: true,
-            pause: 2000,
-    
-            keyPress: false,
-            controls: true,
-            prevHtml: '',
-            nextHtml: '',
-    
-            rtl:false,
-            adaptiveHeight:false,
-    
-            vertical:false,
-            verticalHeight:500,
-            vThumbWidth:100,
-    
-            thumbItem:10,
-            pager: true,
-            gallery: false,
-            galleryMargin: 5,
-            thumbMargin: 5,
-            currentPagerPosition: 'middle',
-    
-            enableTouch:true,
-            enableDrag:true,
-            freeMove:true,
-            swipeThreshold: 40,
-    
-            responsive : [],
-    
-            onBeforeStart: function (el) {},
-            onSliderLoad: function (el) {},
-            onBeforeSlide: function (el) {},
-            onAfterSlide: function (el) {},
-            onBeforeNextSlide: function (el) {},
-            onBeforePrevSlide: function (el) {}
-              }); 
+                item: 4,
+                autoWidth: false,
+                slideMove: 1, // slidemove will be 1 if loop is true
+                slideMargin: 0,
+        
+                addClass: '',
+                mode: "slide",
+                useCSS: true,
+                cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+                easing: 'linear', //'for jquery animation',////
+        
+                speed: 400, //ms'
+                auto: false,
+                loop: false,
+                slideEndAnimation: true,
+                pause: 2000,
+        
+                keyPress: false,
+                controls: true,
+                prevHtml: '',
+                nextHtml: '',
+        
+                rtl:false,
+                adaptiveHeight:false,
+        
+                vertical:false,
+                verticalHeight:500,
+                vThumbWidth:100,
+        
+                thumbItem:10,
+                pager: true,
+                gallery: false,
+                galleryMargin: 5,
+                thumbMargin: 5,
+                currentPagerPosition: 'middle',
+        
+                enableTouch:true,
+                enableDrag:true,
+                freeMove:true,
+                swipeThreshold: 40,
+        
+                responsive : [],
+        
+                onBeforeStart: function (el) {},
+                onSliderLoad: function (el) {},
+                onBeforeSlide: function (el) {},
+                onAfterSlide: function (el) {},
+                onBeforeNextSlide: function (el) {},
+                onBeforePrevSlide: function (el) {}
+                }); 
             });
           </script>
 

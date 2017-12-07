@@ -1,0 +1,20 @@
+#btn-add-article{
+    float: right;
+    margin-right: 10px;
+}
+
+.red {
+    border: solid 1px red;
+  }
+
+.red:hover{
+    background-color: white;
+}
+
+.help-block{
+    color: red;
+}
+
+#description-area{
+    height: auto;
+}

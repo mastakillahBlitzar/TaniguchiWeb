@@ -288,32 +288,26 @@
 
                 <div id="thumbnail-slider">
                         
-                                <ul id="lightSlider">
-                                        <li>
-                                            <h3>First Slide</h3>
-                                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                                        </li>
-                                        <li>
-                                            <h3>Second Slide</h3>
-                                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                                        </li>
-                                        <li>
-                                            <h3>Third Slide</h3>
-                                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                                        </li>
-                                        <li>
-                                            <h3>Fourth Slide</h3>
-                                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                                        </li>
-                                    </ul>
-                                </div>
+                    <ul id="lightSlider">
+                            <li>
+                                <img src="" alt="pic1" class="img-thumb" />
+                            </li>
+                            <li>
+                                <img src="" alt="pic2" class="img-thumb" />
+                            </li>
+                            <li>
+                                <img src="" alt="pic3" class="img-thumb" />
+                            </li>
+                            <li>
+                                <img src="" alt="pic4" class="img-thumb" />
+                            </li>
+                    </ul>
 
+                </div>
 
             </div>
 
     </div>
-
-    
 
         <script type="text/javascript">
 
@@ -325,19 +319,20 @@
                 slideMove: 1, // slidemove will be 1 if loop is true
                 slideMargin: 0,
         
-                addClass: '',
+                addClass: '', //Add custom class for slider, can be used to set different style for different sliders
                 mode: "slide",
                 useCSS: true,
                 cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
                 easing: 'linear', //'for jquery animation',////
         
                 speed: 400, //ms'
-                auto: false,
-                loop: false,
+                auto: true,
+                pauseOnHover: true,
+                loop: true,
                 slideEndAnimation: true,
                 pause: 2000,
         
-                keyPress: false,
+                keyPress: true,
                 controls: true,
                 prevHtml: '',
                 nextHtml: '',
@@ -361,14 +356,32 @@
                 freeMove:true,
                 swipeThreshold: 40,
         
-                responsive : [],
-        
-                onBeforeStart: function (el) {},
-                onSliderLoad: function (el) {},
-                onBeforeSlide: function (el) {},
-                onAfterSlide: function (el) {},
-                onBeforeNextSlide: function (el) {},
-                onBeforePrevSlide: function (el) {}
+                responsive : [
+                    {
+                    breakpoint:800,
+                    settings: {
+                        item:3,
+                        slideMove:1,
+                        slideMargin:0,
+                        }
+                    },
+                    {
+                    breakpoint:480,
+                    settings: {
+                        item:2,
+                        slideMove:1,
+                        slideMargin: 0
+                        }
+                    },
+                    {
+                    breakpoint:300,
+                    settings: {
+                        item:1,
+                        slideMove:1,
+                        slideMargin: 0
+                        }
+                    }
+                ],
                 }); 
             });
           </script>

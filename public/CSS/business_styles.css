@@ -93,3 +93,8 @@
     font-family: mangaFont;
     font-size: 36px;
 }
+
+#thumbnail-slider ul li {
+    background-color: red;
+    height: 200px;
+}

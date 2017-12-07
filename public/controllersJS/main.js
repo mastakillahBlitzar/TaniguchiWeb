@@ -46,6 +46,15 @@ myApp.config(function ($routeProvider, $locationProvider) {
         controller: 'ArticleDetailController',
         isLoggedIn: true
       })
+      .when('/profile', {
+        templateUrl: '../admin/profile.html',
+        controller: 'profileController',
+        isLoggedIn: true
+      })
+      .when('/404', {
+        templateUrl: '../admin/404.html',
+        isLoggedIn: true
+      })
       .otherwise({
         redirectTo: '/'
         

@@ -74,10 +74,15 @@ h4{
     border-left: 1px solid darkgray;
 }
 
+#call-id{
+    padding-right: 0px; 
+    padding-left: 0px; 
+}
+
 .logo-header{
-    position: relative;
     width: 100%;
-    display: inline-block;
+    align-items: center;
+    display: flex;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -337,7 +342,6 @@ p.news-text{
 p.about-text{
     color: darkgray;
     display: inline-block;
-    width: 1020px;
     margin-bottom: 18px;
     margin-top: 10px;
 }

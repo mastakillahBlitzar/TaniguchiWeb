@@ -90,11 +90,16 @@ function($scope, $location, ArticleService){
   ];
 
   $scope.addArticle = function(){
-  
 
-        var array = $scope.article.title;
-        var array2 = $scope.article.url;
-        ArticleService.addArticle($scope.article.title, $scope.article.content, $scope.article.mainUrl, $scope.article.url, $scope.article.des)
+    $scope.submitted = true;
+
+        var title = $scope.article.title;
+        var content = $scope.article.content;
+        var mainUrl = $scope.article.mainUrl;
+        var urls = $scope.article.url;
+        var des = $scope.article.des;
+
+        ArticleService.addArticle(title, content, mainUrl,urls, des)
     
         .then(function(){
           refresh();
@@ -105,7 +110,6 @@ function($scope, $location, ArticleService){
           $scope.article = {};
         });
       }
-
 
 }]);
 

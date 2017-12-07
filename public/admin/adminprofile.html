@@ -14,17 +14,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
- <!-- Bootstrap Core CSS -->
-<link href="../admin/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 <!-- Custom CSS -->
 <link href="../admin/css/style.css" rel='stylesheet' type='text/css' />
 <!-- Graph CSS -->
 <link href="../admin/css/font-awesome.css" rel="stylesheet"> 
-<!-- jQuery -->
-<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
-<!-- lined-icons -->
+
 <link rel="stylesheet" href="../admin/css/icon-font.min.css" type='text/css' />
-<!-- //lined-icons -->
+
 <script src="../admin/js/jquery-1.10.2.min.js"></script>
 <script src="../admin/js/amcharts.js"></script>	
 <script src="../admin/js/serial.js"></script>	
@@ -50,90 +46,63 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header-section">
 						<!--menu-right-->
 						<div class="top_menu">
-						        <div class="main-search">
-											<form>
-											   <input type="text" value="Search" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Search';}" class="text"/>
-												<input type="submit" value="">
-											</form>
-									<div class="close"><img src="../admin/images/cross.png" /></div>
-								</div>
-									<div class="srch"><button></button></div>
-									<script type="text/javascript">
-										 $('.main-search').hide();
-										$('button').click(function (){
-											$('.main-search').show();
-											$('.main-search text').focus();
-										}
-										);
-										$('.close').click(function(){
-											$('.main-search').hide();
-										});
-									</script>
+						        
+									
 							<!--/profile_details-->
 								<div class="profile_details_left">
 									<ul class="nofitications-dropdown">
-											<li class="dropdown note dra-down">
-													   <div id="dd" class="wrapper-dropdown-3" tabindex="1">
-																			<span>Italy</span>
-																			<ul class="dropdown">
-																				<li><a class="deutsch">France</a></li>
-																				<li><a class="english"> Italy</a></li>
-																				<li><a class="espana">Brazil</a></li>
-																				<li><a class="russian">Usa</a></li>
-
-																			</ul>
-																		</div>
-																		<script type="text/javascript">
+										<li class="dropdown note dra-down">
+													   
+											<script type="text/javascript">
 			
-																	function DropDown(el) {
-																		this.dd = el;
-																		this.placeholder = this.dd.children('span');
-																		this.opts = this.dd.find('ul.dropdown > li');
-																		this.val = '';
-																		this.index = -1;
-																		this.initEvents();
-																	}
-																	DropDown.prototype = {
-																		initEvents : function() {
-																			var obj = this;
+												function DropDown(el) {
+													this.dd = el;
+													this.placeholder = this.dd.children('span');
+													this.opts = this.dd.find('ul.dropdown > li');
+													this.val = '';
+													this.index = -1;
+													this.initEvents();
+												}
+												DropDown.prototype = {
+													initEvents : function() {
+														var obj = this;
 
-																			obj.dd.on('click', function(event){
-																				$(this).toggleClass('active');
-																				return false;
-																			});
+														obj.dd.on('click', function(event){
+															$(this).toggleClass('active');
+															return false;
+														});
 
-																			obj.opts.on('click',function(){
-																				var opt = $(this);
-																				obj.val = opt.text();
-																				obj.index = opt.index();
-																				obj.placeholder.text(obj.val);
-																			});
-																		},
-																		getValue : function() {
-																			return this.val;
-																		},
-																		getIndex : function() {
-																			return this.index;
-																		}
-																	}
+														obj.opts.on('click',function(){
+															var opt = $(this);
+															obj.val = opt.text();
+															obj.index = opt.index();
+															obj.placeholder.text(obj.val);
+														});
+													},
+													getValue : function() {
+														return this.val;
+													},
+													getIndex : function() {
+														return this.index;
+													}
+												}
 
-																	$(function() {
+												$(function() {
 
-																		var dd = new DropDown( $('#dd') );
+													var dd = new DropDown( $('#dd') );
 
-																		$(document).click(function() {
-																			// all dropdowns
-																			$('.wrapper-dropdown-3').removeClass('active');
-																		});
+													$(document).click(function() {
+														// all dropdowns
+														$('.wrapper-dropdown-3').removeClass('active');
+													});
 
-																	});
+												});
 
-																</script>
-										    </li>
-									       <li class="dropdown note">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope-o"></i> <span class="badge">3</span></a>
+											</script>
+										</li>
+										<li class="dropdown note">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope-o"></i> <span class="badge">3</span></a>
 
-												
 													<ul class="dropdown-menu two first">
 														<li>
 															<div class="notification_header">
@@ -1299,7 +1268,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!--/sidebar-menu-->
 				<div class="sidebar-menu">
 					<header class="logo">
-					<a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="index.html"> <span id="logo"> <h1>Augment</h1></span> 
+					<a class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a> <span id="logo"> <h1>Augment</h1></span> 
 					<!--<img id="logo" src="" alt="Logo"/>--> 
 				  </a> 
 				</header>
@@ -1310,75 +1279,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									  <a href="../admin/adminprofile.html"><span class=" name-caret">Jasmin Leo</span></a>
 									 <p>System Administrator in Company</p>
 									<ul>
-									<li><a class="tooltips" href="../admin/adminprofile.html"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
+									<li><a class="tooltips" href="#!/profile"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
 										<li><a class="tooltips" href="../admin/adminprofile.html"><span>Settings</span><i class="lnr lnr-cog"></i></a></li>
-										<div ng-controller="logoutController">
-												<li><a class="tooltips" ng-click='logout()'><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>												
-										</div>
+										
+										<li ng-controller="logoutController"><a class="tooltips" ng-click='logout()'><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>												
+										
 										</ul>
 									</div>
 							   <!--//down-->
                            <div class="menu">
 									<ul id="menu" >
-										<li><a href="../admin/adminprofile.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
-										 <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Tabs &amp; Panels</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+										<li><a href="#!/adminprofile"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+										 <li id="menu-academico" ><a><i class="fa fa-table"></i> <span> Tabs &amp; Panels</span> <span class="fa fa-angle-right" style="float: right"></span></a>
 										   <ul id="menu-academico-sub" >
-											<li id="menu-academico-avaliacoes" ><a href="../admin/tabs.html"> Tabs &amp; Panels</a></li>
-											<li id="menu-academico-boletim" ><a href="../admin/widget.html">Widgets</a></li>
-											<li id="menu-academico-avaliacoes" ><a href="../admin/calender.html">Calendar</a></li>
+										
+											<li id="menu-academico-avaliacoes" ><a href="#!/404">Calendar</a></li>
 											
 										  </ul>
 										</li>
-										 <li id="menu-academico" ><a href="#"><i class="fa fa-file-text-o"></i> <span>Edit Posts</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+										 <li id="menu-academico" ><a><i class="fa fa-file-text-o"></i> <span>Edit Posts</span> <span class="fa fa-angle-right" style="float: right"></span></a>
 											 <ul id="menu-academico-sub" >
-												<li id="menu-academico-avaliacoes" ><a href="../admin/forms.html">Forms</a></li>
-												<li id="menu-academico-boletim" ><a href="../admin/validation.html">Validation Forms</a></li>
 												<li id="menu-academico-boletim" ><a href="#!/table">Articles</a></li>
-												<li id="menu-academico-boletim" ><a href="../admin/buttons.html">Buttons</a></li>
 											  </ul>
 										 </li>
-									<li><a href="../admin/typography.html"><i class="lnr lnr-pencil"></i> <span>Typography</span></a></li>
-									<li id="menu-academico" ><a href="#"><i class="lnr lnr-book"></i> <span>Pages</span> <span class="fa fa-angle-right" style="float: right"></span></a>
-										  <ul id="menu-academico-sub" >
-										    <li id="menu-academico-avaliacoes" ><a href="../admin/adminprofile.html">Login</a></li>
-										    <li id="menu-academico-boletim" ><a href="../admin/register.html">Register</a></li>
-											<li id="menu-academico-boletim" ><a href="../admin/404.html">404</a></li>
-											<li id="menu-academico-boletim" ><a href="../admin/sign.html">Sign up</a></li>
-											<li id="menu-academico-boletim" ><a href="../admin/profile.html">Profile</a></li>
-										  </ul>
-									 </li>
-									 <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Mail Box</span><span class="fa fa-angle-right" style="float: right"></span></a>
-									   <ul>
-										<li><a href="../admin/inbox.html"><i class="fa fa-inbox"></i> Inbox</a></li>
-										<li><a href="../admin/compose.html"><i class="fa fa-pencil-square-o"></i> Compose Mail</a></li>
-										<li><a href="../admin/editor.html"><span class="lnr lnr-highlight"></span> Editors Page</a></li>
 									
-									  </ul>
-									</li>
-							        <li id="menu-academico" ><a href="#"><i class="lnr lnr-layers"></i> <span>Components</span> <span class="fa fa-angle-right" style="float: right"></span></a>
-										 <ul id="menu-academico-sub" >
-											<li id="menu-academico-avaliacoes" ><a href="../admin/grids.html">Grids</a></li>
-											<li id="menu-academico-boletim" ><a href="../admin/media.html">Media Objects</a></li>
+									<li id="menu-academico" ><a><i class="lnr lnr-book"></i> <span>Pages</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+										  <ul id="menu-academico-sub" >
+										    
+												<li id="menu-academico-boletim" ><a href="#!/register">Register</a></li>
+												<li id="menu-academico-boletim" ><a href="../admin/404.html">404</a></li>
+												<li id="menu-academico-boletim" ><a href="#!/profile">Profile</a></li>
 
 										  </ul>
-									 </li>
-									<li><a href="../admin/chart.html"><i class="lnr lnr-chart-bars"></i> <span>Charts</span> <span class="fa fa-angle-right" style="float: right"></span></a>
-									  <ul>
-										<li><a href="../admin/map.html"><i class="lnr lnr-map"></i> Maps</a></li>
-										<li><a href="../admin/graph.html"><i class="lnr lnr-apartment"></i> Graph Visualization</a></li>
-									</ul>
 									</li>
-									<li id="menu-comunicacao" ><a href="#"><i class="fa fa-smile-o"></i> <span>More</span><span class="fa fa-angle-double-right" style="float: right"></span></a>
-									  <ul id="menu-comunicacao-sub" >
-										<li id="menu-mensagens" style="width:120px" ><a href="./project.html">Projects <i class="fa fa-angle-right" style="float: right; margin-right: -8px; margin-top: 2px;"></i></a>
-										  <ul id="menu-mensagens-sub" >
-											<li id="menu-mensagens-enviadas" style="width:130px" ><a href="../admin/ribbon.html">Ribbons</a></li>
-											<li id="menu-mensagens-recebidas"  style="width:130px"><a href="../admin/blank.html">Blank</a></li>
-										  </ul>
-										</li>
-										<li id="menu-arquivos" ><a href="../admin/500.html">500</a></li>
-									  </ul>
-									</li>
+
 								  </ul>
 								</div>
 							  </div>
@@ -1412,7 +1346,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="../admin/js/jquery.nicescroll.js"></script>
 <script src="../admin/js/scripts.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-   <script src="../admin/js/bootstrap.min.js"></script>
+
 </body>
 </html>

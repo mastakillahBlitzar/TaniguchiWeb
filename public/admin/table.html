@@ -258,29 +258,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<thead> 
 													<tr> 
 														<th>#</th> 
-														<th>Title</th> 
-														<th>Content</th> 
-														<th>img Url</th> 
-														<th>Date</th> 
+														<th>タイトル</th> 
+														<th>内容</th> 
+														<th>日付</th> 
 													</tr> </thead> 
 													<tbody> 
 														<tr>
 															<td></td>
 															<td><input class="form-control" ng-model="article.title" disabled></td>
 															<td><input class="form-control" ng-model="article.content" disabled></td>
-															<td><input class="form-control" ng-model="article.url" disabled></td>
 															<td></td>
-															<td><a class="btn blue" ng-click="redirectToForm()">+ Create New</a></td>
-															<td><button class="btn btn-info" ng-click= "deselect()">Clear</button></td>
+															<td><a class="btn blue" ng-click="redirectToForm()">+ 記事を追加</a></td>
 														</tr>
 														<tr ng-repeat="article in articleList"> 
 															<th scope="row">{{article._id}}</th> 
 															<td>{{article.title}}</td> 
-															<td>{{article.content}}</td> 
-															<td>{{article.imgUrl}}</td> 
+															<td>{{article.content}}</td>
 															<td>{{article.date}}</td>
-															<td><button class="btn btn-danger" ng-click="remove(article._id)">Remove</button></td>
-															<td><button class="btn btn-warning" ng-click="edit(article._id)">Edit</button></td>
+															<td><button class="btn btn-danger" ng-click="remove(article._id)">削除</button></td>
+															<td><button class="btn btn-warning" ng-click="edit(article._id)">編集</button></td>
 														</tr>
 													</tbody> 
 											</table>
@@ -365,9 +361,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							
 							</ul>
 						</li>
-						<li id="menu-academico" ><a><i class="fa fa-file-text-o"></i> <span>Edit Posts</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+						<li id="menu-academico" ><a><i class="fa fa-file-text-o"></i> <span>記事を編集</span> <span class="fa fa-angle-right" style="float: right"></span></a>
 							<ul id="menu-academico-sub" >
-							<li id="menu-academico-boletim" ><a href="#!/table">Articles</a></li>
+							<li id="menu-academico-boletim" ><a href="#!/table">記事</a></li>
 							</ul>
 						</li>
 					<li id="menu-academico" ><a><i class="lnr lnr-book"></i> <span>Pages</span> <span class="fa fa-angle-right" style="float: right"></span></a>

@@ -3,10 +3,14 @@ var myApp = angular.module('myApp', ['ngRoute']);
 myApp.config(function ($routeProvider, $locationProvider) {
     $routeProvider
        .when('/', {
-        templateUrl: '../partials/home.html',
+        templateUrl: '../partials/maintaniguchi.html',
         isLoggedIn: false
       })
       .when('/home', {
+        templateUrl: '../partials/maintaniguchi.html',
+        isLoggedIn: false
+      })
+      .when('/metalplatehome', {
         templateUrl: '../partials/home.html',
         isLoggedIn: false
       })

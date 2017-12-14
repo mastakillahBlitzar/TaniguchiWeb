@@ -3,10 +3,14 @@ var myApp = angular.module('myApp', ['ngRoute']);
 myApp.config(function ($routeProvider, $locationProvider) {
     $routeProvider
        .when('/', {
-        templateUrl: '../partials/home.html',
+        templateUrl: '../partials/maintaniguchi.html',
         isLoggedIn: false
       })
       .when('/home', {
+        templateUrl: '../partials/maintaniguchi.html',
+        isLoggedIn: false
+      })
+      .when('/metalplatehome', {
         templateUrl: '../partials/home.html',
         isLoggedIn: false
       })
@@ -42,7 +46,10 @@ myApp.config(function ($routeProvider, $locationProvider) {
         isLoggedIn: false
       })
       .when('/generalservice/home', {
-        templateUrl: '../partials/home_gs.html',
+        templateUrl: '../partials/gs_home.html',
+      })
+      .when('/generalservice/contact', {
+        templateUrl: '../partials/gs_contact.html',
         isLoggedIn: false
       })
       .when('/forms', {

@@ -1,0 +1,46 @@
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+     -moz-box-sizing: border-box; /* Firefox, other Gecko */ 
+          box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+ul { 
+  background: grey; 
+  height: 60px; 
+  padding: 10px 0 10px 40px; 
+  width: 100%; 
+}
+
+li { 
+  background: orange; 
+  float: left;
+  line-height: 20px;
+  margin-right: 30px;
+  padding: 10px 3px;
+  position: relative;  
+}
+
+li:last-of-type { margin-right: 0px; }
+
+li:before {  
+  background: none;
+  border-left: 20px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 40px solid orange;
+  content: "";
+  left: -20px;
+  position: absolute;
+  top: 0;
+}
+
+li:after { 
+  border-left: 0px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid orange;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 0;
+} 

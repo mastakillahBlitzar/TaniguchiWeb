@@ -42,13 +42,9 @@ body .header .main-title .subtitle{
     font-family: mangaFont;
 }
 
-body .footer{
-    height: 30px;
+.footer{
     background: black;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    clear: both;
+    border: 0px;
 }
 
 body .row .slider-container{

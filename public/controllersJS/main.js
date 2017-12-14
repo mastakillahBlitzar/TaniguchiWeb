@@ -45,6 +45,10 @@ myApp.config(function ($routeProvider, $locationProvider) {
         templateUrl: '../partials/company.html',
         isLoggedIn: false
       })
+      .when('/generalservice/contact', {
+        templateUrl: '../partials/gscontact.html',
+        isLoggedIn: false
+      })
       .when('/forms', {
         templateUrl: '../admin/forms.html',
         controller: 'ArticleDetailController',

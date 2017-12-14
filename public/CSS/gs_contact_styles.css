@@ -1,0 +1,41 @@
+body{
+
+}
+
+.row{
+    background-color: #F8F8F8;
+}
+
+.row .top-info{
+    display: inline-block;
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.row .top-info .right-container{
+    float: right;
+}
+
+.row .top-info .info-container{
+    
+    display: inline-flex;
+}
+
+.row .info-container img{
+    height: 25px;
+    width: 25px;
+}
+
+.row .info-container .divider{
+    width: 1px;
+    background: black;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.row .info-container p.right-text{
+    margin: 0 auto;
+}

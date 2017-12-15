@@ -203,8 +203,4 @@ function($scope, $location){
     $location.path('/contact');
   }
 
-
-
-
-
 }]);

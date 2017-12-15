@@ -17,15 +17,15 @@
         
     </header>
     <body>
-
+            <script>w3.includeHTML();</script>
         <script>
-            $(document).ready(function(){
-                $("#b").removeClass("active");
-                $("#c").removeClass("active");
-                $("#a").addClass("active");
-                
+            $(document).ready(function(){   
+                var hash = window.location.hash;
+                console.log(window.location.hash);
+                $('.nav > li > a[href="'+hash+'"]').parent().addClass('active');
             });
+
         </script>
-        <script>w3.includeHTML();</script>
+        
     </body>
 </html>

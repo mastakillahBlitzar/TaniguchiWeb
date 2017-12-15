@@ -16,14 +16,17 @@
         
 
     </header>
+ 
+
     <body>
-            <script>
-                    $(document).ready(function(){
-                        $("#a").removeClass("active");
-                        $("#b").removeClass("active");
-                        $("#c").addClass("active");
-                    });
-                </script>
             <script>w3.includeHTML();</script>
+            <script>
+                $(document).ready(function(){   
+                    var hash = window.location.hash;
+                    console.log(window.location.hash);
+                    $('.nav > li > a[href="'+hash+'"]').parent().addClass('active').siblings().removeClass('active');
+                });
+            </script>
+           
     </body>
 </html>

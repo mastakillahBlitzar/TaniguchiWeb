@@ -1,4 +1,4 @@
-.row{
+.row:first-child{
     background-color: #F8F8F8;
 }
 
@@ -34,4 +34,10 @@
 
 .row .info-container p.right-text{
     margin: 0 auto;
+}
+
+@media all and (max-width: 770px){
+    .row .top-info .right-container{
+        float: left;
+    }
 }

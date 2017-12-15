@@ -7,36 +7,23 @@
 
         <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_contact_styles.css"/>
         <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_header_styles.css"/>
+        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_menu_styles.css"/>
         
     </head>
     <header>
-        <div class="row">
-            <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
-            <div class="top-info col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                <span class="top-description">Taniguchi General service limited company is a company specializing in real state.</span>
-                <div class="right-container">
-                <div class="info-container">
-                    <img src="../R/topsection/call.png" alt="call"/>
-                    <div class="divider"></div>
-                    <p class="right-text">0125-23-8170</p>
-                </div>
-
-                <div class="info-container">
-                        <img src="../R/topsection/ic_location.png" alt="call"/>
-                        <div class="divider"></div>
-                        <p class="right-text">2 - 3, 5 Honcho, Takikawa-shi, Hokkaido<br>073-0021 TS Building 1F</p>
-                    </div>
-
-            </div>
-            </div>
-            <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
-        </div>
+            <div w3-include-html="/partials/gs_header.html"></div>
+            
+        
 
     </header>
     <body>
-
-
-
-
+            <script>
+                    $(document).ready(function(){
+                        $("#a").removeClass("active");
+                        $("#b").removeClass("active");
+                        $("#c").addClass("active");
+                    });
+                </script>
+            <script>w3.includeHTML();</script>
     </body>
 </html>

@@ -36,6 +36,13 @@
     margin: 0 auto;
 }
 
+
+/* titles por every page */
+.gs-title{
+    height: 100px;
+    background: rebeccapurple;
+}
+
 @media all and (max-width: 770px){
     .row .top-info .right-container{
         float: left;

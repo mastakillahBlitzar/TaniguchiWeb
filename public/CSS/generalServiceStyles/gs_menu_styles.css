@@ -30,6 +30,14 @@
   transform: skew(20deg);
 }
 
+.navbar-default .navbar-nav>li>a{
+  padding: 24px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a{
+  color: white;
+}
+
 .active a{
   -ms-transform: skew(-20deg);
   -webkit-transform: skew(-20deg);

@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_contact_styles.css"/>
         <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_header_styles.css"/>
         <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_menu_styles.css"/>
-        
+        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_footer_styles.css"/>
     </head>
     <header>
             <div w3-include-html="/partials/gs_header.html"></div>
@@ -19,14 +19,26 @@
  
 
     <body>
-            <script>w3.includeHTML();</script>
-            <script>
-                $(document).ready(function(){   
-                    var hash = window.location.hash;
-                    console.log(window.location.hash);
-                    $('.nav > li > a[href="'+hash+'"]').parent().addClass('active').siblings().removeClass('active');
-                });
-            </script>
-           
+
+            <div class="gs-title">
+                    CONTACT US
+    
+            </div>
+
+
+        <footer>
+                <div w3-include-html="/partials/gs_footer.html"></div>
+        </footer>
+        
+        <script>w3.includeHTML();</script>
+        <script>
+            $(document).ready(function(){   
+                var hash = window.location.hash;
+                console.log(window.location.hash);
+                $('.nav > li > a[href="'+hash+'"]').parent().addClass('active').siblings().removeClass('active');
+            });
+        </script>
+           <!-- bxSlider Javascript file -->
+           <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
     </body>
 </html>

@@ -47,6 +47,11 @@ myApp.config(function ($routeProvider, $locationProvider) {
       })
       .when('/generalservice/home', {
         templateUrl: '../partials/gs_home.html',
+        isLoggedIn: false
+      })
+      .when('/generalservice/owners', {
+        templateUrl: '../partials/gs_owners.html',
+        isLoggedIn: false
       })
       .when('/generalservice/contact', {
         templateUrl: '../partials/gs_contact.html',

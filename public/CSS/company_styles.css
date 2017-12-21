@@ -33,6 +33,7 @@
 
 .info-container .row{
     margin-bottom: 10px;
+    max-width: 100%;
 }
 
 .info-container .row .icon{
@@ -123,4 +124,13 @@
 
 .address-container .row .caption > table tr td{
     font-family: mangaFont;
+}
+
+/* media querys for title sizes for xs screens */
+@media screen and (max-width: 768px){
+    .info-container .row{
+        margin-bottom: 5px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
 }

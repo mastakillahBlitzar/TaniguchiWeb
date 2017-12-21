@@ -7,6 +7,6 @@ exports.dbConfig = {
     port: 51065
 };
 
-exports.webPort = process.env.PORT || 8080;
+exports.webPort = process.env.PORT || 9000;
 
 exports.httpMsgsFormat = "JSON";

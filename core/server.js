@@ -15,7 +15,8 @@ var app = express();
 
 
 //connect to mongodb
-mongoose.connect('mongodb://localhost/taniguchisitedb');
+//mongoose.connect('mongodb://localhost/taniguchisitedb');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/taniguchisitedb');
 var db = mongoose.connection;
 
 //get model

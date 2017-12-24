@@ -60,3 +60,13 @@ body .row .slider-container .thumbnail{
 body .row .slider-container .thumbnail .bx-pager-item a{
     border-radius: 0px;
 }
+
+@media screen and (max-width: 768px){
+    body .header .main-title >h1{
+        font-size: 40px;
+    }
+
+    body .header .main-title .subtitle{
+        font-size: 16px;
+    }
+}

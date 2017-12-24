@@ -12,27 +12,32 @@
     text-align: center;
     position: relative;
     padding: 20px;
-    padding-bottom: 0px;
 }
 
 .title-page h3{
     font-family: mangaFont;
     color: #FEFFFD;
+    transform: skew(30deg);
     margin: 0;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -60%);
 }
 
 .title-page .title-bg{
     height: auto;
-    display: block;
+    display: inline-block;
     margin: auto;
+    transform: skew(-30deg);
+    background-color: #0052A5;
+
+    padding: 14px;
+    padding-right: 18px;
+    padding-left: 18px;
+    box-shadow: 0px 4px 15px 1px rgba(0, 0, 0, 168);
 }
 
 .info-container .row{
-    margin-bottom: 10px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     max-width: 100%;
 }
 
@@ -77,14 +82,9 @@
 }
 
 .address-container .row .thumbnail{
-    padding: 0px;
+    padding: 2px;
     color: #FFF;
     border-color: transparent;
-}
-
-.address-container .row .thumbnail-container{
-    padding: 0px;
-    margin-bottom: 40px;
 }
 
 .address-container .row .thumbnail img{
@@ -129,8 +129,16 @@
 /* media querys for title sizes for xs screens */
 @media screen and (max-width: 768px){
     .info-container .row{
-        margin-bottom: 5px;
-        margin-right: 0px;
-        margin-left: 0px;
+        padding-top: 0px;
+    }
+
+    .address-container .row .thumbnail{
+        margin-top: 8px;
+    }
+
+    .address-container{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
     }
 }

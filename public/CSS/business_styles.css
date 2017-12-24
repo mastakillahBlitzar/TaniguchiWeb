@@ -16,44 +16,42 @@
     text-align: center;
     position: relative;
     padding: 20px;
-    padding-bottom: 0px;
 }
 
 .title-page h3{
     color: #FEFFFD;
     font-family: mangaFont;
+    transform: skew(30deg);
     margin: 0;
-    margin-left: 12px;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -60%);
 }
 
 .title-page .title-bg{
-    width: 500px;
     height: auto;
-    display: block;
+    display: inline-block;
     margin: auto;
+    transform: skew(-30deg);
+    background-color: #0052A5;
+
+    padding: 14px;
+    padding-right: 18px;
+    padding-left: 18px;
+    box-shadow: 0px 4px 15px 1px rgba(0, 0, 0, 168);
+}
+
+.services-container .row{
+    margin: 0;
 }
 
 .service{
-    height: 300px;
     display: inline-flex;
     margin-top: 50px;
 }
 
 .service .left{
-    width: 50%;
-    height: 100%;
-    margin-right: 10px;
     display: inline-flex;
 }
 
 .service .right{
-    width: 50%;
-    height: 100%;
-    margin-left: 10px;
     display: inline-flex;
 }
 

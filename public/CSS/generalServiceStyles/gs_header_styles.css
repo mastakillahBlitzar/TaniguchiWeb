@@ -36,6 +36,11 @@
     margin: 0 auto;
 }
 
+.menu-container .container{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 
 /* titles por every page */
 .gs-title{
@@ -43,8 +48,22 @@
     background: rebeccapurple;
 }
 
+
+
+/* for small devices */
 @media all and (max-width: 770px){
     .row .top-info .right-container{
         float: left;
+        margin-top: 10px;
     }
+
+    .row .top-info .info-container{
+        margin-top: 6px;
+    }
+
+    .menu-container .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
 }

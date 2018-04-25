@@ -1,19 +1,19 @@
 <footer>
-    <div class="container">
+    <div ng-controller="mpFooterController" class="container">
         <div class="row">
             <span class="col-lg-1 col-md-1 hidden-sm hidden-xs "></span>
 
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 widget">
-                <img src="../R/group_logo.jpg">
+                <img src="../R/footer/group_logo_footer.png">
             </div>
 
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 widget">
                 <h2>お問い合わせ</h2>
                 <article class="widget_content">
                     <ul>
-                        <li><img src="../R/ic_phone_gray.png"><a>0125-23-3725</a></li>
+                        <li><img  src="../R/ic_phone_gray.png"><a>0125-23-3725</a></li>
                         <li><img src="../R/ic_phone_gray.png"><a>FAX 0125-23-2250</a></li>
-                        <li><img src="../R/ic_location_gray.png"><a>北海道滝川市本町2丁目3番5号TSビル1階</a></li>
+                        <li><img ng-click="openNewTabLoc()" src="../R/ic_location_gray.png"><a ng-click="openNewTabLoc()">北海道滝川市本町2丁目3番5号TSビル1階</a></li>
                     </ul>
                 </article>
             </div>
@@ -32,11 +32,20 @@
 
             <span class="col-lg-1 col-md-1 hidden-sm hidden-xs"></span>
         </div>
+
+        <div class="row">
+            <span class="col-lg-1 col-md-1 hidden-sm hidden-xs "></span>
+
+            <div class="divider col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                
+            </div>
+            <span class="col-lg-1 col-md-1 hidden-sm hidden-xs"></span>
+        </div>
     </div>
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 widget" style="text-align: center;">© 2017 | COPYRIGHT. ALL RIGHTS RESERVED <span class="pull-right">Minimize your browser »</span>
+                <div class="col-md-12 widget" style="text-align: center; color: #545454; font-size: 13px;">COPYRIGHT © 2017 ALL RIGHTS RESERVED CREATED BY<span class="pull-right"> OWLINVENTION & BLITZAR CORP.</span>
                 </div>
             </div>
         </div>

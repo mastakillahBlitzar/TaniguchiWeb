@@ -1,0 +1,75 @@
+
+.contact-form{
+    font-size: 12px;
+}
+
+.form-title{
+    font-size: 34px;
+    font-weight: bold;
+    padding: 5px 0px;
+}
+
+.contact-form .gs-contact-form{
+    display: block;
+    padding: 8px 1px;
+}
+
+.contact-form .gs-contact-form .btn-primary{
+    background-image: none;
+    border-radius: 0px;
+    background-color: #0052A4;
+    border-color: #0052A4;
+}
+
+.contact-form .gs-contact-form p.output-msg{
+    font-size: 1.4em;
+}
+
+.contact-form .gs-contact-form .btn{
+    padding: 8px 22px;
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+
+.contact-form .gs-contact-form input{
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-size: 1.1em;
+    outline: none;
+    border: none;
+    /* border-bottom: 1px solid #C1C1C1; */
+    margin-top: 10px;
+    margin-bottom: 14px;
+    padding: 3px 1px;
+    line-height: 2.1;
+    background-image: url('../../R/message-field.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.contact-form .gs-contact-form label{
+    color: #C1C1C1;
+    font-weight: 400;
+}
+
+.contact-form .gs-contact-form .content-input{
+    height: 80px;
+}
+
+.contact-form .gs-contact-form .name-input{
+
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #C1C1C1;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #C1C1C1;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #C1C1C1;
+}

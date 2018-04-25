@@ -1,7 +1,7 @@
 footer {
-    background:black;
+    background-color: #1D1D1D;
     border-top:2px solid #0ea6ff;
-    padding-top: 70px;
+    padding-top: 100px;
    }
 
    footer .container{
@@ -11,19 +11,32 @@ footer {
 
    .widget h2 {
     text-align: left;
-    cursor:pointer;  
     font-size:28px;
     color: white;
     margin: 0px;
     margin-bottom: 10px;
    }
+   .widget h2.orange{
+       font-family: 'M+ Type-1 Medium';
+   }
    .footer-bottom {
-    background: black;
-    padding:15px 0;
-    margin-top: 20px;
-    border-top:1px solid #d9d9d9;
+    padding:0px;
+    padding-top: 26px;
+    padding-bottom: 26px;
     font-size:11px;
     color:#0252A7;
+   }
+
+   .footer-bottom .pull-right{
+       float: none!important;
+       color: #0152A4;
+
+   }
+
+   footer .divider{
+       height: 2px;
+       background-color: #3C3C3C;
+       margin-top: 30px;
    }
 
    footer ul{
@@ -38,6 +51,8 @@ footer {
        padding-top: 10px;
        padding-bottom: 10px;
        color: white;
+       font-size: 18px;
+       cursor:pointer;  
    }
 
    footer ul li img{
@@ -51,6 +66,13 @@ footer {
        color: white;
    }
 
+   footer ul li a:focus, a:hover{
+    font-size: 19px;
+    color: #0052A4;
+    text-decoration: none!important;
+}
+   
+
    footer p{
        color: white;
        margin: 0px;
@@ -58,7 +80,8 @@ footer {
    }
 
    footer img {
-        height: 50px;
+        width: 90%;
+        cursor: pointer;
    }
      
    @media only screen and (max-width: 479px) {    

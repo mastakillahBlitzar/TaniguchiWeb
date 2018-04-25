@@ -1,10 +1,9 @@
 html,
 body {
   width: 100%;
-  height: 100%;
   margin: 0;
   position: relative;
-  background: rebeccapurple;
+  background-color: rgba(192, 192, 192, 0.3);
 }
 
 body .container{
@@ -17,16 +16,27 @@ body .container{
 
 .row .thumbnail{
     padding: 10px;
+    background-color: transparent;
 }
 
 .row .thumbnail .logo-container {
-    border: 2px solid red;
-    
+    border: 2px solid #52E3FE;
+    padding: 20px 10px;
+}
+
+.row .thumbnail .logo-container img{
+    max-width: 100%;
+    cursor: pointer;
 }
 
 body .header .main-title{
     text-align: center;
     padding: 15px;
+    margin: 60px 0px;
+}
+
+body .header .main-title img{
+    max-width: 90%;
 }
 
 body .header .main-title >h1{
@@ -42,9 +52,15 @@ body .header .main-title .subtitle{
     font-family: mangaFont;
 }
 
-.footer{
-    background: black;
+body .footer{
+    background: #2C2C2C;
     border: 0px;
+    margin: 0;
+    border-radius: 0px;
+}
+
+body .row.slider{
+    padding: 30px 0px;
 }
 
 body .row .slider-container{
@@ -59,6 +75,14 @@ body .row .slider-container .thumbnail{
 
 body .row .slider-container .thumbnail .bx-pager-item a{
     border-radius: 0px;
+    width: 50px;
+    background-color: #BEB9C0;
+}
+
+.slider-container .thumbnail .bx-pager.bx-default-pager a:hover, 
+.slider-container .thumbnail .bx-wrapper .bx-pager.bx-default-pager a.active, 
+.slider-container .thumbnail .bx-wrapper .bx-pager.bx-default-pager a:focus{
+    background-color: #291E24;
 }
 
 @media screen and (max-width: 768px){

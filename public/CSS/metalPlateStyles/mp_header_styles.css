@@ -1,0 +1,115 @@
+.row{
+    margin: 0px;
+
+}
+
+.row .top-description{
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.row .top-description .right-container .info-container{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    float: right;
+    margin: 2px 5px;
+}
+
+.row .top-description .right-container .info-container .divider{
+    width: 1px;
+    height: 70%;
+    background-color: #B2B2B2;
+    margin: 0px 5px;
+}
+
+.row .top-description .right-container .info-container .right-text{
+    margin: 0 auto;
+    padding: 3px 4px;
+}
+
+.row .top-description .right-container{
+    height: 47px;
+    padding: 3px;
+    color: #7F7F7F;
+}
+
+.row .top-description .right-container .info-container  h5 {
+    color: #0052A6;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.right-container .info-container p{
+    color: darkgray;
+    margin: 0px;
+}
+
+.menu ul {
+    margin-bottom: 0;
+}
+
+.social{
+    width: 100%;
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.social p.secondaryText {
+    color: darkgray;
+    margin: 0px;
+    float: left;
+}
+
+.social .social-icons{
+    float: right;
+}
+
+.social .social-icons img{
+    width: 29px;
+    height: 25px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-right: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+}
+
+#call-id{
+    padding-right: 0px; 
+    padding-left: 0px; 
+}
+
+.logo-header{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.logo-img{
+    position: relative;
+    width: 30%;
+}
+
+.info-container img{
+    padding: 3.5px;
+    cursor: pointer;
+}
+
+
+
+.img-container{
+    position: absolute;
+    opacity: 0.75;
+    filter: alpha(opacity=20);
+    width: 100%; /* or any custom size */
+    height: 100%; 
+}
+
+/* header styles */

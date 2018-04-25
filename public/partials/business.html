@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <title>Metal Plate business</title>
         <link rel="stylesheet" href="../CSS/menu.css" type="text/css">
         <link rel="stylesheet" href="../CSS/footer.css" type="text/css">
         <link rel="stylesheet" href="../CSS/main.css" type="text/css">
         <link rel="stylesheet" href="../CSS/business_styles.css" type="text/css">
-
+        <link rel="stylesheet" href="../CSS/metalPlateStyles/mp_header_styles.css" />
         <link rel="stylesheet" href="../CSS/lightslider/lightslider.css" type="text/css">
 
 
@@ -13,7 +14,7 @@
 </head>
 <header>
 
-    <div w3-include-html="/partials/mp_header.html"></div>
+    <div ng-include src="'partials/mp_header.html'"></div>
 
 </header>
 
@@ -190,16 +191,16 @@
                         
                     <ul id="lightSlider">
                             <li>
-                                <img src="" alt="pic1" class="img-thumb" />
+                                <img src="../R/thumbs/factory_exterior.jpg" alt="pic1" class="img-thumb" />
                             </li>
                             <li>
-                                <img src="" alt="pic2" class="img-thumb" />
+                                <img src="../R/thumbs/machine_1.jpg" alt="pic2" class="img-thumb" />
                             </li>
                             <li>
-                                <img src="" alt="pic3" class="img-thumb" />
+                                <img src="../R/thumbs/Roofwhite-Original.jpg" alt="pic3" class="img-thumb" />
                             </li>
                             <li>
-                                <img src="" alt="pic4" class="img-thumb" />
+                                <img src="../R/thumbs/machine_2.jpg" alt="pic4" class="img-thumb" />
                             </li>
                     </ul>
 
@@ -209,7 +210,7 @@
 
     </div>
 
-        <div w3-include-html="/partials/mp_footer.html"></div>
+        <div ng-include src="'partials/mp_footer.html'"></div>
 
         <script type="text/javascript">
 
@@ -288,7 +289,6 @@
             });
           </script>
 
-        <script>w3.includeHTML();</script>
     </body>
 
    

@@ -1,3 +1,8 @@
+
+body{
+    font-family: mangaFont;
+}
+
 .main-page-header{
     background-color: #272727;
     padding: 40px;
@@ -98,8 +103,8 @@
 }
 
 .address-container .row .thumbnail > table tr td{
-    font-size: 17px;
-    font-family: mangaFont;
+    font-size: 32px;
+    font-family: M+ Type-1 Light;
 }
 
 

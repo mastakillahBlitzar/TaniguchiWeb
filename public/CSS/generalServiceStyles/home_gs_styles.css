@@ -1,0 +1,142 @@
+body #gs-home-slider .bx-wrapper{
+    border: 0px;
+    height: 480px;
+    overflow: hidden;
+}
+
+body .home-main-body .for-customers{
+    background-color: white;
+
+}
+
+body .home-main-body .for-customers .wrapper #to-sell{
+    padding: 15px 0px;
+}
+
+body .home-main-body .for-customers .wrapper #to-buy{
+    padding: 15px 0px;
+}
+
+body .home-main-body .for-customers .wrapper #to-sell .inner{
+    background-color: #0052A4;
+    padding: 20px 0px;
+    transform: skewX(-30deg);
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+}
+
+body .home-main-body .for-customers .wrapper #to-buy .inner {
+    background-color: #282828;
+    padding: 20px 0px;
+    transform: skewX(30deg);
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+}   
+
+body .home-main-body .for-customers .wrapper #to-sell .inner .text{
+    margin: 0 auto;
+    color: white;
+    transform: skewX(30deg);
+}
+
+body .home-main-body .for-customers .wrapper #to-sell .inner .text h3{
+    font-weight: bold;
+    font-size: 27px;
+}
+
+body .home-main-body .for-customers .wrapper #to-sell .inner .text p{
+   
+}
+
+body .home-main-body .for-customers .wrapper #to-sell .inner .btn-container{
+    background-color: #F8F8F8;
+    height: 30%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+body .home-main-body .for-customers .wrapper #to-sell .inner .btn-container p{
+    margin: 0px;
+    transform: skewX(30deg);
+    color: #0052A4;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* TO SELL banner styles */
+body .home-main-body .for-customers .wrapper #to-buy .inner .text{
+    margin: 0 auto;
+    color: white;
+    transform: skewX(-30deg);
+}
+
+body .home-main-body .for-customers .wrapper #to-buy .inner .text h3{
+    font-weight: bold;
+    font-size: 27px;
+}
+
+body .home-main-body .for-customers .wrapper #to-buy .inner .text p{
+   
+}
+
+body .home-main-body .for-customers .wrapper #to-buy .inner .btn-container{
+    background-color: #F8F8F8;
+    height: 30%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+body .home-main-body .for-customers .wrapper #to-buy .inner .btn-container p{
+    margin: 0px;
+    transform: skewX(-30deg);
+    color: #282828;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* Company about styles */
+body .home-main-body .gs-mission{
+    background-color: #F9F9F9;
+    padding: 25px 0px;
+}
+
+body .home-main-body .gs-mission .wrapper{
+    display: inline-flex;
+}
+
+body .home-main-body .gs-mission .wrapper .left{
+    padding: 0px;
+}
+
+body .home-main-body .gs-mission .wrapper .left h2{
+    color: #282828;
+    font-weight: 900;
+}
+
+body .home-main-body .gs-mission .wrapper .left h2 #custom-border{
+    border-bottom: 2px solid #0052A5;
+    position: absolute;
+    left: 0;
+    right: 80%;
+    margin-top: 4px;
+}
+
+body .home-main-body .gs-mission .wrapper .left p{
+    color: #555555;
+    margin-bottom: 22px;
+}
+
+body .home-main-body .gs-mission .wrapper .left p.darker{
+    margin-top: 22px;
+    font-weight: 700;
+}
+
+
+body .home-main-body .gs-mission .wrapper .right{
+    padding: 0px;
+}   

@@ -35,6 +35,21 @@ router.post('/addArticle', function(req, res, next){
     
 });
 
+// GET for list one article
+router.get('/getArticles/:id', function (req, res, next) {
+    var id = req.params.id;
+    ArticleModel.findOne({
+        _id : id
+    }, function(err, article){
+        if(err){
+            res.status(501).json({
+                status: 'Internal Error'
+            })
+        }else{
+            res.send(article);
+        } 
+    }); 
+}); 
 
 // GET for list all articles
 router.get('/getArticles', function (req, res, next) {
@@ -45,6 +60,30 @@ router.get('/getArticles', function (req, res, next) {
                 })
             }else{
                 res.send(articles);
+            }
+        });
+  });
+
+  router.put('/updateArticle/:id', function(req, res){
+        var id = req.params.id;
+        ArticleModel.findById(id, function (err, article){
+            if(err){
+                res.status(501).json({
+                    status: 'Internal Error'
+                })
+            } else {
+                article.title = req.body.title;
+                article.content = req.body.content;
+                article.pictures = req.body.pictures;
+
+                article.save(function(err, article){
+                    if(err){
+                        res.status(500).send(err);
+                    }
+                    res.status(200).json({
+                        status: 'Article Edited'
+                    });
+                });
             }
         });
   });

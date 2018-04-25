@@ -1,0 +1,140 @@
+/* titles por every page */
+.gs-title-container{
+    height: 240px;
+    text-align: center;
+    background-image: url('../../R/gsbg/contact_bg.png');
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.gs-title-container .title{
+    color: white;
+    margin: 0 auto;
+    font-size: 3.3em;
+}
+
+body .owners-main-body .row{
+    background-color: transparent;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+body .owners-main-body .row .owners-info{
+    display: block;
+}
+
+body .owners-main-body .row .owners-info .wrapper-row{
+    display: flex;
+    align-items: center;
+    padding: 8px 0px;
+}
+
+body .owners-main-body .row .owners-info .wrapper-row .icon{
+    display: flex;
+    align-items: center;
+    background-image: url('../../R/bullet-point.png');
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 45px;
+}
+
+
+body .owners-main-body .row .owners-info .wrapper-row .icon .enum{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0 auto;
+    transform: translateY(-27%);
+}
+
+body .owners-main-body .row .owners-info .wrapper-row .info-text{
+    margin-left: 12px;
+    color: #555555;
+    font-size: 1.1em;
+}
+
+body .owners-main-body .row .owners-info .owners-voice{
+    
+}
+
+body .owners-main-body .row .owners-info .owners-voice .title{
+    margin: 16px 0px;
+    display: flex;
+    align-items: center;
+}
+
+body .owners-main-body .row .owners-info .owners-voice .title h4{
+    color: #0051A3;
+    margin: 0 auto;
+    font-size: 3.2em;
+}
+
+body .owners-main-body .row .owners-info .owners-voice .title h4 span{
+    color: black;
+    font-weight: bold;
+}
+
+body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row{
+    padding: 10px 0px;
+    margin: 5px 0px;
+}
+
+body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .img-container{
+    padding: 0px;   
+    display: flex;
+    align-items: center;
+}
+
+body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .img-container .house-img {
+    padding: 10px;
+    border: 2px #D3D3D3 solid;
+    width: 80%;
+}
+
+body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .img-container .house-img img{
+    width: 100%;
+        
+}
+
+body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .img-container .reviewer-img{
+    position: absolute;
+    width: 40%;
+    right: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 8px;
+    background-color: white;
+}
+
+body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .img-container .reviewer-img img{
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .review{
+    
+}
+
+body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .review .review-title{
+    font-size: 1.8em;
+    color: #292929;
+    font-weight: bold;
+
+}
+
+body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .review .review-text{
+    color: #444444;
+}
+
+body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .ng-scope{
+    display: flex;
+    align-items: center;
+}
+
+body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row.oddie .img-container.reviewer-img{
+    right: 291px;
+}

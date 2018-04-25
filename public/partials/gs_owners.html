@@ -1,43 +1,125 @@
 <!DOCTYPE>
 <html>
-    <head>
-        <title>
 
-        </title>
+<head>
+    <title>
 
-        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_owners_styles.css"/>
-        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_header_styles.css"/>
-        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_menu_styles.css"/>
-        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_footer_styles.css"/>
-        
-    </head>
-    <header>
-            <div w3-include-html="/partials/gs_header.html"></div>
-            
-        
-    </header>
-    <body>
-        <div class="gs-title">
-                OWNER OF RENTAL APARTMENT <br> APARTMENT HOUSE
+    </title>
 
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_owners_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_header_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_menu_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_footer_styles.css" />
+
+</head>
+<header>
+    <div ng-include src="'partials/gs_header.html'"></div>
+
+
+</header>
+
+<body>
+    <div class="gs-title-container">
+        <div class="title">
+            OWNER OF RENTAL APARTMENT
+            <br> RENTAL HOUSE
         </div>
-            
 
-            <footer>
-                    <div w3-include-html="/partials/gs_footer.html"></div>
-            </footer>
+    </div>
 
-            <script>w3.includeHTML();</script>
-            <script>
-            $(document).ready(function(){   
-                var hash = window.location.hash;
-                console.log(window.location.hash);
-                $('.nav > li > a[href="'+hash+'"]').parent().addClass('active');
-            });
+    <div class="owners-main-body" ng-controller="OwnersPgCtrl">
+        <div class="row">
+            <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
+            <div class="owners-info col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                <!-- recommendations -->
+                <div class="wrapper-row" ng-repeat="info in ownersInfo">
+                    <div class="icon">
+                        <span class="enum">{{info.id}}</span>
+                    </div>
+                    <div class="info-text">
+                        <p>{{info.msg}}</p>
+                    </div>
+                </div>
 
-            </script>
-            
-            <!-- bxSlider Javascript file -->
-            <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
-    </body>
+                <!-- reviews -->
+                <div class="owners-voice">
+                    <div class="title">
+                        <h4>Owner's
+                            <span>voice</span>
+                        </h4>
+                    </div>
+                    <div class="review-wrapper row" ng-repeat="review in reviews" ng-class-odd="oddie">
+                        <div ng-if="$even">
+                            <div class="img-container col-lg-5 col-md-5">
+                                <div class="house-img">
+                                    <img ng-src="{{review.houseImgPath}}" alt="Modern House" />
+                                </div>
+                                <div class="reviewer-img">
+                                    <img ng-src="{{review.reviewerPath}}" alt="Reviewer" />
+                                </div>
+                            </div>
+                            <div class="review col-lg-7 col-md-7">
+                                <div class="review-title">
+                                    {{review.title}}
+                                </div>
+                                <div class="review-text">
+                                    {{review.text}}
+                                </div>
+
+                            </div>
+                        </div>
+<!-- if odd evaluates to true, show pictures aligned to right of the screen -->
+                        <div ng-if="$odd">
+                            <div class="review col-lg-7 col-md-7">
+                                    <div class="review-title">
+                                        {{review.title}}
+                                    </div>
+                                    <div class="review-text">
+                                        {{review.text}}
+                                    </div>
+    
+                                </div>
+
+                            <div class="img-container col-lg-5 col-md-5">
+                                <div class="house-img">
+                                    <img ng-src="{{review.houseImgPath}}" alt="Modern House" />
+                                </div>
+                                <div class="reviewer-img">
+                                    <img ng-src="{{review.reviewerPath}}" alt="Reviewer" />
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
+        </div>
+
+
+    </div>
+
+
+    <footer>
+        <div ng-include="'partials/gs_footer.html'"></div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            var hash = window.location.hash;
+            console.log(window.location.hash);
+            $('.nav > li > a[href="' + hash + '"]').parent().addClass('active');
+        });
+
+    </script>
+
+    <!-- bxSlider Javascript file -->
+    <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
+</body>
+
 </html>

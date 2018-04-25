@@ -1,4 +1,6 @@
-
+body{
+    font-family: mangaFont;
+}
 
 .main-page-header{
     background-color: #272727;
@@ -93,6 +95,4 @@
 }
 
 #thumbnail-slider ul li {
-    background-color: red;
-    height: 200px;
 }

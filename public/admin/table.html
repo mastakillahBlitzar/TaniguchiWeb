@@ -255,6 +255,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										<div class="tables">
 										
 											<table class="table table-hover" ng-controller="ArticleController"> 
+												<p class="output-msg">{{outputMsg}}</p>
 												<thead> 
 													<tr> 
 														<th>#</th> 
@@ -268,7 +269,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 															<td><input class="form-control" ng-model="article.title" disabled></td>
 															<td><input class="form-control" ng-model="article.content" disabled></td>
 															<td></td>
-															<td><a class="btn blue" ng-click="redirectToForm()">+ 記事を追加</a></td>
+															<td><a class="btn blue" ng-click="redirectToForm(null)">+ 記事を追加</a></td>
 														</tr>
 														<tr ng-repeat="article in articleList"> 
 															<th scope="row">{{article._id}}</th> 
@@ -276,7 +277,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 															<td>{{article.content}}</td>
 															<td>{{article.date}}</td>
 															<td><button class="btn btn-danger" ng-click="remove(article._id)">削除</button></td>
-															<td><button class="btn btn-warning" ng-click="edit(article._id)">編集</button></td>
+															<td><button class="btn btn-warning" ng-click="redirectToForm(article._id)">編集</button></td>
 														</tr>
 													</tbody> 
 											</table>

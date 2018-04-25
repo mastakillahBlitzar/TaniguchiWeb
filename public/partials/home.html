@@ -1,281 +1,307 @@
 <!DOCTYPE>
 <html>
+
 <head>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <title>Taniguchi Corp.</title>
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <title>Taniguchi Corp. metal plate ltda.</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
     <link rel="stylesheet" href="../plugins/facebooklikeslider/css/jquery.bxslider.css">
     <link rel="stylesheet" href="../CSS/main.css" type="text/css">
     <link rel="stylesheet" href="../CSS/menu.css" type="text/css">
     <link rel="stylesheet" href="../CSS/footer.css" type="text/css">
     <link rel="stylesheet" href="../CSS/article_box.css" type="text/css">
-    <link rel="stylesheet" href="../CSS/services_circle.css" type="text/css">
-    
-<!--    <script src="scripts/responsivemenu.js"></script>-->
-        
+    <link rel="stylesheet" href="../CSS/metalPlateStyles/mp_header_styles.css" />
+
+
+    <!--    <script src="scripts/responsivemenu.js"></script>-->
+
 </head>
 <header>
-    
-    <div w3-include-html="/partials/mp_header.html"></div>
 
-    </header>
-    
-    <body >
-        
-        <div class="body-container">
-            <div class="cycle-slideshow"
-                 data-cycle-fx="fadeout"
-                 data-cycle-speed=1500
-                 data-cycle-timeout=3000
-                 data-cycle-caption-plugin="caption2"
-                 data-cycle-overlay-fx-out="slideUp"
-                 data-cycle-overlay-fx-in="slideDown">
-                
-                <div class="cycle-pager"></div>
-                <div class="cycle-overlay"></div>
-                
-                <img src="../R/slider1.jpg" 
-                     data-cycle-title="<h1 style=font-weight: bold,
-                        color: red;>確かな技術と最新鋭の設備。</h1>" 
-                     data-cycle-desc="半世紀に渡る信頼に支えられて<br> 私たちは、あらゆるニーズに取り組み続けています。" 
-                     alt="WE WORK FOR YOU">
-                
-                <img src="../R/slider2.JPG" 
-                     data-cycle-title="<h1>確かな技術と最新鋭の設備。</h1>" 
-                     data-cycle-desc="半世紀に渡る信頼に支えられて<br> 私たちは、あらゆるニーズに取り組み続けています。" 
-                     alt="WE WORK FOR YOU">
-                
-                <img src="../R/slider3.JPG" 
-                     data-cycle-title="<h1>確かな技術と最新鋭の設備。</h1>" 
-                     data-cycle-desc="半世紀に渡る信頼に支えられて<br> 私たちは、あらゆるニーズに取り組み続けています。" 
-                     alt="WE WORK FOR YOU">
-    
-            </div>       
+    <div ng-include src="'partials/mp_header.html'"></div>
+
+</header>
+
+<body>
+
+    <div class="body-container">
+
+
+        <div class="bxslider">
+            <div>
+                <img src="../R/mp_home/materials_1.jpg" title="確かな技術と最新鋭の設備。" />
+            </div>
+            <div>
+                <img src="../R/mp_home/slider1.jpg" title="The long and winding road" />
+            </div>
+            <div>
+                <img src="../R/mp_home/machine_black.jpg" title="Happy trees" />
+            </div>
         </div>
-        
-        <div class="main-body">
+
+
+    </div>
+
+    <div class="main-body">
 
         <div class="options-section">
-            
+
             <div class="row" style="max-width: 100%; margin: 0;">
                 <span class="col-lg-1 col-md-1 col-sm-2 hidden-xs" style="padding: 0; margin: 0"></span>
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0" style="padding: 0px; ">
-                
-                  <div class="thumbnail col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="box-icon">
-                        <img class="img-icon" src="../R/services_black.png">
-                    </div>
-                    <div class="caption" style="background-image: url('../R/service_content.jpg');">
-                      <h3>事業内容</h3>
-                      <p>...</p>
-                      </div>
-                  </div>
 
-                    <div class="thumbnail col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="box-icon">
-                            <img class="img-icon" src="../R/company_black.png">
+                    <div class="thumbnail col-lg-3-and-half col-md-3-and-half col-sm-3-and-half col-xs-12">
+                        <div class="box-icon" id="box-1">
+                            <img class="img-icon" src="../R/services_black.png">
                         </div>
-                      <div class="caption" style="background-image: url('../R/service_content2.jpg');">
-                        <h3>会社概要</h3>
-                        <p>...</p>
-                         </div>
+                        <div class="caption" id="cap-1" >
+                            <h3>事業内容</h3>
+                            <p>...</p>
+                        </div>
                     </div>
-                    <div class="thumbnail col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="box-icon">
-                            <img class="img-icon" src="../R/contact_black.png">
+
+                    <div class="thumbnail col-lg-3-and-half col-md-3-and-half col-sm-3-and-half col-xs-12 col-lg-offset-3-cuarters">
+                        <div class="box-icon" id="box-2">
+                            <img class="img-icon" src="../R/icons/company_icon_unactive.png">
                         </div>
-                      <div class="caption" style="background-image: url('../R/service_content3.jpg'); ">
-                        <h3>お問い合わせ</h3>
-                        <p>...</p>
-                         </div>
+                        <div class="caption" id="cap-2">
+                            <h3>会社概要</h3>
+                            <p>...</p>
+                        </div>
+                    </div>
+                    <div class="thumbnail col-lg-3-and-half col-md-3-and-half col-sm-3-and-half col-xs-12 col-lg-offset-3-cuarters">
+                        <div class="box-icon" id="box-3">
+                            <img class="img-icon" src="../R/icons/contact_icon_unactive.png">
+                        </div>
+                        <div class="caption" id="cap-3">
+                            <h3>お問い合わせ</h3>
+                            <p>...</p>
+                        </div>
                     </div>
                 </div>
                 <span class="col-lg-1 col-md-1 col-sm-2 hidden-xs" style="padding: 0; margin: 0"></span>
             </div>
         </div>
-        
+
         <div class="about-section">
-            
+
             <div class="title-company" style="width: 100%">
-            <h1><span class="section-title-bold">谷口板金</span><span class="section-title">とは…</span></h1>
+                <h1>
+                    <span class="section-title-bold">谷口板金</span>
+                    <div class="section-title">
+                        <div class="title">とは…</div> 
+                        <div class="deco-container">
+                            <div class="ball"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </h1>
             </div>
-               <p class="about-text">有限会社谷口板金工業所は、屋根・外壁工事を専門とする会社です。</p><h2>屋根・外壁のことならおまかせください。</h2><br><p class="about-text">住宅から工場やビル・神社仏閣などの大規模施設まで、あらゆる建築物に対応し工事いたします。<br>長年の実績と豊富な経験で培った技術、そして最新鋭の設備でお客様のあらゆるニーズにお応えします。</p>  
-            
-               <div class="row" style="padding: 0px; margin: 0px; padding-top: 10px;">
-                    <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
-                        <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
-                            <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6" style="padding-right: 0px; padding-left: 0px;">
+            <p class="about-text">有限会社谷口板金工業所は、屋根・外壁工事を専門とする会社です。</p>
+            <h2>屋根・外壁のことならおまかせください。</h2>
+            <br>
+            <p class="about-text">住宅から工場やビル・神社仏閣などの大規模施設まで、あらゆる建築物に対応し工事いたします。
+                <br>長年の実績と豊富な経験で培った技術、そして最新鋭の設備でお客様のあらゆるニーズにお応えします。</p>
 
-                                <div class="about-content">
-                                            
-                                    <div class="about-content left">
-                                        <p>There are many variations passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour or randomissed words which don't look even slightly belieavable if you are going to use a passage of Lorem Ipsum you need to be sure there isnt anything embarrasing hidden in the middle of text</p>
-                                        
-                                        <p>If you are going to use a passage of Lorem Ipsum you need to be sure there isnt anything embarrasing hidden in the middle of text</p>
-                                    
-                                        <p>There are many variations passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour or randomissed words which don't look even slightly belieavable </p>
-                                
-                                    </div>
-                                    
-                                
-                                </div>   
-                            
-                            </div>
-                            <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6" style="padding-right: 0px; padding-left: 0px;">
+            <div class="row" style="padding: 0px; margin: 0px; padding-top: 10px;">
+                <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+                <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6" style="padding-right: 0px; padding-left: 0px;">
 
-                                    <div class="about-content">
-                                            
-                                        <div class="about-content right">
-                                                <img src="../R/machine.jpg">
-                                        </div>
-                                    
-                                    </div>
-                                        
+                        <div class="about-content">
+
+                            <div class="about-content left">
+                                <p>There are many variations passages of Lorem Ipsum available, but the majority have suffered
+                                    alteration in some form by injected humour or randomissed words which don't look even
+                                    slightly belieavable if you are going to use a passage of Lorem Ipsum you need to be
+                                    sure there isnt anything embarrasing hidden in the middle of text</p>
+
+                                <p>If you are going to use a passage of Lorem Ipsum you need to be sure there isnt anything
+                                    embarrasing hidden in the middle of text</p>
+
+                                <p>There are many variations passages of Lorem Ipsum available, but the majority have suffered
+                                    alteration in some form by injected humour or randomissed words which don't look even
+                                    slightly belieavable </p>
+
                             </div>
-                        </div>         
-                    <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6" style="padding-right: 0px; padding-left: 0px;">
+
+                        <div class="about-content">
+
+                            <div class="about-content right">
+                                <img src="../R/mp_home/machine_blue.jpg">
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
-        
+                <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+            </div>
+
         </div>
-        
+
         <div class="news-section">
             <div class="title-company" style="width: 100%;">
-                <h1><span class="section-title-bold">谷口板金</span><span class="section-title">NEWS</span></h1>
+                <h1>
+                    <span class="section-title-bold">谷口板金</span>
+                    <span class="section-title">
+                        
+                        <div class="title">NEWS</div> 
+                        <div class="deco-container">
+                            <div class="ball"></div>
+                            <div class="line"></div>
+                        </div>
+                    </span>
+                </h1>
             </div>
 
             <div class="row" ng-controller="HomeNewsController">
-                    <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
-                    <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
+                <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
+                <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
                     <div class="col-sm-6 col-md-4" ng-repeat="article in articleList | limitTo : 3">
                         <div class="thumbnail">
-                        <!-- <img ng-src="{{article.imgUrl}}" alt="..."> -->
-                        <img ng-src="{{article.pictures[0].url}}" alt="...">
-                        <div class="caption">
-                            <div class="article-foot">
+                            <!-- <img ng-src="{{article.imgUrl}}" alt="..."> -->
+                            <img ng-src="{{article.pictures[0].url}}" alt="...">
+                            <div class="caption">
+                                <div class="article-foot">
                                     <div class="date">
                                         <p class="day">{{article.daymonth}}</p>
                                         <p class="year">{{article.date | limitTo : 4}}</p>
 
                                     </div>
                                     <div class="author">By: Sayuri San</div>
-                            </div>
-                            <h3>{{article.title}}</h3>
-                            <p>{{article.content}}</p>
-                            <a  class="btnClick"  data-toggle="modal"  data-target="#modal{{article._id}}">Read More >></a>
-                           
-                            <!-- Modal -->
-                            <div class="modal fade" id="modal{{article._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        
-                                <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                    <h5 class="modal-title" >{{article.title}}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    </div>
-                                    <div class="modal-body">
-                                            
-                                            <div class="slider">
-                                                    <div ng-repeat="picture in article.pictures | limitTo : 4 : 1">                                         
-                                                            <img ng-src="{{picture.url}}" ng-attr-title="{{picture.description}}" />                                                          
-                                                    </div>
-                                                    
+                                </div>
+                                <h3 class="article-title">{{article.title}}</h3>
+                                <p>{{article.content}}</p>
+                                <a class="btnClick" data-toggle="modal" data-target="#modal{{article._id}}">Read More >></a>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="modal{{article._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">{{article.title}}</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
                                             </div>
-                                            <script>
-                                                $(".btnClick").click(function(){
-                                                    setTimeout(function(){
-                                                        $('.slider').bxSlider({
-                                                            mode: 'fade',
-                                                            captions: true,
-                                                            touchEnabled: true
-                                                        });
-                                                    }, 280);
-                                                });
-                                            </script>
-                                    </div>
-                                   
-                                    <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <div class="modal-body">
+
+                                                <div class="slider">
+                                                    <div ng-repeat="picture in article.pictures | limitTo : 4 : 1">
+                                                        <img ng-src="{{picture.url}}" ng-attr-title="{{picture.description}}" />
+                                                    </div>
+
+                                                </div>
+                                                <script>
+                                                    $(".btnClick").click(function () {
+                                                        setTimeout(function () {
+                                                            $('.slider').bxSlider({
+                                                                mode: 'fade',
+                                                                captions: true,
+                                                                touchEnabled: true
+                                                            });
+                                                        }, 280);
+                                                    });
+                                                </script>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                </div>
+
+
                             </div>
-                            
-                            
-                        </div>
                         </div>
                     </div>
                 </div>
-               
+
                 <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
-                
+
             </div>
-        
+
         </div>
-        
+
         <div class="bottom-box">
 
-                <div class="row" style="padding: 0px; margin: 0px">
-                        <span class="col-lg-2 hidden-xs col-md-2 col-sm-2"></span>
-                        <div class="col-lg-8 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
+            <div class="row" style="padding: 0px; margin: 0px">
+                <span class="col-lg-2 hidden-xs col-md-2 col-sm-2"></span>
+                <div class="col-lg-8 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
 
-                                <div class="col-xs-12 col-md-4 col-lg-4 col-sm-8" style="padding-right: 0px; padding-left: 0px;">
-                                        <div class="contact-box">
-                                                <span class="contact-title">お問い合わせ</span>
-    
-                                                    <form class="contact-form">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" name="content" placeholder="お問い合わせ内容＊" >
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" name="nameKanji" placeholder="お名前（漢字）＊" >
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" name="namekatakana" placeholder="お名前（カタカナ）＊" >
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" name="email" placeholder="E-mail＊" >
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="email" class="form-control" id="tel" placeholder="電話番号＊">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" id="fax" placeholder="FAX番号">
-                                                        </div>
-                                                    <button type="submit" class="btn btn-default">送信</button>
-                                                    </form>
+                    <div class="col-lg-5 col-md-5 col-sm-8 col-xs-12" style="padding-right: 0px; padding-left: 0px;">
+                        <div class="contact-box">
+                            <h3 class="contact-title">お問い合わせ</h3>
 
-                                            </div>
-
+                            <form class="contact-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="content" placeholder="お問い合わせ内容＊">
                                 </div>
-
-                                <div class="col-xs-12 col-md-8 col-lg-8 col-sm-12" style="padding-right: 0px; padding-left: 0px;">
-                                        <div class="map-container" >
-                                                
-                                                <iframe  class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d722.8132867177167!2d141.90654682920848!3d43.5596079705375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0c98d88d92de73%3A0x6893b993c8972458!2zSmFwYW4sIOOAkjA3My0wMDIxIEhva2thaWTFjSwgVGFraWthd2Etc2hpLCBIb25tYWNoaSwgMiBDaG9tZeKIkjPiiJI1LCDvvLTvvLPjg5Pjg6s!5e0!3m2!1sen!2sus!4v1512529915990" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                            
-                                        </div>
-
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="nameKanji" placeholder="お名前（漢字）＊">
                                 </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="namekatakana" placeholder="お名前（カタカナ）＊">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="email" placeholder="E-mail＊">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="tel" placeholder="電話番号＊">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="fax" placeholder="FAX番号">
+                                </div>
+                                <button type="submit" class="btn btn-primary">送信</button>
+                            </form>
 
                         </div>
-                        <span class="col-lg-2 hidden-xs col-md-2 col-sm-2"></span>
-                </div>
-        </div>
 
-        
-        <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnleYwXg3nbEGFus9O_9-4LnIjIhMuS4U&callback=initialize">
+                    </div>
+
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12" style="padding-right: 0px; padding-left: 0px;">
+                        <div class="map-container">
+
+                            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d722.8132867177167!2d141.90654682920848!3d43.5596079705375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0c98d88d92de73%3A0x6893b993c8972458!2zSmFwYW4sIOOAkjA3My0wMDIxIEhva2thaWTFjSwgVGFraWthd2Etc2hpLCBIb25tYWNoaSwgMiBDaG9tZeKIkjPiiJI1LCDvvLTvvLPjg5Pjg6s!5e0!3m2!1sen!2sus!4v1512529915990"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <span class="col-lg-2 hidden-xs col-md-2 col-sm-2"></span>
+            </div>
+        </div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnleYwXg3nbEGFus9O_9-4LnIjIhMuS4U">
         </script>
-    
-        
+        <script>
+            $(function () {
+                $('.bxslider').bxSlider({
+                    mode: 'fade',
+                    captions: true,
+
+                });
+            });
+        </script>
+
         <!-- <script>
         $(document).ready(readyDocument);
             
@@ -297,21 +323,10 @@
             }
         </script> -->
 
-        <div w3-include-html="/partials/mp_footer.html"></div>
+        <div ng-include src="'partials/mp_footer.html'"></div>
 
         <script type="text/javascript" src="../scripts/jquery.cycle2.min.js"></script>
         <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
-        <script>w3.includeHTML();</script>
-    </body>
+</body>
 
-    
-    
-
-
-
-   
-    
 </html>
-
-
-

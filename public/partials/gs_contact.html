@@ -1,44 +1,130 @@
 <!DOCTYPE>
 <html>
-    <head>
-        <title>
 
-        </title>
+<head>
+    <title>
 
-        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_contact_styles.css"/>
-        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_header_styles.css"/>
-        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_menu_styles.css"/>
-        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_footer_styles.css"/>
-    </head>
-    <header>
-            <div w3-include-html="/partials/gs_header.html"></div>
-            
+    </title>
+
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_contact_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_header_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_menu_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_footer_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_contact_form.css" />
+</head>
+<header>
+    <div ng-include src="'partials/gs_header.html'"></div>
+
+
+
+</header>
+
+
+<body>
+
+    <div class="gs-title-container">
+        <div class="title">
+                CONTACT US
+        </div>
         
+    </div>
 
-    </header>
- 
+    <div class="contact-main-body">
 
-    <body>
+        <div class="row">
 
-            <div class="gs-title">
-                    CONTACT US
-    
+            <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
+
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+
+                <div ng-controller="gsContactFormCtrl" class="contact-form col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-title">Get in Touch</div>
+                    <form name="gsContactForm"class="gs-contact-form" ng-submit="sendContactForm(gscontact)">
+
+                        <input ng-model="gscontact.name" class="name-input" name="gscontact.name" type="text" placeholder="NAME*">
+                        <input ng-model="gscontact.email" class="email-input" name="gscontact.email" type="email" placeholder="EMAIL">
+                        <input ng-model="gscontact.phone" class="telephone-input" name="gscontact.phone" type="tel" placeholder="TELEPHONE NUMBER">
+                        <input ng-model="gscontact.fax" class="fax-input" name="gscontact.fax" type="tel" placeholder="FAX NUMBER">
+                        <label>CONTENT OF INQUIRY*</label>
+                        <input ng-model="gscontact.content" class="content-input" name="gscontact.content" type="text" placeholder="">
+                        <p class="output-msg">{{message}}</p>
+                        <button type="submit" class="btn btn-primary" role="button">SEND MESSAGE</button>
+                    </form>
+                </div>
+
+                <div class="contact-info col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-title">
+                        Inquiries are accepted here.
+                    </div>
+                    <div class="contact-opt">
+                        <div class="info-wrapper">
+                            <div class="img-wrapper">
+                                <img src="../R/icons/phone.png" alt="phone">
+
+                            </div>
+                            <div class="number">0125-23-9289</div>
+                        </div>
+                        <div class="info-wrapper">
+                            <div class="img-wrapper">
+                                <img src="../R/icons/fax.png" alt="fax">
+                            </div>
+                            <div class="number">0125-23-2250</div>
+                        </div>
+                    </div>
+                    <div class="map-container" >
+                                                
+                        <div id="map"></div>
+                    
+                </div>
+                </div>
+
             </div>
 
+            <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
 
-        <footer>
-                <div w3-include-html="/partials/gs_footer.html"></div>
-        </footer>
-        
-        <script>w3.includeHTML();</script>
-        <script>
-            $(document).ready(function(){   
-                var hash = window.location.hash;
-                console.log(window.location.hash);
-                $('.nav > li > a[href="'+hash+'"]').parent().addClass('active').siblings().removeClass('active');
+        </div>
+    </div>
+
+
+    <footer>
+        <div ng-include src="'partials/gs_footer.html'"></div>
+    </footer>
+    <script>
+        function initMap(){
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 43.5595703, lng: 141.9049131},
+                zoom: 17,
+                disableDefaultUI: true
             });
+
+            var infowindow = new google.maps.InfoWindow();
+            var service = new google.maps.places.PlacesService(map);
+
+            service.getDetails({
+                placeId: 'ChIJq6qWjdiYDF8RpzXo9vSzhQA'
+            }, function(place, status){
+                if(status === google.maps.places.PlacesServiceStatus.OK){
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: place.geometry.location
+                    });
+                    map.setCenter(marker.getPosition());
+                }
+            })
+        }
         </script>
-           <!-- bxSlider Javascript file -->
-           <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
-    </body>
+    <script>
+        $(document).ready(function () {
+            var hash = window.location.hash;
+            console.log(window.location.hash);
+            $('.nav > li > a[href="' + hash + '"]').parent().addClass('active').siblings().removeClass('active');
+        });
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnleYwXg3nbEGFus9O_9-4LnIjIhMuS4U&libraries=places&callback=initMap">
+</script>
+    <!-- bxSlider Javascript file -->
+    <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
+</body>
+
 </html>

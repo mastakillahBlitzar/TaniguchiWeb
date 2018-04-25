@@ -1,58 +1,142 @@
 <!DOCTYPE>
 <html>
-    <head>
-        <title>
 
-        </title>
+<head>
+    <title>
 
-        <link rel="stylesheet" href="../CSS/generalServiceStyles/home_gs_styles.css"/>
-        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_header_styles.css"/>
-        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_menu_styles.css"/>
-        <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_footer_styles.css"/>
-        <!-- bxSlider CSS file -->
-        <link href="../plugins/facebooklikeslider/css/jquery.bxslider.css" rel="stylesheet" />
-        
-    </head>
-    <header>
-            <div w3-include-html="/partials/gs_header.html"></div>
-            
-        
-    </header>
-    <body>
-        <div id="gs-home-slider">
-                <div class="bxslider">
-                        <div><img src="../R/article1.jpg" title="Funky roots"></div>
-                        <div><img src="../R/article2.jpg" title="The long and winding road"></div>
-                        <div><img src="../R/article3.jpg" title="Happy trees"></div>
+    </title>
+
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/home_gs_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_header_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_menu_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_footer_styles.css" />
+    <!-- bxSlider CSS file -->
+    <link href="../plugins/facebooklikeslider/css/jquery.bxslider.css" rel="stylesheet" />
+
+</head>
+<header>
+    <div ng-include src="'partials/gs_header.html'"></div>
+
+
+</header>
+
+<body>
+    <div id="gs-home-slider">
+        <div class="bxslider">
+            <div>
+                <img src="../R/article1.jpg" title="Funky roots">
+            </div>
+            <div>
+                <img src="../R/article2.jpg" title="The long and winding road">
+            </div>
+            <div>
+                <img src="../R/article3.jpg" title="Happy trees">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="home-main-body" ng-controller="GsHomeCtrl">
+        <div class="row for-customers">
+            <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
+            <div class="wrapper col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                <div id="to-sell">
+                    <div class="img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="inner">
+                        <div class="text">
+                            <h3>CUSTOMER WHO WANT TO SELL PROPERTIES</h3>
+                            <p>We will mediate property sales mainly in Takikawa city. Please inquiry in detail. </p>
+                        </div>
+                        <div class="btn-container">
+                            <p>CLICK HERE</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="to-buy">
+                    <div class="inner">
+                        <div class="btn-container">
+                            <p>CLICK HERE</p>
+                        </div>
+
+                        <div class="text">
+                            <h3>CUSTOMER WHO WANT TO BUY PROPERTY</h3>
+                            <p>We will mediate property sales mainly in Takikawa city. Please inquiry in detail. </p>
+                        </div>
+
+                    </div>
                 </div>
 
+            </div>
+            <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
+
         </div>
-            
+        <div class="row gs-mission">
+            <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
+            <div class="wrapper col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                <div class="left col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h2>
+                        TANIGUCHI GS IS'
+                        <div id="custom-border"></div>
+                    </h2>
+                    <p class="darker">It is a long established fact that a reader will be distracted by the readable content of a page when
+                        looking at its layout. The point of using Lorem Ipsum is that it has a more or less normal distribution
+                        of letters, as opposed to using Content here content here making it look like redable English.
 
-            <footer>
-                    <div w3-include-html="/partials/gs_footer.html"></div>
-            </footer>
+                    </p>
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                        The point of using Lorem Ipsum is that it has a more or less normal distribution of letters, as opposed
+                        to using Content here content here making it look like redable English.
 
-            <script>w3.includeHTML();</script>
-            <script>
-            $(document).ready(function(){   
-                var hash = window.location.hash;
-                console.log(window.location.hash);
-                $('.nav > li > a[href="'+hash+'"]').parent().addClass('active');
+                    </p>
+                    <p>
+                        The point of using Lorem Ipsum is that it has a more or less normal distribution of letters, as opposed to using Content
+                        here content here making it look like redable English.
+
+                    </p>
+                </div>
+                <div class="right col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="column-1">
+                        <img src="../R/gs_home/Apartment1.png" alt="">
+                        <img src="../R/gs_home/apartment_2.png" alt="">
+                    </div>
+                    <div class="column-2">
+                        <img src="../R/gs_home/apartment_1.png" alt="">
+                        <img src="../R/gs_home/apartment_blossom.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
+        </div>
+    </div>
+
+
+    <footer>
+        <div ng-include src="'partials/gs_footer.html'"></div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            var hash = window.location.hash;
+            console.log(window.location.hash);
+            $('.nav > li > a[href="' + hash + '"]').parent().addClass('active');
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('.bxslider').bxSlider({
+                mode: 'fade',
+                auto: true,
+                pager: false,
+                keyboardEnabled: true,
             });
+        });
+    </script>
+    <!-- bxSlider Javascript file -->
+    <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
+</body>
 
-            </script>
-            <script>
-                $(function(){
-                $('.bxslider').bxSlider({
-                    mode: 'fade',
-                    auto: true,
-                    pager: false,
-                    keyboardEnabled: true,
-                });
-                });
-            </script>
-            <!-- bxSlider Javascript file -->
-            <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
-    </body>
 </html>

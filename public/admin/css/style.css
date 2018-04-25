@@ -4001,6 +4001,7 @@ th {
 .green {
   color: #2ecc71;
   border: 2px #2ecc71 solid;
+  background: transparent;
 }
 
 .green:hover {
@@ -5449,6 +5450,13 @@ footer  p a{
 footer  p a:hover ,.footer p a:hover{
 	text-decoration:underline;
 }
+
+.tables table .table p.output-msg{
+	font-size: 14px;
+	color: #00C6D7;
+	font-weight: bold;
+}
+
 /*---responsive-----*/
 @media (max-width:1600px){
 	.left-content {

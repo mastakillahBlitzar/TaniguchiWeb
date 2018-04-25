@@ -6,25 +6,39 @@
 
 .menu{
     position: relative;
+    padding: 0px
 }
 
 #main-menu {
     margin: 0;
     padding: 0px;
     border: 0px;
+    border-radius: 0px;
+    background: transparent;
 }
 
 #main-menu > .container-fluid
 {
-   background-color: #0C2043;
     color: white; 
 }
 
 #main-menu > .container-fluid > .collapse>  .nav > li > a
 {
+    padding: 20px 20px;
     color:white;
     font-family: mangaFont;
+    transition: all 0.4s ease;
+
 }
+
+#main-menu > .container-fluid > .collapse>  .nav > li > a:before,
+#main-menu > .container-fluid > .collapse>  .nav > li > a:after{
+    height: 0%;
+    background-color: white;
+    transition: all .4s ease-in;
+}
+
+
 
 #main-menu > .container-fluid > .collapse>  .nav > li.active > a,
 #main-menu > .container-fluid > .collapse>  .nav > li > a:hover,
@@ -32,6 +46,7 @@
 {
     color: black;
     background-color: white;
+    font-size: 16px;
 }
 
 #bs-example-navbar-collapse-1 > ul > li.dropdown.open > .dropdown-toggle
@@ -47,12 +62,14 @@
 
 #main-menu > .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
     color: white;
-    margin-left: 70px;
+    padding: 20px 20px;
+    height: auto;
 }
 
 #main-menu > .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
     background-color: white;
     color: black;
+    
 }
 
 
@@ -72,4 +89,9 @@
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
     border-color: #5f9fff;
+}
+
+.row.mp-menu{
+    
+   background-color: #0052A6;
 }

@@ -1,4 +1,76 @@
 body{
 
+    font-family: mangaFont;
 }
 
+/* titles por every page */
+.gs-title-container{
+    height: 240px;
+    text-align: center;
+    background-image: url('../../R/gsbg/contact_bg.png');
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.gs-title-container .title{
+    color: white;
+    margin: 0 auto;
+    font-size: 3.3em;
+}
+
+body .contact-main-body .row{
+    background: transparent;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-main-body .row .contact-info .contact-opt{
+    padding: 8px 1px;
+}
+
+.contact-main-body .row .contact-info .contact-opt .info-wrapper{
+    padding: 3px 0px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-main-body .row .contact-info .contact-opt .info-wrapper .img-wrapper{
+    padding: 0px;
+    width: 22px;
+    display: inline-flex;
+}
+
+.contact-main-body .row .contact-info .contact-opt .info-wrapper .number{
+    margin-left: 12px;
+    font-size: 1.2em;
+}
+
+.contact-main-body .row .contact-info .contact-opt .info-wrapper .img-wrapper img{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.contact-main-body .row .contact-info {
+    padding: 0px;
+    padding-left: 10%;
+}
+
+.contact-main-body .row .contact-info .map-container{
+    padding: 10px;
+    border: 1px solid #0052A4;
+    height: 300px;
+}
+
+
+/* map */
+
+
+
+div.contact-main-body.ng-scope > div > div > div.contact-info.col-lg-6.col-md-6.col-sm-6.col-xs-12 > div.map-container #map{
+    width: 100%;
+    height: 100%
+}

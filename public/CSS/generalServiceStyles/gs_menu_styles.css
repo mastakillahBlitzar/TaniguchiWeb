@@ -1,4 +1,5 @@
 .menu-container{
+  border: 0px;
   box-shadow: none;
   background-image: none;
   background-color: transparent;
@@ -6,7 +7,7 @@
 }
 
 .menu-item:hover{
-  background-color: yellow;
+  background-color: #B2B2B2;
   /* border: 1px solid black; */
 
   -ms-transform: skew(20deg);
@@ -24,7 +25,7 @@
 }
 
 .active{
-  background-color: blue;
+  background-color: #0052A4;
   -ms-transform: skew(20deg);
   -webkit-transform: skew(20deg);
   transform: skew(20deg);
@@ -32,6 +33,10 @@
 
 .navbar-default .navbar-nav>li>a{
   padding: 24px;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+  color: #686868;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a{
@@ -45,6 +50,12 @@
 }
 
 .active:hover{
-  background-color: blue;
+  background-color: #0052A4;
 }
+
+.navbar-default .navbar-nav>.active>a:hover{
+  color: #F2F6F9;
+  
+}
+
 

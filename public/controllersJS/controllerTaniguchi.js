@@ -296,38 +296,26 @@ myApp.controller('OwnersPgCtrl',
       $scope.ownersInfo = [
         {
           id: '1',
-          msg: 'Recommendation related to troubled tenants and hazardous material handling compliance'
-        },
-        {
-          id: '2',
-          msg: 'Owner, please leave us anything uncontrollable by yourself'
-        },
-        {
-          id: '3',
-          msg: 'Make a statement about the general idea of the requirements for rent'
-        },
-        {
-          id: '4',
-          msg: 'Please do not hesitate to contact us for costs and details'
-        },
+          msg: '空室ばかり、入居者とのトラブルばかり、雑草などで荒れ放題、等々ではせっかくの大切なご資産がもったいないです。オーナー様お一人では手に負えないことを私たちにお任せください！ ～入居者様に対しては末永く心地よくお住まい頂くために、オーナー様に対しては様々な煩わしさから開放され安心して物件をおまかせ頂くために、私たちがいます～もちろん、新規入居者募集および賃貸借契約締結の仲介業務のみも承ります。費用・詳細等についてはお気軽にお問い合わせください。'
+        }
       ];
 
       $scope.reviews = [
         {
-          houseImgPath: '../R/modern-house.jpg',
-          reviewerPath: '../R/gsreviewers/face_rev_1.jpg',
+          houseImgPath: '../R/gsreviewers/mg_property.jpg',
+          reviewerPath: '../R/gsreviewers/mg.jpg',
           title: '栗山市在住　M.G.様',
           text: '初めての不動産から谷口総合サービスさんにお世話になっております。もう長いお付き合いになりますが、管理していただいて一度も困った事はありません。滝川市では一番の不動産屋さんです。'
         },
         {
-          houseImgPath: '../R/modern-house.jpg',
-          reviewerPath: '../R/gsreviewers/face_rev_1.jpg',
+          houseImgPath: '../R/gsreviewers/tn_property.jpg',
+          reviewerPath: '../R/gsreviewers/tn.jpg',
           title: '滝川市在住　T.N.様',
           text: '谷口総合サービス　最高です！<br> 仕事柄、国内外の移動が多くなかなか物件管理が難しく、アパート経営を始めた当初から入居者募集及び家賃管理、物件の管理までお願いしておりますが、今まで何の問題もなく、逆に自社物件かのように大切に管理していただいて、大変感謝しております。これからも、賃貸物件を増やすことがあれば、もちろん谷口総合サービスだと決めております。<br>滝川市での賃貸物件の管理は谷口総合サービスがお勧めです。'
         },
         {
-          houseImgPath: '../R/modern-house.jpg',
-          reviewerPath: '../R/gsreviewers/face_rev_1.jpg',
+          houseImgPath: '../R/gsreviewers/yu_property.jpg',
+          reviewerPath: '../R/gsreviewers/yu.jpg',
           title: '滝川市在住　Y.U.様',
           text: '自営の仕事が忙しく、またアパート経営に関しては素人なので管理をやってもらって助かってます。'
         },

@@ -7,6 +7,11 @@
     margin-left: 0px;
 }
 
+.rc-row{
+    display: flex;
+    align-items: center;
+}
+
 .row:first-child{
     background-color: #F8F8F8;
 }
@@ -15,32 +20,26 @@
     background-color: transparent;
 }
 
-.row .top-info{
-    display: flex;
+.row.top-info{
     align-items: center;
-    padding: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
 }
 
-.row .top-info .top-description{
+.row.top-info .top-description{
     padding: 0px;
     color: #7F7F7F;
+    line-height: 46px;
 }
 
-.row .top-info .right-container{
-    float: right;
-    height: 47px;
+.row.top-info .right-container{
     padding: 3px;
     color: #7F7F7F;
 }
 
-.row .top-info .info-container{
+.row.top-info .info-container{
     height: 100%;
     display: inline-flex;
     align-items: center;
-    float: right;
-    margin: 2px 5px;
 }
 
 .row .info-container img{
@@ -51,74 +50,24 @@
 
 .row .info-container .divider{
     width: 1px;
-    height: 70%;
+    height: 22px;
     background-color: #B2B2B2;
     margin: 0px 5px;
 }
 
 .row .info-container p.right-text{
-    margin: 0 auto;
+    margin: 0;
     padding: 3px 4px;
-}
-
-.menu-container .container{
-    padding-left: 0px;
-    padding-right: 0px;
-    min-height: 0px;
-}
-
-.menu-row .menu-container .container #navbar ul.nav.navbar-nav.navbar-right{
-    display: flex;
-    align-items: center;
-}
-
-.menu-row .menu-container .container #navbar ul li.access-item{
-    margin-left: 80px;
-    cursor: pointer;
-}
-
-.menu-row .menu-container .container #navbar ul li.access-item a{
-    padding: 0px 20px;
-}
-
-.menu-row .menu-container .container #navbar ul li.access-item:hover{
-    transform: none;
-    background: transparent;
-}
-
-.menu-row .menu-container .container #navbar ul li.access-item:hover a:hover{
-    transform: none;
-}
-
-.menu-row .menu-container .container #navbar ul li.access-item .btn-txt{
-    position: absolute;
-    top: 50%;
-    left: 56%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 16px;
-}
-
-.navbar-default .navbar-nav>li>a{
-    font-family: mplusregular;
-}
-
-.navbar-default .navbar-brand img{
-    width: 67px;
-}
-
-.navbar-default .navbar-brand{
-    padding: 0;
 }
 
 /* for small devices */
 @media all and (max-width: 770px){
-    .row .top-info .right-container{
+    .row.top-info .right-container{
         float: left;
         margin-top: 10px;
     }
 
-    .row .top-info .info-container{
+    .row.top-info .info-container{
         margin-top: 6px;
     }
 
@@ -126,5 +75,4 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-
 }

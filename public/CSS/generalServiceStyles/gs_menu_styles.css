@@ -9,18 +9,15 @@
 .menu-item:hover{
   background-color: #B2B2B2;
   /* border: 1px solid black; */
-
   -ms-transform: skew(20deg);
   -webkit-transform: skew(20deg);
   transform: skew(20deg);
-
 }
 
 .menu-item a:hover {
   -ms-transform: skew(-20deg);
   -webkit-transform: skew(-20deg);
   transform: skew(-20deg);
-
   background-color: transparent;
 }
 
@@ -55,7 +52,75 @@
 
 .navbar-default .navbar-nav>.active>a:hover{
   color: #F2F6F9;
-  
 }
 
+.menu-container .container{
+  padding-left: 0px;
+  padding-right: 0px;
+  min-height: 0px;
+}
+
+.menu-row .menu-container .container #navbar ul.nav.navbar-nav.navbar-right{
+  display: flex;
+  align-items: center;
+}
+
+.menu-row .menu-container .container #navbar ul li.access-item{
+  margin-left: 80px;
+  cursor: pointer;
+}
+
+.menu-row .menu-container .container #navbar ul li.access-item a{
+  padding: 0px 20px;
+}
+
+.menu-row .menu-container .container #navbar ul li.access-item:hover{
+  transform: none;
+  background: transparent;
+}
+
+.menu-row .menu-container .container #navbar ul li.access-item:hover a:hover{
+  transform: none;
+}
+
+.menu-row .menu-container .container #navbar ul li.access-item .btn-txt{
+  position: absolute;
+  top: 50%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+}
+
+.navbar-default .navbar-nav>li>a{
+  font-family: mplusregular;
+}
+
+.navbar-default .navbar-brand img{
+  width: 166px;
+  margin: auto;
+}
+
+.navbar-default .navbar-brand{
+  padding: 0;
+  display: flex;
+}
+
+@media all and (max-width: 770px){
+  .active,
+  .active a,
+  .menu-item:hover,
+  .menu-item a:hover {
+    transform: none;
+  }
+
+  .menu-row .menu-container .container #navbar ul.nav.navbar-nav.navbar-right{
+    display: block;
+  }
+
+  .menu-container .container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 

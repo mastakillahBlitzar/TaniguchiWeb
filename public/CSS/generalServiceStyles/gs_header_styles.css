@@ -90,10 +90,6 @@
     transform: none;
 }
 
-.menu-row .menu-container .container #navbar ul li.access-item img.access-btn{
-
-}
-
 .menu-row .menu-container .container #navbar ul li.access-item .btn-txt{
     position: absolute;
     top: 50%;
@@ -101,6 +97,18 @@
     transform: translate(-50%, -50%);
     color: white;
     font-size: 16px;
+}
+
+.navbar-default .navbar-nav>li>a{
+    font-family: mplusregular;
+}
+
+.navbar-default .navbar-brand img{
+    width: 67px;
+}
+
+.navbar-default .navbar-brand{
+    padding: 0;
 }
 
 /* for small devices */

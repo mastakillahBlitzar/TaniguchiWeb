@@ -10,21 +10,27 @@ footer {
    }
 
    .widget h2 {
-    text-align: left;
-    font-size:28px;
-    color: white;
-    margin: 0px;
-    margin-bottom: 10px;
+       font-family: mplusmedium;
+        text-align: left;
+        font-size:28px;
+        color: white;
+        margin: 0px;
+        margin-bottom: 10px;
    }
-   .widget h2.orange{
-       font-family: 'M+ Type-1 Medium';
-   }
+
    .footer-bottom {
     padding:0px;
     padding-top: 26px;
     padding-bottom: 26px;
     font-size:11px;
     color:#0252A7;
+   }
+
+   .disclaimer{
+       text-align: center; 
+       color: #545454; 
+       font-size: 13px;
+       font-family: firalight;
    }
 
    .footer-bottom .pull-right{
@@ -66,6 +72,10 @@ footer {
        color: white;
    }
 
+   footer ul li a.num{
+    font-family: firaregular;
+}
+
    footer ul li a:focus, a:hover{
     font-size: 19px;
     color: #0052A4;
@@ -83,6 +93,17 @@ footer {
         width: 90%;
         cursor: pointer;
    }
+
+   
+   @media only screen and (max-width: 770px) {  
+        .container .list{
+            margin-top: 22px;
+        }
+
+        footer{
+            padding-top: 45px;
+        }
+    }
      
    @media only screen and (max-width: 479px) {    
         .widget_content{
@@ -93,6 +114,8 @@ footer {
        }
        .widget h2 { 
            border-bottom:1px solid #ddd;
+           font-family: mplusregular;
+           font-size: 1.8rem;
        }   
        .widget h2:after {
            content:"\203A";

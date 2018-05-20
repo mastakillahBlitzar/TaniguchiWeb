@@ -31,8 +31,7 @@ router.post('/addArticle', function(req, res, next){
                 status: 'Article Saved'
             });
         }
-    })
-    
+    });
 });
 
 // GET for list one article
@@ -44,7 +43,7 @@ router.get('/getArticles/:id', function (req, res, next) {
         if(err){
             res.status(501).json({
                 status: 'Internal Error'
-            })
+            });
         }else{
             res.send(article);
         } 
@@ -57,7 +56,7 @@ router.get('/getArticles', function (req, res, next) {
             if(err){
                 res.status(501).json({
                     status: 'Internal Error'
-                })
+                });
             }else{
                 res.send(articles);
             }
@@ -70,7 +69,7 @@ router.get('/getArticles', function (req, res, next) {
             if(err){
                 res.status(501).json({
                     status: 'Internal Error'
-                })
+                });
             } else {
                 article.title = req.body.title;
                 article.content = req.body.content;
@@ -97,7 +96,7 @@ router.get('/getArticles', function (req, res, next) {
         if(err){
             res.status(501).json({
                 msg: 'database internal error'
-            })
+            });
         } else {
             res.status(200).json({
                 status: 'row deleted'

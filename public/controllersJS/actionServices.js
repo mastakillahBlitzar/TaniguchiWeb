@@ -22,7 +22,7 @@ function($q, $timeout, $http){
         var mailRequest = {
             message,
             email
-        }
+        };
         $http.post('user/contact/send%form', mailRequest)
         .then(function(response, err){
             deferred.resolve(response);

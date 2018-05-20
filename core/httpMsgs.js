@@ -18,7 +18,7 @@ exports.sendJson = function(req, res, data) {
         res.write(JSON.stringify(data.recordset)); 
     }
     res.end();
-}
+};
 
 exports.show405 = function(req, res) {
     if(settings.httpMsgsFormat === "HTML") {
@@ -60,10 +60,6 @@ exports.send200 = function(req, res) {
     res.writeHead(200, {"Content-Type": "application/json"});
     res.end();
 };
-
-exports.showHome = function(req, res) {
-    
-}
 
 
 

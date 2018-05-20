@@ -133,7 +133,7 @@ myApp.controller('ArticleDetailController',
             $scope.error = true;
             $scope.errorMessage = "Something went wrong!";
           });
-      }
+      };
 
       $scope.updateArticle = function (article) {
         ArticleService.updateArticle(article._id, article)
@@ -151,8 +151,8 @@ myApp.controller('ArticleDetailController',
           })
           .catch(function () {
             $scope.errorMessage = "Ops!, something went wrong";
-          })
-      }
+          });
+      };
 
 
     }]);
@@ -168,14 +168,14 @@ myApp.controller('ArticleController',
       $scope.redirectToForm = function (id) {
         var _id = id;
         $location.path('/forms/' + _id);
-      }
+      };
 
       $scope.remove = function (id) {
         ArticleService.deleteArticle(id)
           .then(function () {
             refresh();
           });
-      }
+      };
 
       function refresh() {
         ArticleService.getArticles()
@@ -214,7 +214,7 @@ myApp.controller('HomeNewsController',
               day = dayArray[0];
 
               element.daymonth = day.concat(" ").concat(month);
-            })
+            });
             $scope.articleList = data;
 
           })
@@ -225,10 +225,8 @@ myApp.controller('HomeNewsController',
 
       $scope.readMoreClicked = function (index) {
         $('.slider').bxSlider();
-      }
-
-
-
+      };
+      
     }]);
 
 myApp.controller('redirectController',
@@ -236,19 +234,19 @@ myApp.controller('redirectController',
     function ($scope, $location) {
       $scope.home = function () {
         $location.path('/home');
-      }
+      };
 
       $scope.services = function () {
         $location.path('/business');
-      }
+      };
 
       $scope.company = function () {
         $location.path('/company');
-      }
+      };
 
       $scope.contact = function () {
         $location.path('/contact');
-      }
+      };
 
     }]);
 
@@ -312,28 +310,28 @@ myApp.controller('OwnersPgCtrl',
           id: '4',
           msg: 'Please do not hesitate to contact us for costs and details'
         },
-      ]
+      ];
 
       $scope.reviews = [
         {
           houseImgPath: '../R/modern-house.jpg',
           reviewerPath: '../R/gsreviewers/face_rev_1.jpg',
-          title: 'Mr. Kuriyama, City Resident',
-          text: 'Taniguchi General service is the first real state agency which has taken care of me. It is the best real agency in takikawa shi.'
+          title: '栗山市在住　M.G.様',
+          text: '初めての不動産から谷口総合サービスさんにお世話になっております。もう長いお付き合いになりますが、管理していただいて一度も困った事はありません。滝川市では一番の不動産屋さんです。'
         },
         {
           houseImgPath: '../R/modern-house.jpg',
           reviewerPath: '../R/gsreviewers/face_rev_1.jpg',
-          title: 'Takashi living in Takikawa city',
-          text: 'It is difficult to manage property because of many jobs. Taniguchi General service is the first real state agency which has taken care of me. It is the best real agency in takikawa shi.'
+          title: '滝川市在住　T.N.様',
+          text: '谷口総合サービス　最高です！<br> 仕事柄、国内外の移動が多くなかなか物件管理が難しく、アパート経営を始めた当初から入居者募集及び家賃管理、物件の管理までお願いしておりますが、今まで何の問題もなく、逆に自社物件かのように大切に管理していただいて、大変感謝しております。これからも、賃貸物件を増やすことがあれば、もちろん谷口総合サービスだと決めております。<br>滝川市での賃貸物件の管理は谷口総合サービスがお勧めです。'
         },
         {
           houseImgPath: '../R/modern-house.jpg',
           reviewerPath: '../R/gsreviewers/face_rev_1.jpg',
-          title: 'Yu. Mr Takigawa residing in Japan',
-          text: 'I am self employed. Taniguchi General service is the first real state agency which has taken care of me. It is the best real agency in takikawa shi.'
+          title: '滝川市在住　Y.U.様',
+          text: '自営の仕事が忙しく、またアパート経営に関しては素人なので管理をやってもらって助かってます。'
         },
-      ]
+      ];
 
     }]);
 
@@ -341,5 +339,106 @@ myApp.controller('GsHomeCtrl',
   ['$scope', '$window', 'ActionService',
     function ($scope, $window, ActionService) {
 
+
+    }]);
+
+myApp.controller('mpAddressCtrl',
+  ['$scope', '$window',
+    function ($scope, $window) {
+
+      $scope.infoCompany = [
+        {
+          icon: '../R/contacticons/1.png',
+          infoName: '商号',
+          infoDesc: ['有限会社谷口板金工業所']
+        },
+        {
+          icon: '../R/contacticons/2.png',
+          infoName: '創業',
+          infoDesc: ['昭和36年4月']
+        },
+        {
+          icon: '../R/contacticons/1.png',
+          infoName: '設立',
+          infoDesc: ['昭和47年7月']
+        },
+        {
+          icon: '../R/contacticons/4.png',
+          infoName: '建築業登録',
+          infoDesc: ['北海道知事許可（般-26）第01221号']
+        },
+        {
+          icon: '../R/contacticons/5.png',
+          infoName: '資本金',
+          infoDesc: ['2300万円']
+        },
+        {
+          icon: '../R/contacticons/6.png',
+          infoName: '代表取締役',
+          infoDesc: ['谷口　正樹']
+        },
+        {
+          icon: '../R/contacticons/7.png',
+          infoName: '役員',
+          infoDesc: [
+            '専務取締役　1名',
+            '常務取締役　2名',
+            '取締役　2名'
+          ] 
+        },
+        {
+          icon: '../R/contacticons/8.png',
+          infoName: '従業員数',
+          infoDesc: ['27名（平成29年5月現在）']
+        },
+        {
+          icon: '../R/contacticons/9.png',
+          infoName: '技術者',
+          infoDesc: [
+            '1級建築士　1名',
+            '2級建築士 2名',
+            '金属屋根工事技師　3名',
+            '1級建築板金技能士　4名',
+            '2級建築板金技能士 6名',
+            '1級建築施工管理技士　1名',
+            '2級建築施工管理技士（躯体）　1名',
+            '2級建築施工管理技士（仕上げ）　1名',
+            '基幹技能者　1名'
+          ] 
+        },
+      ];
+
+      $scope.addresses = [
+        {
+          addressName: '本社',
+          address: '北海道滝川市本町2丁目3番5号　ＴＳビル1階',
+          num: '0125-23-3725',
+          fax: '0125-23-2250',
+        },
+        {
+          addressName: '札幌営業所',
+          address: '北海道札幌市中央区北1条西15丁目1番3号　大通りハイム603号室',
+          num: ' 011-632-7600',
+          fax: ' 011-632-7608',
+        },
+        {
+          addressName: '北関東営業所',
+          address: '茨城県水戸市城南2丁目4番28号',
+          num: ' 029-229-2580',
+          fax: '029-229-2581',
+        },
+        {
+          addressName: '芦別営業所',
+          address: '北海道芦別市本町1053番地',
+          num: '0124-23-3725',
+          fax: 'FAX or alternative number',
+        },
+        {
+          addressName: '工場',
+          address: '北海道滝川市幸町3丁目4番18号',
+          num: '0125-23-1013',
+          fax: '0125-23-1013',
+        },
+      ];
 
     }]);

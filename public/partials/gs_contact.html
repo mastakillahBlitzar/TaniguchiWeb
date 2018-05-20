@@ -38,23 +38,28 @@
             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
 
                 <div ng-controller="gsContactFormCtrl" class="contact-form col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="form-title">Get in Touch</div>
+                        
+                    <div class="form-title">お問い合わせフォーム</div>
+                    お問い合わせは、下記にて承っております。
+                    *は必須項目です。
                     <form name="gsContactForm"class="gs-contact-form" ng-submit="sendContactForm(gscontact)">
 
-                        <input ng-model="gscontact.name" class="name-input" name="gscontact.name" type="text" placeholder="NAME*">
-                        <input ng-model="gscontact.email" class="email-input" name="gscontact.email" type="email" placeholder="EMAIL">
-                        <input ng-model="gscontact.phone" class="telephone-input" name="gscontact.phone" type="tel" placeholder="TELEPHONE NUMBER">
-                        <input ng-model="gscontact.fax" class="fax-input" name="gscontact.fax" type="tel" placeholder="FAX NUMBER">
-                        <label>CONTENT OF INQUIRY*</label>
+                        <input ng-model="gscontact.name" class="name-input" name="gscontact.name" type="text" placeholder="お名前（漢字）*">
+                        <input ng-model="gscontact.name" class="name-input" name="gscontact.name" type="text" placeholder="お名前（フリガナ）*">
+
+                        <input ng-model="gscontact.email" class="email-input" name="gscontact.email" type="email" placeholder="E-MAIL*">
+                        <input ng-model="gscontact.phone" class="telephone-input" name="gscontact.phone" type="tel" placeholder="電話番号（半角）*">
+                        <input ng-model="gscontact.fax" class="fax-input" name="gscontact.fax" type="tel" placeholder="FAX番号（半角）">
+                        <label>お問い合わせ内容*</label>
                         <input ng-model="gscontact.content" class="content-input" name="gscontact.content" type="text" placeholder="">
                         <p class="output-msg">{{message}}</p>
-                        <button type="submit" class="btn btn-primary" role="button">SEND MESSAGE</button>
+                        <button type="submit" class="btn btn-primary" role="button">送信</button>
                     </form>
                 </div>
 
                 <div class="contact-info col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="form-title">
-                        Inquiries are accepted here.
+                            お問い合わせは、こちらで受付しております。
                     </div>
                     <div class="contact-opt">
                         <div class="info-wrapper">
@@ -62,7 +67,7 @@
                                 <img src="../R/icons/phone.png" alt="phone">
 
                             </div>
-                            <div class="number">0125-23-9289</div>
+                            <div class="number">0125-23-8170</div>
                         </div>
                         <div class="info-wrapper">
                             <div class="img-wrapper">

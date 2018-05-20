@@ -33,12 +33,10 @@ myApp.factory('ArticleService',
 
             function updateArticle(id, article) {
                 var deferred = $q.defer();
-
                 $http.put('user/edit/updateArticle/' + id, article)
                     .then(function (response) {
                         deferred.resolve(response);
-                    })
-
+                    });
                 return deferred.promise;
             }
 
@@ -51,7 +49,7 @@ myApp.factory('ArticleService',
                     content: content,
                     pictures: pictures,
                     date
-                }
+                };
 
                 return article;
             }
@@ -97,13 +95,12 @@ myApp.factory('ArticleService',
                         if (response.status === 200) {
                             deferred.resolve();
                         }
-                    })
-
+                    });
                 return deferred.promise;
             }
 
             function getDatetime() {
-                return (new Date);
-            };
+                return (new Date());
+            }
 
         }]);

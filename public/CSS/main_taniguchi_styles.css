@@ -3,20 +3,16 @@ body {
   width: 100%;
   margin: 0;
   position: relative;
-  background-color: rgba(192, 192, 192, 0.3);
+  background-color: #484845;
 }
 
 body .container{
     padding: 0px;
 }
 
-.row{
-
-}
-
 .row .thumbnail{
     padding: 10px;
-    background-color: transparent;
+    background-color: white;
 }
 
 .row .thumbnail .logo-container {
@@ -63,10 +59,6 @@ body .row.slider{
     padding: 30px 0px;
 }
 
-body .row .slider-container{
-    
-}
-
 body .row .slider-container .thumbnail{
     padding: 10px;
     border: 1px solid white;
@@ -83,6 +75,32 @@ body .row .slider-container .thumbnail .bx-pager-item a{
 .slider-container .thumbnail .bx-wrapper .bx-pager.bx-default-pager a.active, 
 .slider-container .thumbnail .bx-wrapper .bx-pager.bx-default-pager a:focus{
     background-color: #291E24;
+}
+
+body footer{
+    display: flex;
+    align-items: center;
+}
+
+body footer .container p{
+    color: #ECECEC;
+}
+
+body footer .container p span.owl{
+    color: #054F98;
+    font-weight: bold;
+}
+
+body footer .container p span.blitz{
+    color: #0FC121;
+    font-weight: bold;
+}
+
+body footer p.footer-block{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 0.8em;
 }
 
 @media screen and (max-width: 768px){

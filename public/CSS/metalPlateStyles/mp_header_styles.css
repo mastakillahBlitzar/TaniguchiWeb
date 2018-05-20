@@ -1,6 +1,14 @@
 .row{
     margin: 0px;
+}
 
+.row.internal-serv-row{
+    display: flex;
+}
+
+.row .rc-row{
+    display: flex;
+    align-items: center;
 }
 
 .row .top-description{
@@ -13,24 +21,25 @@
     height: 100%;
     display: inline-flex;
     align-items: center;
-    float: right;
-    margin: 2px 5px;
+    padding: 0;
 }
 
 .row .top-description .right-container .info-container .divider{
     width: 1px;
-    height: 70%;
+    height: 22px;
     background-color: #B2B2B2;
     margin: 0px 5px;
 }
 
 .row .top-description .right-container .info-container .right-text{
-    margin: 0 auto;
     padding: 3px 4px;
 }
 
+#call-id{
+    font-family: firaregular;
+}
+
 .row .top-description .right-container{
-    height: 47px;
     padding: 3px;
     color: #7F7F7F;
 }
@@ -46,6 +55,7 @@
 .right-container .info-container p{
     color: darkgray;
     margin: 0px;
+    font-size: 2rem;
 }
 
 .menu ul {
@@ -64,6 +74,7 @@
     color: darkgray;
     margin: 0px;
     float: left;
+    font-size: 1.6rem;
 }
 
 .social .social-icons{
@@ -111,5 +122,30 @@
     width: 100%; /* or any custom size */
     height: 100%; 
 }
+
+@media screen and (max-width: 991px) {
+
+    .row.internal-serv-row{
+        flex-direction: column;
+    }
+
+    .row .rc-row{
+        flex-direction: column;
+    }
+
+    .row .top-description .right-container .info-container{
+        margin-top: 12px;
+    }
+
+    .social .social-icons{
+        float: right;
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    .social .social-icons{
+        float: none;
+    }
+  }
 
 /* header styles */

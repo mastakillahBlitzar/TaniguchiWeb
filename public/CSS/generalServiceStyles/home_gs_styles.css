@@ -42,12 +42,13 @@ body .home-main-body .for-customers .wrapper #to-sell .inner .text{
 }
 
 body .home-main-body .for-customers .wrapper #to-sell .inner .text h3{
-    font-weight: bold;
-    font-size: 27px;
+    font-size: 47px;
+    font-family: mplusregular;
 }
 
 body .home-main-body .for-customers .wrapper #to-sell .inner .text p{
-   
+    font-size: 22px;
+    font-family: mpluslight;
 }
 
 body .home-main-body .for-customers .wrapper #to-sell .inner .btn-container{
@@ -75,12 +76,13 @@ body .home-main-body .for-customers .wrapper #to-buy .inner .text{
 }
 
 body .home-main-body .for-customers .wrapper #to-buy .inner .text h3{
-    font-weight: bold;
-    font-size: 27px;
+    font-size: 47px;
+    font-family: mplusregular;
 }
 
 body .home-main-body .for-customers .wrapper #to-buy .inner .text p{
-   
+    font-size: 22px;
+    font-family: mpluslight;
 }
 
 body .home-main-body .for-customers .wrapper #to-buy .inner .btn-container{
@@ -129,6 +131,7 @@ body .home-main-body .gs-mission .wrapper .left h2 #custom-border{
 body .home-main-body .gs-mission .wrapper .left p{
     color: #555555;
     margin-bottom: 22px;
+    padding-right: 20px;
 }
 
 body .home-main-body .gs-mission .wrapper .left p.darker{
@@ -139,4 +142,22 @@ body .home-main-body .gs-mission .wrapper .left p.darker{
 
 body .home-main-body .gs-mission .wrapper .right{
     padding: 0px;
+}   
+
+body .home-main-body .gs-mission .wrapper .right .column-1{
+    overflow-x: hidden;
+    padding: 0;
+    padding-left: 20px;
+}  
+
+body .home-main-body .gs-mission .wrapper .right .column-2{
+    overflow-x: hidden;
+    margin-top: 13rem;
+    padding: 0;
+}   
+
+body .home-main-body .gs-mission .wrapper .right .h-img{
+    max-width: 305px;
+    margin-top: 2rem;
+    max-height: 230px;
 }   

@@ -40,10 +40,8 @@ function ($q, $timeout, $http) {
     }
     
     function login(username, password) {
-    
       // create a new instance of deferred
       var deferred = $q.defer();
-    
       // send a post request to the server
       $http.post('/user/auth',
         {username: username, password: password})
@@ -59,18 +57,15 @@ function ($q, $timeout, $http) {
         }, function(error){
           user = false;
           deferred.reject();
-        })
-    
+        });
       // return promise object
       return deferred.promise;
-    
     }
     
     function logout() {
     
       // create a new instance of deferred
       var deferred = $q.defer();
-    
       // send a get request to the server
       $http.get('/user/logout')
       .then(function(success, data){
@@ -79,7 +74,7 @@ function ($q, $timeout, $http) {
       }, function(error){
         user = false;
         deferred.reject();
-      })
+      });
       // return promise object
       return deferred.promise;
     
@@ -101,10 +96,8 @@ function ($q, $timeout, $http) {
           }
         }, function(error){
           deferred.reject();
-        })
+        });
       // return promise object
       return deferred.promise;
-    
     }
- 
  }]);

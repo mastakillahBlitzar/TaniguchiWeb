@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <title>Metal Plate company</title>
-        <link rel="stylesheet" href="../CSS/menu.css" type="text/css">
-        <link rel="stylesheet" href="../CSS/footer.css" type="text/css">
-        <link rel="stylesheet" href="../CSS/main.css" type="text/css">
-        <link rel="stylesheet" href="../CSS/company_styles.css" type="text/css">
-        <link rel="stylesheet" href="../CSS/metalPlateStyles/mp_header_styles.css" />
-        <link rel="stylesheet" href="../CSS/jquery.mThumbnailScroller.css" type="text/css">
 
-        <script src="../scripts/jquery.mThumbnailScroller.js" type="text/javascript"></script>
+<head>
+    <title>Metal Plate company</title>
+    <link rel="stylesheet" href="../CSS/menu.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/footer.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/main.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/company_styles.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/metalPlateStyles/mp_header_styles.css" />
+    <link rel="stylesheet" href="../CSS/jquery.mThumbnailScroller.css" type="text/css">
+
+    <script src="../scripts/jquery.mThumbnailScroller.js" type="text/javascript"></script>
 </head>
 <header>
 
@@ -18,407 +19,78 @@
 </header>
 
 
-    <body>
+<body>
 
-        <div class="main-page-header">
-            <h1>会社概要</h1>
+    <div class="main-page-header">
+        <h1>会社概要</h1>
+    </div>
+
+    <div class="title-page">
+        <div class="title-bg">
+
+            <h3>COMPANY</h3>
         </div>
 
-        <div class="title-page">
-            <div class="title-bg">
+    </div>
 
-                <h3>COMPANY</h3>
-            </div>
-            
-        </div>
-
-        <div class="info-container">
-
-                <div class="row" >
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                            <div class="info-row col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                <div class="icon">
-                                        <img src="../R/contacticons/1.png"/>
-                                </div>
-    
-                                <div class="description">
-                                    商号
-    
-                                </div>
-
-                                <div class="info-content">
-                                    有限会社谷口板金工業所
-                                </div>
-    
-                            </div>
-                            
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                        
-    
+    <div class="info-container" ng-controller="mpAddressCtrl">
+        <div class="row">
+            <div class="info-row col-xs-10 col-sm-8 col-md-8 col-lg-8
+            col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-1" ng-repeat="info in infoCompany">
+                <div class="icon">
+                    <img ng-src="{{info.icon}}" />
                 </div>
-
-                <div class="row" >
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                            <div class="info-row col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                <div class="icon">
-                                        <img src="../R/contacticons/2.png"/>
-                                </div>
-    
-                                <div class="description">
-                                        創業
-    
-                                </div>
-
-                                <div class="info-content">
-                                    昭和36年4月
-                                </div>
-    
-                            </div>
-                            
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                        
-    
+                <div class="description">
+                    {{info.infoName}}
                 </div>
-
-                <div class="row" >
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                            <div class="info-row col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                <div class="icon">
-                                        <img src="../R/contacticons/1.png"/>
-                                </div>
-    
-                                <div class="description">
-                                        設立
-    
-                                </div>
-
-                                <div class="info-content">
-                                    昭和47年7月
-                                </div>
-    
-                            </div>
-                            
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                        
-    
-                </div>
-
-                <div class="row" >
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                            <div class="info-row col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                <div class="icon">
-                                        <img src="../R/contacticons/4.png"/>
-                                </div>
-    
-                                <div class="description">
-                                        建築業登録
-    
-                                </div>
-
-                                <div class="info-content">
-                                    北海道知事許可（般-26）第01221号
-                                </div>
-    
-                            </div>
-                            
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                        
-    
-                </div>
-
-                <div class="row" >
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                            <div class="info-row col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                <div class="icon">
-                                        <img src="../R/contacticons/5.png"/>
-                                </div>
-    
-                                <div class="description">
-                                        資本金
-    
-                                </div>
-
-                                <div class="info-content">
-                                    2300万円
-                                </div>
-    
-                            </div>
-                            
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                        
-    
-                </div>
-
-                <div class="row" >
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                            <div class="info-row col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                <div class="icon">
-                                        <img src="../R/contacticons/6.png"/>
-                                </div>
-    
-                                <div class="description">
-                                        代表取締役
-    
-                                </div>
-
-                                <div class="info-content">
-                                    谷口　正樹
-                                </div>
-    
-                            </div>
-                            
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                        
-    
-                </div>
-
-                <div class="row" >
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                            <div class="info-row col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                <div class="icon">
-                                        <img src="../R/contacticons/7.png"/>
-                                </div>
-    
-                                <div class="description">
-                                        役員
-    
-                                </div>
-
-                                <div class="info-content">
-                                    専務取締役　1名 <br>常務取締役　2名 <br>取締役　2名
-                                </div>
-    
-                            </div>
-                            
-                        <span class="hidden-xs hidden-sm col-md-1 col-lg-1"></span>
-                        
-    
-                </div>
-
-                <div class="row" >
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                            <div class="info-row col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                <div class="icon">
-                                        <img src="../R/contacticons/8.png"/>
-                                </div>
-    
-                                <div class="description">
-                                        従業員数
-    
-                                </div>
-
-                                <div class="info-content">
-                                    27名（平成29年5月現在）
-                                </div>
-    
-                            </div>
-                            
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                        
-    
-                </div>
-
-                <div class="row" >
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                            <div class="info-row col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                <div class="icon">
-                                        <img src="../R/contacticons/9.png"/>
-                                </div>
-    
-                                <div class="description">
-                                        技術者
-    
-                                </div>
-
-                                <div class="info-content">
-                                1級建築士　1名 <br>2級建築士　2名 <br>金属屋根工事技師　3名 <br>1級建築板金技能士　4名 <br>
-                                2級建築板金技能士　6名 <br>1級建築施工管理技士　1名 <br>2級建築施工管理技士（躯体）　1名 <br>2級建築施工管理技士（仕上げ）　1名 <br>
-                                基幹技能者　1名
-                                    
-                                </div>
-    
-                            </div>
-                            
-                        <span class="hidden-xs hidden-sm col-md-2 col-lg-2"></span>
-                        
-    
-                </div>
-
-            <div class="address-container">
-
-                <div class="row">
-                        <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
-                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0" style="padding: 0px;">
-                            <div class="lg-4 col-md-4 col-sm-6 col-xs-12">
-                                <div class="thumbnail" >
-                                
-                                <img src="../R/address-box-header.png" alt="...">
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>本社</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="caption">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td><img src="../R/addressbox/location.png"></td>
-                                                <td>北海道滝川市本町2丁目3番5号　ＴＳビル1階</td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="../R/addressbox/call.png"></td>
-                                                <td>0125-23-3725</td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="../R/addressbox/fax.png"></td>
-                                                <td>0125-23-2250</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                </div>
-                        </div>
-                        <div class="lg-4 col-md-4 col-sm-6 col-xs-12">
-                            <div class="thumbnail ">
-                                    <img src="../R/address-box-header.png" alt="...">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>札幌営業所</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="caption">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td><img src="../R/addressbox/location.png"></td>
-                                                    <td>北海道札幌市中央区北1条西15丁目1番3号　大通りハイム603号室</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="../R/addressbox/call.png"></td>
-                                                    <td>011-632-7600</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="../R/addressbox/fax.png"></td>
-                                                    <td>011-632-7608</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lg-4 col-md-4 col-sm-6 col-xs-12">
-                                <div class="thumbnail ">
-                                        <img src="../R/address-box-header.png" alt="...">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>北関東営業所</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="caption">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><img src="../R/addressbox/location.png"></td>
-                                                        <td>茨城県水戸市城南2丁目4番28号</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="../R/addressbox/call.png"></td>
-                                                        <td>029-229-2580</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="../R/addressbox/fax.png"></td>
-                                                        <td>029-229-2581</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="info-content">
+                    <div ng-repeat="desc in info.infoDesc">
+                        {{desc}}
                     </div>
-                    <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
-            
-                </div>
-
-                <div class="row">
-                        <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
-                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-lg-offset-0" style="padding: 0px;">
-                            <div class="lg-4 col-md-4 col-sm-6 col-xs-12">
-                                <div class="thumbnail">
-                                
-                                    <img src="../R/address-box-header.png" alt="...">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td>芦別営業所</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="caption">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td><img src="../R/addressbox/location.png"></td>
-                                                    <td>北海道芦別市本町1053番地</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="../R/addressbox/call.png"></td>
-                                                    <td>0124-23-3725</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="../R/addressbox/fax.png"></td>
-                                                    <td>FAX or alternative number</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="lg-4 col-md-4 col-sm-6 col-xs-12">
-                                    <div class="thumbnail">
-                                    
-                                        <img src="../R/address-box-header.png" alt="...">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>工場</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <div class="caption">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><img src="../R/addressbox/location.png"></td>
-                                                        <td>北海道滝川市幸町3丁目4番18号</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="../R/addressbox/call.png"></td>
-                                                        <td>0125-23-1013</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="../R/addressbox/fax.png"></td>
-                                                        <td>0125-23-1013</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                        <span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
                 </div>
             </div>
         </div>
 
-        <div ng-include src="'partials/mp_footer.html'"></div>
-
-    </body>
+        <div class="address-container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 col-sm-10 col-xs-10
+                col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-2" style="padding: 0px;">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" ng-repeat="address in addresses">
+                            <div class="thumbnail">
+                                <div class="t-hdr">
+                                    <div class="txt">{{address.addressName}}</div>
+                                </div>
+                                <div class="caption">
+                                    <div class="row">
+                                        <div class="row-itm ic col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                                            <img src="../R/addressbox/location.png">
+                                        </div>
+                                        <div class="row-itm col-lg-10 col-md-10 col-sm-10 hidden-xs">
+                                            {{address.address}}
+                                        </div>
+                                        <div class="row-itm ic col-lg-2 col-sm-2 col-xs-6">
+                                            <img src="../R/addressbox/call.png">
+                                        </div>
+                                        <div class="row-itm num col-lg-10 col-sm-10 hidden-xs">
+                                            {{address.num}}
+                                        </div>
+                                        <div class="row-itm ic col-lg-2 col-sm-2 hidden-xs">
+                                            <img src="../R/addressbox/fax.png">
+                                        </div>
+                                        <div class="row-itm num col-lg-10 col-sm-10 hidden-xs">
+                                            {{address.fax}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-include src="'partials/mp_footer.html'"></div>
+</body>
 
 </html>

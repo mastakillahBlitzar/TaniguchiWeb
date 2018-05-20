@@ -21,8 +21,7 @@
 <body>
     <div class="gs-title-container">
         <div class="title">
-            OWNER OF RENTAL APARTMENT
-            <br> RENTAL HOUSE
+            賃貸アパート・賃家のオーナー様
         </div>
 
     </div>
@@ -44,8 +43,7 @@
                 <!-- reviews -->
                 <div class="owners-voice">
                     <div class="title">
-                        <h4>Owner's
-                            <span>voice</span>
+                        <h4>賃貸物件の一例・オーナー様の声
                         </h4>
                     </div>
                     <div class="review-wrapper row" ng-repeat="review in reviews" ng-class-odd="oddie">
@@ -68,17 +66,17 @@
 
                             </div>
                         </div>
-<!-- if odd evaluates to true, show pictures aligned to right of the screen -->
+                        <!-- if odd evaluates to true, show pictures aligned to right of the screen -->
                         <div ng-if="$odd">
                             <div class="review col-lg-7 col-md-7">
-                                    <div class="review-title">
-                                        {{review.title}}
-                                    </div>
-                                    <div class="review-text">
-                                        {{review.text}}
-                                    </div>
-    
+                                <div class="review-title">
+                                    {{review.title}}
                                 </div>
+                                <div class="review-text">
+                                    {{review.text}}
+                                </div>
+
+                            </div>
 
                             <div class="img-container col-lg-5 col-md-5">
                                 <div class="house-img">
@@ -88,7 +86,7 @@
                                     <img ng-src="{{review.reviewerPath}}" alt="Reviewer" />
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
 

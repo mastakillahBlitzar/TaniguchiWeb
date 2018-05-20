@@ -20,6 +20,7 @@
 #main-menu > .container-fluid
 {
     color: white; 
+    padding: 0;
 }
 
 #main-menu > .container-fluid > .collapse>  .nav > li > a
@@ -28,7 +29,7 @@
     color:white;
     font-family: mangaFont;
     transition: all 0.4s ease;
-
+    font-size: 1.8rem;
 }
 
 #main-menu > .container-fluid > .collapse>  .nav > li > a:before,
@@ -95,3 +96,11 @@
     
    background-color: #0052A6;
 }
+@media screen and (max-width: 768px) {
+    #main-menu > .container-fluid
+    {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+  }
+

@@ -11,27 +11,21 @@
     align-items: center;
 }
 
-.row .top-description{
-    padding: 0px;
-    display: flex;
-    align-items: center;
-}
-
-.row .top-description .right-container .info-container{
+.row .right-container .info-container{
     height: 100%;
     display: inline-flex;
     align-items: center;
     padding: 0;
 }
 
-.row .top-description .right-container .info-container .divider{
+.row .right-container .info-container .divider{
     width: 1px;
     height: 22px;
     background-color: #B2B2B2;
     margin: 0px 5px;
 }
 
-.row .top-description .right-container .info-container .right-text{
+.row .right-container .info-container .right-text{
     padding: 3px 4px;
 }
 
@@ -39,12 +33,12 @@
     font-family: firaregular;
 }
 
-.row .top-description .right-container{
+.row .right-container{
     padding: 3px;
     color: #7F7F7F;
 }
 
-.row .top-description .right-container .info-container  h5 {
+.row .right-container .info-container  h5 {
     color: #0052A6;
     font-weight: bold;
     font-size: 16px;
@@ -98,7 +92,6 @@
 .logo-header{
     width: 100%;
     align-items: center;
-    display: flex;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -133,12 +126,28 @@
         flex-direction: column;
     }
 
-    .row .top-description .right-container .info-container{
+    .row .right-container .info-container{
         margin-top: 12px;
     }
 
     .social .social-icons{
         float: right;
+    }
+
+    .mobile-container{
+        text-align: center;
+    }
+
+    .center{
+        margin-top: 22px;
+        display: inline-flex;
+    }
+
+    .divider{
+        width: 1px;
+        height: 28px;
+        background-color: #7F7F7F;
+        margin: 0px 15px;
     }
   }
 
@@ -146,6 +155,28 @@
     .social .social-icons{
         float: none;
     }
+
+    .logo-img{
+        width: 50%;
+    }
+
+    .logos{
+        text-align: center;
+    }
+
+    .row .right-container .info-container  h5 {
+        color: #0052A6;
+        font-weight: bold;
+        font-size: 15px;
+        margin: 0px;
+        cursor: pointer;
+    }
+
+    .right-container .info-container p{
+        font-size: 1.8rem;
+    }
+    
+    
   }
 
 /* header styles */

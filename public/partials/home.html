@@ -103,11 +103,14 @@
                     </div>
                 </h1>
             </div>
-            <p class="about-text">有限会社谷口板金工業所は、屋根・外壁工事を専門とする会社です。</p>
-            <h2>屋根・外壁のことならおまかせください。</h2>
-            <br>
-            <p class="about-text">住宅から工場やビル・神社仏閣などの大規模施設まで、あらゆる建築物に対応し工事いたします。
-                <br>長年の実績と豊富な経験で培った技術、そして最新鋭の設備でお客様のあらゆるニーズにお応えします。</p>
+            <div class="text-body">
+                <p class="about-text">有限会社谷口板金工業所は、屋根・外壁工事を専門とする会社です。</p>
+                <h2>屋根・外壁のことならおまかせください。</h2>
+                <br>
+                <p class="about-text">住宅から工場やビル・神社仏閣などの大規模施設まで、あらゆる建築物に対応し工事いたします。
+                    <br>長年の実績と豊富な経験で培った技術、そして最新鋭の設備でお客様のあらゆるニーズにお応えします。</p>
+
+            </div>
 
             <div class="row" style="padding: 0px; padding-top: 10px;">
                 <div class="col-lg-10 col-md-10 col-xs-12 col-sm-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0" style="padding: 0px;">
@@ -166,25 +169,23 @@
             </div>
 
             <div class="row" ng-controller="HomeNewsController">
-                <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
-                <div class="col-lg-10 col-xs-12 col-sm-8 col-md-8" style="padding: 0px; margin: 0px; ">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 
+                        col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
                     <div class="col-sm-6 col-md-4" ng-repeat="article in articleList | limitTo : 3">
                         <div class="thumbnail">
-                            <!-- <img ng-src="{{article.imgUrl}}" alt="..."> -->
                             <img ng-src="{{article.pictures[0].url}}" alt="...">
                             <div class="caption">
-                                <div class="article-foot">
+                                <div class="article-title">{{article.title}}</div>
+                                <div class="content">{{article.content}}</div>
+                                <div class="article-footer">
                                     <div class="date">
-                                        <p class="day">{{article.daymonth}}</p>
-                                        <p class="year">{{article.date | limitTo : 4}}</p>
-
+                                            {{article.daymonth}} {{article.date | limitTo : 4}}
                                     </div>
-                                    <div class="author">By: Sayuri San</div>
+                                    <div class="line"></div>
+                                    <div class="btn-round">
+                                        <a class="btnClick" data-toggle="modal" data-target="#modal{{article._id}}">></a>
+                                    </div>
                                 </div>
-                                <h3 class="article-title">{{article.title}}</h3>
-                                <p>{{article.content}}</p>
-                                <a class="btnClick" data-toggle="modal" data-target="#modal{{article._id}}">Read More >></a>
-
                                 <!-- Modal -->
                                 <div class="modal fade" id="modal{{article._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
@@ -223,15 +224,10 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <span class="col-lg-1 hidden-xs col-md-2 col-sm-2"></span>
-
             </div>
 
         </div>
@@ -240,53 +236,50 @@
 
             <div class="row" style="padding: 0px; margin: 0px">
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 
-                col-md-offset-1 col-sm-offset-1 col-xs-offset-0" 
-                style="padding: 0px;">
+                col-md-offset-1 col-sm-offset-1 col-xs-offset-0" style="padding: 0px;">
 
                     <div class="row">
-                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-10
-                            col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-1" 
-                            style="padding-right: 0px; padding-left: 0px;">
-                                <div class="contact-box">
-                                    <h3 class="contact-title">お問い合わせ</h3>
-        
-                                    <form class="contact-form">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="content" placeholder="お問い合わせ内容＊">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="nameKanji" placeholder="お名前（漢字）＊">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="namekatakana" placeholder="お名前（カタカナ）＊">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="email" placeholder="E-mail＊">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="tel" placeholder="電話番号＊">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="fax" placeholder="FAX番号">
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">送信</button>
-                                    </form>
-        
-                                </div>
-        
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-10
+                            col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-1" style="padding-right: 0px; padding-left: 0px;">
+                            <div class="contact-box">
+                                <h3 class="contact-title">お問い合わせ</h3>
+
+                                <form class="contact-form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="content" placeholder="お問い合わせ内容＊">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="nameKanji" placeholder="お名前（漢字）＊">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="namekatakana" placeholder="お名前（カタカナ）＊">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="email" placeholder="E-mail＊">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="tel" placeholder="電話番号＊">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="fax" placeholder="FAX番号">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">送信</button>
+                                </form>
+
                             </div>
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12" 
-                            style="padding-right: 0px; padding-left: 0px;">
-                                <div class="map-container">
-        
-                                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d722.8132867177167!2d141.90654682920848!3d43.5596079705375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0c98d88d92de73%3A0x6893b993c8972458!2zSmFwYW4sIOOAkjA3My0wMDIxIEhva2thaWTFjSwgVGFraWthd2Etc2hpLCBIb25tYWNoaSwgMiBDaG9tZeKIkjPiiJI1LCDvvLTvvLPjg5Pjg6s!5e0!3m2!1sen!2sus!4v1512529915990"
-                                        frameborder="0" style="border:0" allowfullscreen></iframe>
-        
-                                </div>
-        
+
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12" style="padding-right: 0px; padding-left: 0px;">
+                            <div class="map-container">
+
+                                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d722.8132867177167!2d141.90654682920848!3d43.5596079705375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0c98d88d92de73%3A0x6893b993c8972458!2zSmFwYW4sIOOAkjA3My0wMDIxIEhva2thaWTFjSwgVGFraWthd2Etc2hpLCBIb25tYWNoaSwgMiBDaG9tZeKIkjPiiJI1LCDvvLTvvLPjg5Pjg6s!5e0!3m2!1sen!2sus!4v1512529915990"
+                                    frameborder="0" style="border:0" allowfullscreen></iframe>
+
                             </div>
+
+                        </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

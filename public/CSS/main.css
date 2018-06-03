@@ -396,61 +396,6 @@ p.about-text{
     margin-top: 10px;
 }
 
-/* news section and articles styles */
-
-.news-section{
-    padding-top: 15px;
-    padding-bottom: 90px;
-    width: 100%;
-}
-
-.news-section .thumbnail .article-title{
-    color: #3B3B3B;
-    font-size: 24px;
-
-}
-
-.news-section .thumbnail p{
-    color: #717171;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.news-section .thumbnail{
-    padding: 0px;
-}
-
-.news-section .thumbnail .caption{
-    margin-top: 0px;
-    padding-top: 9px;
-    height: 250px;
-    border: 0px;
-}
-
-.news-section .thumbnail .caption a{
-    float: right;
-    margin-top: 15px;
-    margin-right: 10px;
-    cursor: pointer;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out; 
-}
-
-.news-section .thumbnail .caption a:hover {
-    font-size: 1.2em;
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-}
-
-/* news section and articles styles */
-
 .bottom-box{
     width: 100%;
     background-color: black;
@@ -539,7 +484,7 @@ footer{
     }
     
     .body-container .bx-wrapper .bx-caption span{
-        font-size: 4.0rem;
+        font-size: 2.6rem;
     }
 
     .body-container .bx-wrapper .bx-pager {
@@ -565,11 +510,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
         padding-right: 20px;
         padding-left: 20px;
     }
-
-    #middle-article-box{
-        padding-right: 20px;
-        padding-left: 20px;
-    }
 }
 
 @media (max-width: 978px){
@@ -578,7 +518,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     }
 
     .body-container .bx-wrapper .bx-pager {
-        bottom: 70px;
+        bottom: 38px;
     }
     
     .options-section .col-md-offset-3-cuarters {
@@ -593,22 +533,33 @@ and (-webkit-min-device-pixel-ratio: 1) {
         padding-right: 0px;
         padding-left: 0px;
     }
-
-    #middle-article-box{
-        padding-right: 0px;
-        padding-left: 0px;
-    }
 }
 
 /* media querys for title sizes for xs screens */
 @media screen and (max-width: 768px){   
+
+    body{
+        font-family: mpluslight;
+        font-size: 2rem;
+    }
+    
+    .text-body{
+        padding: 0 14px;
+    }
+
+    .body-container .bx-wrapper .bx-pager.bx-default-pager a{
+        border-radius: 0px;
+        width: 35px;
+        height: 4px;
+        border: 0.8px solid #8A8A8A;
+    }
 
     .about-section{
         padding-top: 0px;
     }
 
     .body-container .bx-wrapper .bx-caption span{
-        font-size: 4.0rem;
+        font-size: 2.6rem;
     }
 
     .options-section .col-sm-offset-3-cuarters {

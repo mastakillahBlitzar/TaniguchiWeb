@@ -3,16 +3,31 @@ body{
 }
 
 .main-page-header{
-    background-color: #272727;
-    padding: 40px;
+    height: 240px;
     text-align: center;
-    margin-bottom: 20px;
+    background-image: url('../../R/gsbg/hammer.jpg');
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
 }
 
-.main-page-header h1{
+.main-page-header .title{
     color: #FFF;
+    margin: 0 auto;
+    font-size: 40px;
+    font-family: mplusmedium;
 }
 
+.main-page-header .title.down{
+    font-family: firalight;
+}
+
+.main-page-header .wrapper{
+    margin: 0 auto;
+}
 
 .title-page{
     text-align: center;

@@ -3,7 +3,7 @@
 <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
 <!-- lets build our row wrapper -->
-<div class="row footer-row">
+<div ng-controller="gsFooterController" class="row footer-row">
 	<span class="col-lg-1 col-md-1 col-sm-1 hidden-xs"></span>
 	<div class="footer-container col-lg-10 col-md-10 col-sm-10">
 		<footer class="footer-distributed">
@@ -28,7 +28,7 @@
 			<div class="footer-center">
 
 				<div>
-					<i class="fa fa-map-marker"></i>
+					<i ng-click="openNewTabLoc()" class="fa fa-map-marker"></i>
 					<p>073-0021<br><span>北海道滝川市本町2丁目3番5号<br>ＴＳビル　1階</span></p>
 				</div>
 

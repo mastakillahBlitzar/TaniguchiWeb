@@ -260,6 +260,16 @@ myApp.controller('mpHeaderController',
 
     }]);
 
+    myApp.controller('gsHeaderController',
+  ['$scope', '$window', 'ActionService',
+    function ($scope, $window, ActionService) {
+
+      $scope.openNewTabLoc = function () {
+        ActionService.openNewTabLoc($window);
+      };
+
+    }]);
+
 myApp.controller('mpFooterController',
   ['$scope', '$window', 'ActionService',
     function ($scope, $window, ActionService) {
@@ -270,7 +280,36 @@ myApp.controller('mpFooterController',
 
     }]);
 
+    myApp.controller('gsFooterController',
+  ['$scope', '$window', 'ActionService',
+    function ($scope, $window, ActionService) {
+
+      $scope.openNewTabLoc = function () {
+        ActionService.openNewTabLoc($window);
+      };
+
+    }]);
+
 myApp.controller('gsContactFormCtrl',
+  ['$scope', '$window', 'ActionService',
+    function ($scope, $window, ActionService) {
+
+      $scope.sendContactForm = function (msg) {
+        var email = "juano.diy@gmail.com";
+        var message = msg;
+        ActionService.sendEmail(message, email)
+          .then(function (res) {
+            if (res.status === 200) {
+              $scope.gsContactForm.$setPristine();
+              $scope.gscontact = {};
+            }
+            $scope.message = res.data.status;
+          });
+      };
+
+    }]);
+
+    myApp.controller('mpFormCtrl',
   ['$scope', '$window', 'ActionService',
     function ($scope, $window, ActionService) {
 

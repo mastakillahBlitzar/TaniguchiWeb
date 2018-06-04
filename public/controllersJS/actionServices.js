@@ -11,7 +11,6 @@ function($q, $timeout, $http){
 
     function openNewTabLoc(window){
         var deferred = $q.defer();
-        console.log('im here');
         window.open('https://www.google.com/maps?q=Japan, 〒073-0021 Hokkaidō, Takikawa-shi, 本町２丁目2 Chome−3−３番５号 ＴＳビル', '_blank');
         return deferred.promise;
     }

@@ -169,63 +169,68 @@
             </div>
 
             <div class="row" ng-controller="HomeNewsController">
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 
-                        col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
-                    <div class="col-sm-6 col-md-4" ng-repeat="article in articleList | limitTo : 3">
-                        <div class="thumbnail">
-                            <img ng-src="{{article.pictures[0].url}}" alt="...">
-                            <div class="caption">
-                                <div class="article-title">{{article.title}}</div>
-                                <div class="content">{{article.content}}</div>
-                                <div class="article-footer">
-                                    <div class="date">
-                                            {{article.daymonth}} {{article.date | limitTo : 4}}
-                                    </div>
-                                    <div class="line"></div>
-                                    <div class="btn-round">
-                                        <a class="btnClick" data-toggle="modal" data-target="#modal{{article._id}}">></a>
-                                    </div>
+                <div class="main-col col-lg-10 col-md-10 col-sm-12 col-xs-12 
+                        col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0">
+                    <div class="child-col col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-repeat="article in articleList | limitTo : 3">
+                        <div class="container-fluid" style="padding: 0;">
+                            <div class="row thumbnail">
+                                <div class="top-card col-lg-12 col-md-12 col-sm-5 col-xs-5">
+                                    <img class="main-img" ng-src="{{article.pictures[0].url}}" alt="...">
                                 </div>
-                                <!-- Modal -->
-                                <div class="modal fade" id="modal{{article._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="col-lg-12 col-md-12 col-sm-7 col-xs-7 caption">
+                                    <div class="article-title">{{article.title}}</div>
+                                    <div class="content">{{article.content}}</div>
+                                    <div class="article-footer">
+                                        <div class="date">
+                                            {{article.daymonth}} {{article.date | limitTo : 4}}
+                                        </div>
+                                        <div class="line"></div>
+                                        <div class="btn-round">
+                                            <a class="btnClick" data-toggle="modal" data-target="#modal{{article._id}}">></a>
+                                        </div>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="modal{{article._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">{{article.title}}</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-
-                                                <div class="slider">
-                                                    <div ng-repeat="picture in article.pictures | limitTo : 4 : 1">
-                                                        <img ng-src="{{picture.url}}" ng-attr-title="{{picture.description}}" />
-                                                    </div>
-
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">{{article.title}}</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
                                                 </div>
-                                                <script>
-                                                    $(".btnClick").click(function () {
-                                                        setTimeout(function () {
-                                                            $('.slider').bxSlider({
-                                                                mode: 'fade',
-                                                                captions: true,
-                                                                touchEnabled: true
-                                                            });
-                                                        }, 280);
-                                                    });
-                                                </script>
-                                            </div>
+                                                <div class="modal-body">
 
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <div class="slider">
+                                                        <div ng-repeat="picture in article.pictures | limitTo : 4 : 1">
+                                                            <img ng-src="{{picture.url}}" ng-attr-title="{{picture.description}}" />
+                                                        </div>
+
+                                                    </div>
+                                                    <script>
+                                                        $(".btnClick").click(function () {
+                                                            setTimeout(function () {
+                                                                $('.slider').bxSlider({
+                                                                    mode: 'fade',
+                                                                    captions: true,
+                                                                    touchEnabled: true
+                                                                });
+                                                            }, 280);
+                                                        });
+                                                    </script>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -241,27 +246,27 @@
                     <div class="row">
                         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-10
                             col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-1" style="padding-right: 0px; padding-left: 0px;">
-                            <div class="contact-box">
+                            <div class="contact-box" ng-controller="mpFormCtrl">
                                 <h3 class="contact-title">お問い合わせ</h3>
 
-                                <form class="contact-form">
+                                <form name="mpContactForm" ng-submit="sendContactForm(mpcontact)" class="contact-form">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="content" placeholder="お問い合わせ内容＊">
+                                        <input ng-model="mpcontact.content" type="text" class="form-control" name="content" placeholder="お問い合わせ内容＊">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="nameKanji" placeholder="お名前（漢字）＊">
+                                        <input ng-model="mpcontact.nameKanji" type="text" class="form-control" name="nameKanji" placeholder="お名前（漢字）＊">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="namekatakana" placeholder="お名前（カタカナ）＊">
+                                        <input ng-model="mpcontact.namekatakana" type="text" class="form-control" name="namekatakana" placeholder="お名前（カタカナ）＊">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="email" placeholder="E-mail＊">
+                                        <input ng-model="mpcontact.email" type="text" class="form-control" name="email" placeholder="E-mail＊">
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="tel" placeholder="電話番号＊">
+                                        <input ng-model="mpcontact.phone" type="tel" class="form-control" name="phone" id="tel" placeholder="電話番号＊">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="fax" placeholder="FAX番号">
+                                        <input ng-model="mpcontact.fax" type="tel" class="form-control" name="fax" id="fax" placeholder="FAX番号">
                                     </div>
                                     <button type="submit" class="btn btn-primary">送信</button>
                                 </form>

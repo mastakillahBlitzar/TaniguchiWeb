@@ -90,4 +90,41 @@
     background-color: #3B3B3B;
 }
 
+.main-img{
+    max-width: 100%;
+}
+
+.top-card{
+    padding: 0;
+}
+
+.main-col{
+    padding: 0;
+}
+
+@media screen and (max-width: 768px){
+    .news-section .thumbnail{
+        margin-top: 20px;
+    }
+
+    .news-section .thumbnail .caption{
+        height: unset;
+        padding: 10px 15px;
+    }
+
+    .news-section .thumbnail .article-title{
+        font-size: 14px;
+    }
+
+    .news-section .thumbnail .content{
+        font-size: 17px;
+    }
+
+    .article-footer .btn-round{
+        height: 30px;
+        width: 30px;
+    }
+
+}
+
 /* news section and articles styles */

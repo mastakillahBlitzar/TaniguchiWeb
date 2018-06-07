@@ -3,9 +3,9 @@ var myApp = angular.module('myApp');
 
 myApp.controller('loginController',
   ['$scope', '$location', 'AuthService',
-    function ($scope, $location, AuthService) {
+    ($scope, $location, AuthService) => {
 
-      $scope.login = function () {
+      $scope.login = () => {
 
         // initial values
         $scope.error = false;
@@ -14,13 +14,13 @@ myApp.controller('loginController',
         // call login from service
         AuthService.login($scope.user.email, $scope.user.password)
           // handle success  
-          .then(function () {
+          .then(() => {
             $location.path('/adminprofile');
             $scope.disabled = false;
             $scope.user = {};
           })
           // handle error
-          .catch(function () {
+          .catch(() => {
             $scope.error = true;
             $scope.errorMessage = "Invalid username and/or password";
             $scope.disabled = false;
@@ -33,13 +33,13 @@ myApp.controller('loginController',
 
 myApp.controller('logoutController',
   ['$scope', '$location', 'AuthService',
-    function ($scope, $location, AuthService) {
+    ($scope, $location, AuthService) => {
 
-      $scope.logout = function () {
+      $scope.logout = () => {
 
         // call logout from service
         AuthService.logout()
-          .then(function () {
+          .then(() => {
             $location.path('/login');
           });
 
@@ -49,9 +49,9 @@ myApp.controller('logoutController',
 
 myApp.controller('registerController',
   ['$scope', '$location', 'AuthService',
-    function ($scope, $location, AuthService) {
+   ($scope, $location, AuthService) => {
 
-      $scope.register = function () {
+      $scope.register = () => {
 
         // initial values
         $scope.error = false;
@@ -60,13 +60,13 @@ myApp.controller('registerController',
         // call register from service
         AuthService.register($scope.registerForm.username, $scope.registerForm.password)
           // handle success
-          .then(function () {
+          .then(() => {
             $location.path('/login');
             $scope.disabled = false;
             $scope.registerForm = {};
           })
           // handle error
-          .catch(function () {
+          .catch(() => {
             $scope.error = true;
             $scope.errorMessage = "Something went wrong!";
             $scope.disabled = false;
@@ -79,7 +79,7 @@ myApp.controller('registerController',
 
 myApp.controller('ArticleDetailController',
   ['$scope', '$routeParams', '$location', 'ArticleService',
-    function ($scope, $routeParams, $location, ArticleService) {
+    ($scope, $routeParams, $location, ArticleService) => {
 
       var id = $routeParams._id;
 
@@ -87,10 +87,10 @@ myApp.controller('ArticleDetailController',
         $scope.isEdit = true;
         //TODO: llamar metodo que trae el articulo por el atributo id
         ArticleService.getOneArticle(id)
-          .then(function (data) {
+          .then((data) => {
             $scope.article = data;
           })
-          .catch(function () {
+          .catch(() => {
             $scope.error = "error en el servidor, intente recargar la pagina de nuevo";
           });
       } else {
@@ -105,7 +105,7 @@ myApp.controller('ArticleDetailController',
         { id: '5' }
       ];
 
-      $scope.addArticle = function () {
+      $scope.addArticle = () => {
 
         $scope.submitted = true;
 
@@ -115,7 +115,7 @@ myApp.controller('ArticleDetailController',
 
         ArticleService.addArticle(title, content, pictures)
 
-          .then(function (response) {
+          .then((response) => {
             if (response.status === 200) {
               $scope.articleForm.$setPristine();
               $scope.article = {};
@@ -129,15 +129,15 @@ myApp.controller('ArticleDetailController',
               $scope.errorMessage = "Something went wrong!";
             }
           })
-          .catch(function () {
+          .catch(() => {
             $scope.error = true;
             $scope.errorMessage = "Something went wrong!";
           });
       };
 
-      $scope.updateArticle = function (article) {
+      $scope.updateArticle = (article) => {
         ArticleService.updateArticle(article._id, article)
-          .then(function (response) {
+          .then((response) => {
             if (response.status === 200) {
               $scope.article = {};
               $location
@@ -149,7 +149,7 @@ myApp.controller('ArticleDetailController',
               $scope.errorMessage = "Ops!, something went wrong";
             }
           })
-          .catch(function () {
+          .catch(() => {
             $scope.errorMessage = "Ops!, something went wrong";
           });
       };
@@ -159,40 +159,40 @@ myApp.controller('ArticleDetailController',
 
 myApp.controller('ArticleController',
   ['$scope', '$location', '$routeParams', 'ArticleService',
-    function ($scope, $location, $routeParams, ArticleService) {
+    ($scope, $location, $routeParams, ArticleService) => {
 
       refresh();
       /* obtain param from url */
       $scope.outputMsg = $routeParams.param;
 
-      $scope.redirectToForm = function (id) {
+      $scope.redirectToForm = (id) => {
         var _id = id;
         $location.path('/forms/' + _id);
       };
 
-      $scope.remove = function (id) {
+      $scope.remove = (id) => {
         ArticleService.deleteArticle(id)
-          .then(function () {
+          .then(() => {
             refresh();
           });
       };
 
-      function refresh() {
+      refresh = () => {
         ArticleService.getArticles()
 
-          .then(function (data) {
+          .then((data) => {
             $scope.articleList = data;
           })
-          .catch(function () {
+          .catch(() => {
 
           });
-      }
+      };
     }]);
 
 
 myApp.controller('HomeNewsController',
   ['$scope', 'ArticleService',
-    function ($scope, ArticleService) {
+    ($scope, ArticleService) => {
       refresh();
 
       var months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
@@ -201,9 +201,9 @@ myApp.controller('HomeNewsController',
       function refresh() {
         ArticleService.getArticles()
 
-          .then(function (data) {
+          .then((data) => {
             //
-            data.forEach(function (element) {
+            data.forEach((element) => {
               //split the string
               var dateArray = element.date.split("-");
               //extract the month from the resulting array
@@ -218,12 +218,12 @@ myApp.controller('HomeNewsController',
             $scope.articleList = data;
 
           })
-          .catch(function () {
+          .catch(() => {
 
           });
       }
 
-      $scope.readMoreClicked = function (index) {
+      $scope.readMoreClicked = (index) => {
         $('.slider').bxSlider();
       };
       
@@ -231,20 +231,20 @@ myApp.controller('HomeNewsController',
 
 myApp.controller('redirectController',
   ['$scope', '$location',
-    function ($scope, $location) {
-      $scope.home = function () {
+    ($scope, $location) => {
+      $scope.home = () => {
         $location.path('/home');
       };
 
-      $scope.services = function () {
+      $scope.services = () => {
         $location.path('/business');
       };
 
-      $scope.company = function () {
+      $scope.company = () => {
         $location.path('/company');
       };
 
-      $scope.contact = function () {
+      $scope.contact = () => {
         $location.path('/contact');
       };
 
@@ -252,9 +252,9 @@ myApp.controller('redirectController',
 
 myApp.controller('mpHeaderController',
   ['$scope', '$window', 'ActionService',
-    function ($scope, $window, ActionService) {
+    ($scope, $window, ActionService) => {
 
-      $scope.openNewTabLoc = function () {
+      $scope.openNewTabLoc = () => {
         ActionService.openNewTabLoc($window);
       };
 
@@ -262,9 +262,9 @@ myApp.controller('mpHeaderController',
 
     myApp.controller('gsHeaderController',
   ['$scope', '$window', 'ActionService',
-    function ($scope, $window, ActionService) {
+    ($scope, $window, ActionService) => {
 
-      $scope.openNewTabLoc = function () {
+      $scope.openNewTabLoc = () => {
         ActionService.openNewTabLoc($window);
       };
 
@@ -272,9 +272,9 @@ myApp.controller('mpHeaderController',
 
 myApp.controller('mpFooterController',
   ['$scope', '$window', 'ActionService',
-    function ($scope, $window, ActionService) {
+    ($scope, $window, ActionService) => {
 
-      $scope.openNewTabLoc = function () {
+      $scope.openNewTabLoc = () => {
         ActionService.openNewTabLoc($window);
       };
 
@@ -282,9 +282,9 @@ myApp.controller('mpFooterController',
 
     myApp.controller('gsFooterController',
   ['$scope', '$window', 'ActionService',
-    function ($scope, $window, ActionService) {
+    ($scope, $window, ActionService) => {
 
-      $scope.openNewTabLoc = function () {
+      $scope.openNewTabLoc = () => {
         ActionService.openNewTabLoc($window);
       };
 
@@ -292,13 +292,13 @@ myApp.controller('mpFooterController',
 
 myApp.controller('gsContactFormCtrl',
   ['$scope', '$window', 'ActionService',
-    function ($scope, $window, ActionService) {
+    ($scope, $window, ActionService) => {
 
-      $scope.sendContactForm = function (msg) {
+      $scope.sendContactForm = (msg) => {
         var email = "juano.diy@gmail.com";
         var message = msg;
         ActionService.sendEmail(message, email)
-          .then(function (res) {
+          .then((res) => {
             if (res.status === 200) {
               $scope.gsContactForm.$setPristine();
               $scope.gscontact = {};
@@ -311,13 +311,13 @@ myApp.controller('gsContactFormCtrl',
 
     myApp.controller('mpFormCtrl',
   ['$scope', '$window', 'ActionService',
-    function ($scope, $window, ActionService) {
+    ($scope, $window, ActionService) => {
 
-      $scope.sendContactForm = function (msg) {
+      $scope.sendContactForm = (msg) => {
         var email = "juano.diy@gmail.com";
         var message = msg;
         ActionService.sendEmail(message, email)
-          .then(function (res) {
+          .then((res) => {
             if (res.status === 200) {
               $scope.gsContactForm.$setPristine();
               $scope.gscontact = {};
@@ -330,7 +330,7 @@ myApp.controller('gsContactFormCtrl',
 
 myApp.controller('OwnersPgCtrl',
   ['$scope', '$window', 'ActionService',
-    function ($scope, $window, ActionService) {
+    ($scope, $window, ActionService) => {
 
       $scope.ownersInfo = [
         {
@@ -364,14 +364,14 @@ myApp.controller('OwnersPgCtrl',
 
 myApp.controller('GsHomeCtrl',
   ['$scope', '$window', 'ActionService',
-    function ($scope, $window, ActionService) {
+    ($scope, $window, ActionService) => {
 
 
     }]);
 
 myApp.controller('mpAddressCtrl',
   ['$scope', '$window',
-    function ($scope, $window) {
+    ($scope, $window) => {
 
       $scope.infoCompany = [
         {
@@ -468,4 +468,17 @@ myApp.controller('mpAddressCtrl',
         },
       ];
 
+    }]);
+
+    myApp.controller('optionsCtrl',
+    ['$scope','$location', 'smoothScrollService',
+    ($scope, $location, $smoothScrollService) => {
+      $scope.scrollTo = (id) => {
+        $location.hash(id);
+        $smoothScrollService.scrollTo(id);
+      };
+
+      $scope.redirectTo = (page) => {
+        $location.path(page);
+      };
     }]);

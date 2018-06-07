@@ -2,7 +2,7 @@ var myApp = angular.module('myApp');
 
 myApp.factory('ArticleService',
     ['$q', '$timeout', '$http',
-        function ($q, $timeout, $http) {
+        ($q, $timeout, $http) => {
 
             var article = null;
 
@@ -22,7 +22,7 @@ myApp.factory('ArticleService',
 
                 $http.post('user/edit/addArticle', article)
 
-                    .then(function (response) {
+                    .then((response) => {
                         deferred.resolve(response);
                     });
 
@@ -34,7 +34,7 @@ myApp.factory('ArticleService',
             function updateArticle(id, article) {
                 var deferred = $q.defer();
                 $http.put('user/edit/updateArticle/' + id, article)
-                    .then(function (response) {
+                    .then((response) => {
                         deferred.resolve(response);
                     });
                 return deferred.promise;
@@ -59,11 +59,12 @@ myApp.factory('ArticleService',
                 var deferred = $q.defer();
 
                 $http.get('user/edit/getArticles')
-                    .then(function (result) {
+                    .then((result) => {
                         deferred.resolve(result.data);
                         /* article = result.data;
                         return article; */
-                    }, function (error) {
+                    }, 
+                    (error) => {
 
                     });
 
@@ -75,11 +76,11 @@ myApp.factory('ArticleService',
                 var deferred = $q.defer();
 
                 $http.get('user/edit/getArticles/' + id)
-                    .then(function (result) {
+                    .then((result) => {
                         deferred.resolve(result.data);
                         /* article = result.data;
                         return article; */
-                    }, function (error) {
+                    }, (error) => {
 
                     });
 
@@ -91,7 +92,7 @@ myApp.factory('ArticleService',
                 var deferred = $q.defer();
 
                 $http.delete('user/edit/deleteArticle/' + id)
-                    .then(function (response) {
+                    .then((response) => {
                         if (response.status === 200) {
                             deferred.resolve();
                         }
@@ -99,8 +100,8 @@ myApp.factory('ArticleService',
                 return deferred.promise;
             }
 
-            function getDatetime() {
+            getDatetime = () => {
                 return (new Date());
-            }
+            };
 
         }]);

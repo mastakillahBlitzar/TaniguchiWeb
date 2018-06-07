@@ -88,6 +88,11 @@
     width: 40px;
     border-radius: 50%;
     background-color: #3B3B3B;
+    display: flex;
+    align-items: center;
+}
+.article-footer .btn-round a{
+    margin: 0 auto;
 }
 
 .main-img{

@@ -106,4 +106,13 @@ body footer p.footer-block{
     body .header .main-title .subtitle{
         font-size: 16px;
     }
+
+    body .row .slider-container .thumbnail{
+        padding: 0;
+        border: none;
+    }
+
+    .slider-container .thumbnail .bx-wrapper{
+        border: none;
+    }
 }

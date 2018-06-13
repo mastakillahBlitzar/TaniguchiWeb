@@ -12,10 +12,6 @@
     align-items: center;
 }
 
-.row:first-child{
-    background-color: #F8F8F8;
-}
-
 .menu-row{
     background-color: transparent;
 }
@@ -23,12 +19,16 @@
 .row.top-info{
     align-items: center;
     padding: 10px 0;
+    background: #ffffff;
+    background: -webkit-linear-gradient(to bottom, #efecec, #ffffff);
+    background: linear-gradient(to bottom, #efecec, #ffffff)
 }
 
 .row.top-info .top-description{
     padding: 0px;
     color: #7F7F7F;
     line-height: 46px;
+    font-family: mplusregular;
 }
 
 .row.top-info .right-container{
@@ -58,6 +58,11 @@
 .row .info-container p.right-text{
     margin: 0;
     padding: 3px 4px;
+    font-family: firaregular;
+}
+
+.row.rc-row{
+    background: transparent;
 }
 
 /* for small devices */
@@ -74,5 +79,10 @@
     .menu-container .container{
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .row.top-info .top-description{
+        line-height: normal;
+        font-family: mplusmedium;
     }
 }

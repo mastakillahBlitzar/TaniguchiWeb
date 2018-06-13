@@ -31,14 +31,7 @@ body .owners-main-body .row .owners-info .wrapper-row{
     padding: 8px 0px;
 }
 
-body .owners-main-body .row .owners-info .wrapper-row .icon{
-    background-image: url('../../R/bullet-point.png');
-    background-repeat: no-repeat;
-    height: 45px;
-}
-
-
-body .owners-main-body .row .owners-info .wrapper-row .icon .enum{
+body .owners-main-body .row .owners-info .wrapper-row .enum{
     color: white;
     font-weight: bold;
 }
@@ -47,10 +40,6 @@ body .owners-main-body .row .owners-info .wrapper-row .info-text{
     color: #555555;
     font-size: 1.6em;
     font-family: mplusmedium;
-}
-
-body .owners-main-body .row .owners-info .owners-voice{
-    
 }
 
 body .owners-main-body .row .owners-info .owners-voice .title{
@@ -108,14 +97,9 @@ body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .img-
 
 }
 
-body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .review{
-    
-}
-
 body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .review .review-title{
     font-size: 1.8em;
     color: #292929;
-    font-weight: bold;
     font-family: mplusmedium;
 }
 
@@ -131,8 +115,12 @@ body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row.oddie
 }
 
 .chart{
-    padding-bottom: 20px;
+    padding: 0;
     text-align: center;
+}
+
+.owners-main-body .chart img{
+    max-width: 100%;
 }
 
 @media all and (max-width: 770px){
@@ -140,4 +128,35 @@ body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row.oddie
         font-size: 2.3em;
     }
 
+    body .owners-main-body .row .owners-info .wrapper-row .info-text{
+        font-size: 1.6rem;
+        padding: 0;
+        font-family: mpluslight;
+    }
+
+    body .owners-main-body .row{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }    
+
+    .chart{
+        margin-top: 1rem;
+    }    
+
+    body .owners-main-body .row .owners-info .owners-voice .title h4{
+        font-size: 2.5rem;
+    }
+
+    body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .img-container .house-img {
+        padding: 0;
+    }
+
+    .review-wrapper .review{
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+    body .owners-main-body .row .owners-info .owners-voice .review-wrapper.row .review .review-text{
+        font-size: 1.6rem;
+    }
 }

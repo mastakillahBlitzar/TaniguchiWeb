@@ -75,3 +75,11 @@ div.contact-main-body.ng-scope > div > div > div.contact-info.col-lg-6.col-md-6.
     width: 100%;
     height: 100%
 }
+
+@media all and (max-width: 770px){
+    .contact-main-body .row .contact-info {
+        margin-top: 1rem;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

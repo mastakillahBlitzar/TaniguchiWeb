@@ -35,8 +35,9 @@
                 <div ng-controller="gsContactFormCtrl" class="contact-form col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         
                     <div class="form-title">お問い合わせフォーム</div>
-                    お問い合わせは、下記にて承っております。
-                    *は必須項目です。
+                    <div class="form-subtitle">お問い合わせは、下記にて承っております。<br>
+                            *は必須項目です。</div>
+                    
                     <form name="gsContactForm"class="gs-contact-form" ng-submit="sendContactForm(gscontact)">
 
                         <input ng-model="gscontact.name" class="name-input" name="gscontact.name" type="text" placeholder="お名前（漢字）*">

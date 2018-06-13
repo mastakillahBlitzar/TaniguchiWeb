@@ -9,6 +9,11 @@
     font-family: mplusheavy;
 }
 
+.form-subtitle{
+    font-family: mplusregular;
+    font-size: 1.4rem;
+}
+
 .contact-form .gs-contact-form{
     display: block;
     padding: 8px 1px;

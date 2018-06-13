@@ -49,7 +49,7 @@ myApp.controller('logoutController',
 
 myApp.controller('registerController',
   ['$scope', '$location', 'AuthService',
-   ($scope, $location, AuthService) => {
+    ($scope, $location, AuthService) => {
 
       $scope.register = () => {
 
@@ -226,7 +226,7 @@ myApp.controller('HomeNewsController',
       $scope.readMoreClicked = (index) => {
         $('.slider').bxSlider();
       };
-      
+
     }]);
 
 myApp.controller('redirectController',
@@ -260,7 +260,7 @@ myApp.controller('mpHeaderController',
 
     }]);
 
-    myApp.controller('gsHeaderController',
+myApp.controller('gsHeaderController',
   ['$scope', '$window', 'ActionService',
     ($scope, $window, ActionService) => {
 
@@ -278,9 +278,35 @@ myApp.controller('mpFooterController',
         ActionService.openNewTabLoc($window);
       };
 
+      $scope.class1 = null;
+      $scope.class2 = null;
+      $scope.toggleFooter = (option) => {
+        if(option === 1){
+          toggleClass1();
+        } else {
+          toggleClass2();
+        }
+      };
+
+      toggleClass1 = () => {
+        if ($scope.class1 === null) {
+          $scope.class1 = 'active';
+        } else {
+          $scope.class1 = null;
+        }
+      };
+
+      toggleClass2 = () => {
+        if ($scope.class2 === null) {
+          $scope.class2 = 'active';
+        } else {
+          $scope.class2 = null;
+        }
+      };
+
     }]);
 
-    myApp.controller('gsFooterController',
+myApp.controller('gsFooterController',
   ['$scope', '$window', 'ActionService',
     ($scope, $window, ActionService) => {
 
@@ -309,7 +335,7 @@ myApp.controller('gsContactFormCtrl',
 
     }]);
 
-    myApp.controller('mpFormCtrl',
+myApp.controller('mpFormCtrl',
   ['$scope', '$window', 'ActionService',
     ($scope, $window, ActionService) => {
 
@@ -411,7 +437,7 @@ myApp.controller('mpAddressCtrl',
             '専務取締役　1名',
             '常務取締役　2名',
             '取締役　2名'
-          ] 
+          ]
         },
         {
           icon: '../R/contacticons/8.png',
@@ -431,7 +457,7 @@ myApp.controller('mpAddressCtrl',
             '2級建築施工管理技士（躯体）　1名',
             '2級建築施工管理技士（仕上げ）　1名',
             '基幹技能者　1名'
-          ] 
+          ]
         },
       ];
 
@@ -470,8 +496,8 @@ myApp.controller('mpAddressCtrl',
 
     }]);
 
-    myApp.controller('optionsCtrl',
-    ['$scope','$location', 'smoothScrollService',
+myApp.controller('optionsCtrl',
+  ['$scope', '$location', 'smoothScrollService',
     ($scope, $location, $smoothScrollService) => {
       $scope.scrollTo = (id) => {
         $location.hash(id);

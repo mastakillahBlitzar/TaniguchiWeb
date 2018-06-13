@@ -55,11 +55,6 @@ body .contact-main-body .row{
     margin: 0 auto;
 }
 
-.contact-main-body .row .contact-info {
-    padding: 0px;
-    padding-left: 10%;
-}
-
 .contact-main-body .row .contact-info .map-container{
     padding: 10px;
     border: 1px solid #0052A4;

@@ -108,15 +108,15 @@ footer {
    @media only screen and (max-width: 479px) {    
         .widget_content{
            display:none;
-       }
-       .active .widget_content{
+        }
+       .widget_content.active {
            display:inline;	
-       }
+        }
        .widget h2 { 
            border-bottom:1px solid #ddd;
            font-family: mplusregular;
            font-size: 1.8rem;
-       }   
+        }   
        .widget h2:after {
            content:"\203A";
            color:white;
@@ -126,9 +126,5 @@ footer {
            display:inline-block;
            text-align:center;
            float:right;
-       }
-       .active.widget h2:after {
-           content:"\2039";    
-           background:#ccc;
-       }
+        }
    }

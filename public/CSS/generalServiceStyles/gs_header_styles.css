@@ -85,4 +85,8 @@
         line-height: normal;
         font-family: mplusmedium;
     }
+
+    .rc-row{
+        display: block;
+    }
 }

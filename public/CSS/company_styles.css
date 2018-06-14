@@ -55,12 +55,7 @@ body{
     max-width: 100%;
 }
 
-.info-container .row .icon{
-    margin-right: 16px;
-}
-
 .info-row{
-    display: inline-flex;
     padding: 0px;
     border: 1px solid #0052A4;
     margin-top: 40px;
@@ -73,9 +68,7 @@ body{
 }
 
 .info-row .description{
-    width: 40%;
     margin-top: 12px;
-    padding: 0px;
     color: #0052A4;
     font-weight: bold;
     font-family: mpluslight;
@@ -83,8 +76,6 @@ body{
 
 .info-row .info-content{
     color: #2C2C2C;
-    width: 60%;
-    margin: auto;
     padding: 10px;
     font-family: mplusthin;
 }
@@ -92,7 +83,9 @@ body{
 
 .address-container{
     margin-top: 60px;
-    background-color: #17897F;
+    background: #136a8a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding-top: 80px;
     padding-bottom: 40px;
 }
@@ -102,6 +95,7 @@ body{
     color: #FFF;
     border-color: transparent;
     margin-top: 20px;
+    box-shadow: 0px 3px 25px 3px rgba(153,153,153,1);
 }
 
 

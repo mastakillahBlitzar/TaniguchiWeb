@@ -39,11 +39,12 @@
 .news-section .thumbnail{
     padding: 0px;
     box-shadow: 0px 3px 25px -2px rgba(92,92,92,1);
+    min-height: 510px;
+    position: relative;
 }
 
 .news-section .thumbnail .caption{
     margin-top: 0px;
-    height: 250px;
     border: 0px;
     padding: 20px 20px;
 }
@@ -69,12 +70,15 @@
 .article-footer{
     display: flex;
     align-items: center;
-    margin-top: 24px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 1rem;
 }
 
 .article-footer .date{
     color: #293038;
     font-size: 15px;
+    font-family: 'Fira Sans';
 }
 
 .article-footer .line{
@@ -90,6 +94,7 @@
     background-color: #3B3B3B;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .article-footer .btn-round a{
     margin: 0 auto;
@@ -105,6 +110,18 @@
 
 .main-col{
     padding: 0;
+}
+
+.modal-title{
+    font-family: mplusmedium;
+}
+
+#myModal .bx-wrapper .bx-caption span{
+    font-family: mplusregular;
+}
+
+#myModal .btn{
+    font-family: mplusregular;
 }
 
 @media screen and (max-width: 768px){
@@ -130,6 +147,14 @@
         width: 30px;
     }
 
+    .news-section .thumbnail{
+        max-height: 350px;
+        min-height: unset;
+    }
+
+    .article-footer{
+        position: relative;
+    }
 }
 
 /* news section and articles styles */

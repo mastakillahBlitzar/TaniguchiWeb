@@ -56,23 +56,3 @@ src: url('../fonts/M+/mplus-1-black-sub.eot?#iefix') format('embedded-opentype')
 url('../fonts/M+/mplus-1-black-sub.woff') format('woff'),
 url('../fonts/M+/mplus-1-black-sub.ttf') format('truetype');
 }
-
-@font-face{
-    font-family: firalight;
-    src: url('../fonts/firaSans/FiraSans-Light.ttf');
-}
-
-@font-face{
-    font-family: firaregular;
-    src: url('../fonts/firaSans/FiraSans-Regular.ttf');
-}
-
-@font-face{
-    font-family: firabold;
-    src: url('../fonts/firaSans/FiraSans-Bold.ttf');
-}
-
-@font-face{
-    font-family: firablack;
-    src: url('../fonts/firaSans/FiraSans-Black.ttf');
-}

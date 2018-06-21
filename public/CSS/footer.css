@@ -30,7 +30,8 @@ footer {
        text-align: center; 
        color: #545454; 
        font-size: 13px;
-       font-family: firalight;
+       font-family: 'Fira Sans';
+       font-weight: 300;
    }
 
    .footer-bottom .pull-right{
@@ -73,7 +74,7 @@ footer {
    }
 
    footer ul li a.num{
-    font-family: firaregular;
+    font-family: 'Fira Sans';
 }
 
    footer ul li a:focus, a:hover{

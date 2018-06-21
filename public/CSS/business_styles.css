@@ -22,7 +22,8 @@ body{
 }
 
 .main-page-header .title.down{
-    font-family: firalight;
+    font-family: 'Fira Sans';
+    font-weight: 300;
 }
 
 .main-page-header .wrapper{

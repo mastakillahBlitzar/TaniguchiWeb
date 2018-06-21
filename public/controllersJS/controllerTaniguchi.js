@@ -216,7 +216,7 @@ myApp.controller('HomeNewsController',
               element.daymonth = day.concat(" ").concat(month);
             });
             $scope.articleList = data;
-
+            console.log($scope.articleList);
           })
           .catch(() => {
 

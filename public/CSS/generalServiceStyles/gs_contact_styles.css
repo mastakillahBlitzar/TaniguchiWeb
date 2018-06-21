@@ -19,7 +19,8 @@ body{
     color: white;
     margin: 0 auto;
     font-size: 3.3em;
-    font-family: firalight;
+    font-family: 'Fira Sans';
+    font-weight: 300;
 }
 
 body .contact-main-body .row{

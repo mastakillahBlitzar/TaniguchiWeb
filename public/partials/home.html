@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../CSS/article_box.css" type="text/css">
     <link rel="stylesheet" href="../CSS/metalPlateStyles/mp_header_styles.css" />
     <link rel="stylesheet" href="../CSS/tn_webfonts.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700" rel="stylesheet">
 
     <!--    <script src="scripts/responsivemenu.js"></script>-->
 
@@ -83,16 +84,16 @@
                         </div>
                         <div class="row">
                             <div ng-click="redirectTo('/business')" class="mobile-icons col-sm-4 col-xs-4 hidden-lg hidden-md">
-                                    <img class="img-icon" src="../R/icons/iconstaniguchi/briefcase.svg">
-                                    <div class="title">事業内容</div class="title">
+                                <img class="img-icon" src="../R/icons/iconstaniguchi/briefcase.svg">
+                                <div class="title">事業内容</div class="title">
                             </div>
                             <div ng-click="redirectTo('/company')" class="mobile-icons col-sm-4 col-xs-4 hidden-lg hidden-md">
-                                    <img class="img-icon" src="../R/icons/iconstaniguchi/puzzle.svg">
-                                    <div class="title">会社概要</div class="title">
+                                <img class="img-icon" src="../R/icons/iconstaniguchi/puzzle.svg">
+                                <div class="title">会社概要</div class="title">
                             </div>
                             <div ng-click="scrollTo('mp-contact')" class="mobile-icons col-sm-4 col-xs-4 hidden-lg hidden-md">
-                                    <img class="img-icon" src="../R/icons/iconstaniguchi/chat-dialog.svg">
-                                    <div class="title">お問い合わせ</div class="title">
+                                <img class="img-icon" src="../R/icons/iconstaniguchi/chat-dialog.svg">
+                                <div class="title">お問い合わせ</div class="title">
                             </div>
                         </div>
                     </div>
@@ -191,17 +192,8 @@
                                 <div class="col-lg-12 col-md-12 col-sm-7 col-xs-7 caption">
                                     <div class="article-title">{{article.title}}</div>
                                     <div class="content">{{article.content}}</div>
-                                    <div class="article-footer">
-                                        <div class="date">
-                                            {{article.daymonth}} {{article.date | limitTo : 4}}
-                                        </div>
-                                        <div class="line"></div>
-                                        <div class="btn-round">
-                                            <a class="btnClick" data-toggle="modal" data-target="#modal{{article._id}}"><img src="../R/icons/path-3.svg"></a>
-                                        </div>
-                                    </div>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="modal{{article._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
@@ -227,7 +219,7 @@
                                                                     captions: true,
                                                                     touchEnabled: true
                                                                 });
-                                                            }, 280);
+                                                            }, 320);
                                                         });
                                                     </script>
                                                 </div>
@@ -237,6 +229,17 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="article-footer col-lg-12 col-md-12 col-sm-10 col-xs-12">
+                                    <div class="date">
+                                        {{article.daymonth}} {{article.date | limitTo : 4}}
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="btn-round" data-toggle="modal" data-target="#myModal">
+                                        <a class="btnClick">
+                                            <img src="../R/icons/path-3.svg">
+                                        </a>
                                     </div>
                                 </div>
                             </div>

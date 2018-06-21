@@ -60,7 +60,8 @@ h4{
 
 .title-company > h1 > .section-title .title{ 
     color: #747474;
-    font-family: firabold;
+    font-family: 'Fira Sans';
+    font-weight: 700;
     padding: 12px 1px;
 }
 
@@ -456,7 +457,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     body{
         font-family: mpluslight;
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     
     .text-body{

@@ -29,18 +29,19 @@ h4{
 
 /* title underline deco styles */
 
-.title-company > h1{
+.title-company .tc-wrap{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 3rem;
 }
 
-.title-company > h1 > .section-title .deco-container{
+.title-company .tc-wrap .section-title .deco-container{
     display: flex;
     align-items: center;
 }
 
-.title-company > h1 > .section-title .deco-container .ball{
+.title-company .tc-wrap .section-title .deco-container .ball{
     border-radius: 50%;
     width: 12px;
     height: 12px;
@@ -48,24 +49,24 @@ h4{
     position: absolute;
 }
 
-.title-company > h1 > .section-title .deco-container .line{
+.title-company .section-title .deco-container .line{
     height: 2px;
     width: 100%;
     background-color: #737373;
 }
 
-.title-company > h1 > .section-title{
+.title-company .section-title{
     display: inline-block;
 }
 
-.title-company > h1 > .section-title .title{ 
+.title-company .section-title .title{ 
     color: #747474;
     font-family: 'Fira Sans';
     font-weight: 700;
     padding: 12px 1px;
 }
 
-.title-company > h1 > .section-title-bold{
+.title-company .section-title-bold{
     color: #0052A4;
     font-weight: bold;
 }
@@ -458,6 +459,10 @@ and (-webkit-min-device-pixel-ratio: 1) {
     body{
         font-family: mpluslight;
         font-size: 1.6rem;
+    }
+
+    h1{
+        font-size: 32px;
     }
     
     .text-body{

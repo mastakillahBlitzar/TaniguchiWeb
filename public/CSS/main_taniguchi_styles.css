@@ -96,7 +96,7 @@ body footer p.footer-block{
     width: 100%;
     margin: 0;
     text-align: center;
-    font-size: 0.8em;
+    font-size: .55em;
 }
 
 @media screen and (max-width: 768px){
@@ -110,10 +110,16 @@ body footer p.footer-block{
 
     body .row .slider-container .thumbnail{
         padding: 0;
+        margin: 0;
         border: none;
     }
 
     .slider-container .thumbnail .bx-wrapper{
         border: none;
+        margin: 0;
+    }
+
+    body .row.slider{
+        padding: 0;
     }
 }

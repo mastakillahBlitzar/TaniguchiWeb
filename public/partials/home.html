@@ -44,13 +44,10 @@
                 <img src="../R/mp_home/roof_tanihouse.jpg" title="Happy trees" />
             </div>
         </div>
-
-
     </div>
 
-    <div class="main-body">
-
-        <div class="options-section" ng-controller="optionsCtrl">
+    <div class="main-body" ng-controller="mpHomeController" data-ng-init="scrollToHash()">
+        <div class="options-section">
             <div class="container-fluid">
                 <div class="row" style="max-width: 100%; margin: 0;">
                     <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1" style="padding: 0px; ">
@@ -64,7 +61,6 @@
                                     <h3>事業内容</h3>
                                 </div>
                             </div>
-
                             <div ng-click="redirectTo('/company')" class="thumbnail col-lg-3-and-half col-md-3-and-half col-sm-3-and-half col-xs-full col-lg-offset-3-cuarters col-md-offset-3-cuarters col-sm-offset-3-cuarters">
                                 <div class="box-icon" id="box-2">
                                     <img class="img-icon" src="../R/icons/iconstaniguchi/puzzle.svg">
@@ -85,15 +81,15 @@
                         <div class="row">
                             <div ng-click="redirectTo('/business')" class="mobile-icons col-sm-4 col-xs-4 hidden-lg hidden-md">
                                 <img class="img-icon" src="../R/icons/iconstaniguchi/briefcase.svg">
-                                <div class="title">事業内容</div class="title">
+                                <div class="title">事業内容</div>
                             </div>
                             <div ng-click="redirectTo('/company')" class="mobile-icons col-sm-4 col-xs-4 hidden-lg hidden-md">
                                 <img class="img-icon" src="../R/icons/iconstaniguchi/puzzle.svg">
-                                <div class="title">会社概要</div class="title">
+                                <div class="title">会社概要</div>
                             </div>
                             <div ng-click="scrollTo('mp-contact')" class="mobile-icons col-sm-4 col-xs-4 hidden-lg hidden-md">
                                 <img class="img-icon" src="../R/icons/iconstaniguchi/chat-dialog.svg">
-                                <div class="title">お問い合わせ</div class="title">
+                                <div class="title">お問い合わせ</div>
                             </div>
                         </div>
                     </div>
@@ -104,7 +100,7 @@
         <div class="about-section">
 
             <div class="title-company" style="width: 100%">
-                <h1>
+                <div class="tc-wrap">
                     <span class="section-title-bold">谷口板金</span>
                     <div class="section-title">
                         <div class="title">とは…</div>
@@ -113,11 +109,11 @@
                             <div class="line"></div>
                         </div>
                     </div>
-                </h1>
+                </div>
             </div>
             <div class="text-body">
                 <p class="about-text">有限会社谷口板金工業所は、屋根・外壁工事を専門とする会社です。</p>
-                <h2>屋根・外壁のことならおまかせください。</h2>
+                <h3>屋根・外壁のことならおまかせください。</h3>
                 <br>
                 <p class="about-text">住宅から工場やビル・神社仏閣などの大規模施設まで、あらゆる建築物に対応し工事いたします。
                     <br>長年の実績と豊富な経験で培った技術、そして最新鋭の設備でお客様のあらゆるニーズにお応えします。</p>
@@ -165,9 +161,9 @@
 
         </div>
 
-        <div class="news-section">
+        <div class="news-section" id="mp-news">
             <div class="title-company" style="width: 100%;">
-                <h1>
+                <div class="tc-wrap">
                     <span class="section-title-bold">谷口板金</span>
                     <span class="section-title">
 
@@ -177,10 +173,10 @@
                             <div class="line"></div>
                         </div>
                     </span>
-                </h1>
+                </div>
             </div>
 
-            <div class="row" ng-controller="HomeNewsController">
+            <div class="row">
                 <div class="main-col col-lg-10 col-md-10 col-sm-12 col-xs-12 
                         col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0">
                     <div class="child-col col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-repeat="article in articleList | limitTo : 3">
@@ -302,20 +298,22 @@
                 </div>
             </div>
         </div>
-        <script>
-            $(function () {
-                $('.bxslider').bxSlider({
-                    mode: 'fade',
-                    captions: true,
 
-                });
+    </div>
+    <script>
+        $(function () {
+            $('.bxslider').bxSlider({
+                mode: 'fade',
+                captions: true,
+
             });
-        </script>
+        });
+    </script>
 
-        <div ng-include src="'partials/mp_footer.html'"></div>
+    <div ng-include src="'partials/mp_footer.html'"></div>
 
-        <script type="text/javascript" src="../scripts/jquery.cycle2.min.js"></script>
-        <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.cycle2.min.js"></script>
+    <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
 </body>
 
 </html>

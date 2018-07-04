@@ -78,7 +78,7 @@ myApp.config(function ($routeProvider, $locationProvider) {
 
   });
 
-  myApp.run(function ($rootScope, $location, $route, AuthService) {
+  myApp.run(($rootScope, $location, $route, AuthService) => {
    
     $rootScope.$on('$routeChangeStart',
       function (event, next, current) {

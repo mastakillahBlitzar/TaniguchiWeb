@@ -75,9 +75,11 @@ footer {
 
    footer ul li a.num{
     font-family: 'Fira Sans';
+    transition: .3s ease;
 }
 
    footer ul li a:focus, a:hover{
+    transition: .3s ease-out;
     font-size: 19px;
     color: #0052A4;
     text-decoration: none!important;
@@ -95,6 +97,9 @@ footer {
         cursor: pointer;
    }
 
+   a.phone-link{
+    padding: 0;
+   }
    
    @media only screen and (max-width: 770px) {  
         .container .list{
@@ -103,6 +108,10 @@ footer {
 
         footer{
             padding-top: 45px;
+        }
+
+        footer ul li a:focus, a:hover{
+            color: white;
         }
     }
      

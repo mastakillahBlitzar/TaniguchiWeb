@@ -190,9 +190,9 @@ myApp.controller('ArticleController',
     }]);
 
 
-myApp.controller('HomeNewsController',
-  ['$scope', 'ArticleService',
-    ($scope, ArticleService) => {
+myApp.controller('mpHomeController',
+  ['$scope', '$location',  '$routeParams', 'ArticleService', 'smoothScrollService',
+    ($scope, $location, $routeParams, ArticleService, $smoothScrollService) => {
       refresh();
 
       var months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
@@ -217,6 +217,7 @@ myApp.controller('HomeNewsController',
             });
             $scope.articleList = data;
             console.log($scope.articleList);
+            //scrollToHash();
           })
           .catch(() => {
 
@@ -227,6 +228,31 @@ myApp.controller('HomeNewsController',
         $('.slider').bxSlider();
       };
 
+      $scope.scrollToHash = () => {
+        console.log($routeParams.scrollTo);
+        let i = '#'.concat($routeParams.scrollTo);
+        $location.hash($routeParams.scrollTo);
+        $smoothScrollService.scrollTo($routeParams.scrollTo);
+      };
+
+      $scope.scrollTo = (id) => {
+        $location.hash(id);
+        $smoothScrollService.scrollTo(id);
+      };
+
+      $scope.redirectTo = (page) => {
+        $location.path(page);
+      };
+
+    }]);
+    
+    myApp.controller('businessCtrl',
+  ['$scope', '$location',
+    ($scope, $location) => {
+    
+      $scope.clearParams = () => {
+        $location.path('/business');
+      };
     }]);
 
 myApp.controller('redirectController',
@@ -260,6 +286,24 @@ myApp.controller('mpHeaderController',
 
     }]);
 
+myApp.controller('mpMenuController',
+  ['$scope', '$location', 'smoothScrollService',
+    ($scope, $location, $smoothScrollService) => {
+
+      $scope.scrollTo = (id) => {
+        let i = '#'.concat(id);
+        if(angular.element(i).length){
+          $location.hash(id);
+          console.log(id);
+          $smoothScrollService.scrollTo(id);
+        } else {
+          $location.path('/metalplatehome/').search({scrollTo: id});
+        }
+      };
+
+    }]);
+
+
 myApp.controller('gsHeaderController',
   ['$scope', '$window', 'ActionService',
     ($scope, $window, ActionService) => {
@@ -281,7 +325,7 @@ myApp.controller('mpFooterController',
       $scope.class1 = null;
       $scope.class2 = null;
       $scope.toggleFooter = (option) => {
-        if(option === 1){
+        if (option === 1) {
           toggleClass1();
         } else {
           toggleClass2();
@@ -494,17 +538,4 @@ myApp.controller('mpAddressCtrl',
         },
       ];
 
-    }]);
-
-myApp.controller('optionsCtrl',
-  ['$scope', '$location', 'smoothScrollService',
-    ($scope, $location, $smoothScrollService) => {
-      $scope.scrollTo = (id) => {
-        $location.hash(id);
-        $smoothScrollService.scrollTo(id);
-      };
-
-      $scope.redirectTo = (page) => {
-        $location.path(page);
-      };
     }]);

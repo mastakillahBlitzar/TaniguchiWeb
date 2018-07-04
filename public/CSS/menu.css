@@ -27,6 +27,13 @@
     color:white;
     font-size: 1.6rem;
     font-family: mpluslight;
+    height: 66px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-default .navbar-nav>li> .news-link{
+    cursor: pointer;
 }
 
 #main-menu > .container-fluid > .collapse>  .nav > li > a:before,
@@ -59,16 +66,15 @@
 }
 
 #main-menu > .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
-    color: white;
     height: auto;
-    font-family: mpluslight;
-    transition: all 0.2s ease-in;
+}
+
+#main-menu > .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand img{
+    width: 250px;
 }
 
 #main-menu > .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
-    background-color: white;
-    color: black;
-    transition: all 0.2s ease-in;
+    cursor: pointer;
 }
 
 
@@ -101,13 +107,9 @@
         padding-left: 15px;
     }
 
-    #main-menu > .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
-        font-family: mplusregular;
+    #main-menu > .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand img{
+        width: 173px;
     }
 
-    #main-menu > .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
-        background-color: transparent;
-        color: white;
-    }
   }
 

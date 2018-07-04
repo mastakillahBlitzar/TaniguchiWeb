@@ -121,5 +121,6 @@ body footer p.footer-block{
 
     body .row.slider{
         padding: 0;
+        margin-top: 45px;
     }
 }

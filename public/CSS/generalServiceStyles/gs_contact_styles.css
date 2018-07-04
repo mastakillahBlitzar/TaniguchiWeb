@@ -49,6 +49,7 @@ body .contact-main-body .row{
 .contact-main-body .row .contact-info .contact-opt .info-wrapper .number{
     margin-left: 12px;
     font-size: 1.2em;
+    font-family: 'Fira Sans';
 }
 
 .contact-main-body .row .contact-info .contact-opt .info-wrapper .img-wrapper img{

@@ -69,7 +69,7 @@ app.use('/user/edit/', articleroutes);
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../public', 'index.html'));
-  });
+});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -98,8 +98,8 @@ function clientErrorHandler(err, req, res, next) {
 }
 
 function errorHandler(err, req, res, next){
-    res.status(500);
-    res.render('error', {error: err});
+    res.status(err.status || 500);
+    res.render({error: err});
 }
 
 app.listen(settings.webPort, function(){

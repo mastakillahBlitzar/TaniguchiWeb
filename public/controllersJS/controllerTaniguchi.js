@@ -3,7 +3,7 @@ var myApp = angular.module('myApp');
 
 myApp.controller('loginController',
   ['$scope', '$location', 'AuthService',
-    ($scope, $location, AuthService) => {
+    function($scope, $location, AuthService) {
 
       $scope.login = () => {
 
@@ -79,7 +79,7 @@ myApp.controller('registerController',
 
 myApp.controller('ArticleDetailController',
   ['$scope', '$routeParams', '$location', 'ArticleService',
-    ($scope, $routeParams, $location, ArticleService) => {
+    function($scope, $routeParams, $location, ArticleService) {
 
       var id = $routeParams._id;
 
@@ -159,7 +159,7 @@ myApp.controller('ArticleDetailController',
 
 myApp.controller('ArticleController',
   ['$scope', '$location', '$routeParams', 'ArticleService',
-    ($scope, $location, $routeParams, ArticleService) => {
+    function($scope, $location, $routeParams, ArticleService) {
 
       refresh();
       /* obtain param from url */
@@ -177,9 +177,8 @@ myApp.controller('ArticleController',
           });
       };
 
-      refresh = () => {
+      function refresh() {
         ArticleService.getArticles()
-
           .then((data) => {
             $scope.articleList = data;
           })

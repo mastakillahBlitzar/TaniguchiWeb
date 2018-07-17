@@ -215,6 +215,9 @@ myApp.controller('mpHomeController',
               element.daymonth = day.concat(" ").concat(month);
             });
             $scope.articleList = data;
+            data.forEach(() => {
+              console.log(data);
+            })
             console.log($scope.articleList);
             //scrollToHash();
           })
@@ -229,9 +232,10 @@ myApp.controller('mpHomeController',
 
       $scope.scrollToHash = () => {
         console.log($routeParams.scrollTo);
-        let i = '#'.concat($routeParams.scrollTo);
-        $location.hash($routeParams.scrollTo);
-        $smoothScrollService.scrollTo($routeParams.scrollTo);
+        if($routeParams.scrollTo){
+          $location.hash($routeParams.scrollTo);
+          $smoothScrollService.scrollTo($routeParams.scrollTo);
+        }
       };
 
       $scope.scrollTo = (id) => {
@@ -253,6 +257,46 @@ myApp.controller('mpHomeController',
         $location.path('/business');
       };
     }]);
+
+    myApp.controller('businessMainCtrl',
+    ['$scope', '$location',
+      ($scope, $location) => {
+      
+        $scope.servicesArray = [
+          {
+            serviceName: 'JFE鋼板 株式会社',
+            serviceInfo: [
+              'JFE GLカラー鋼板'
+            ]
+          },
+          {
+            serviceName: '株式会社 淀川製作所',
+            serviceInfo: [
+              'ヨドGLカラー鋼板',
+              'ヨドルーフ'
+            ]
+          },
+          {
+            serviceName: '日新製鋼 株式会社',
+            serviceInfo: [
+              '月星GLカラー'
+            ]
+          },
+          {
+            serviceName: '株式会社 アイジー工業',
+            serviceInfo: [
+              'アイジーヴァンド'
+            ]
+          },
+          {
+            serviceName: 'ロンシール工業 株式会社',
+            serviceInfo: [
+              'ベストプルーフ'
+            ]
+          },
+        ];
+      }]);
+    
 
 myApp.controller('redirectController',
   ['$scope', '$location',

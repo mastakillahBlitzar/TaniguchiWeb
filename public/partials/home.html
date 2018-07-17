@@ -9,9 +9,12 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
+
     <title>Taniguchi Corp. metal plate ltda.</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.2.js"></script>
 
     <link rel="stylesheet" href="../plugins/facebooklikeslider/css/jquery.bxslider.css">
     <link rel="stylesheet" href="../CSS/main.css" type="text/css">
@@ -22,7 +25,7 @@
     <link rel="stylesheet" href="../CSS/tn_webfonts.css" />
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700" rel="stylesheet">
 
-    <!--    <script src="scripts/responsivemenu.js"></script>-->
+
 
 </head>
 <header>
@@ -35,13 +38,16 @@
     <div class="body-container">
         <div class="bxslider">
             <div>
-                <img src="../R/mp_home/materials_1.jpg" title="確かな技術と最新鋭の設備。" />
+                <img src="../R/mp_home/construction_site.jpg" title="確かな技術と最新鋭の設備。<br>半世紀に渡る信頼に支えられて <br>私たちは、あらゆるニーズに取り組み続けています。"/>
             </div>
             <div>
-                <img src="../R/mp_home/roof_black.jpg" title="The long and winding road" />
+                <img src="../R/mp_home/company_facade.jpg"  title="" />
             </div>
             <div>
-                <img src="../R/mp_home/roof_tanihouse.jpg" title="Happy trees" />
+                <img src="../R/mp_home/machine_1.jpg" title="" />
+            </div>
+            <div>
+                <img src="../R/mp_home/materials_1.jpg" title=""/>
             </div>
         </div>
     </div>
@@ -189,7 +195,7 @@
                                     <div class="article-title">{{article.title}}</div>
                                     <div class="content">{{article.content}}</div>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
@@ -225,8 +231,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
+
                                 <div class="article-footer col-lg-12 col-md-12 col-sm-10 col-xs-12">
                                     <div class="date">
                                         {{article.daymonth}} {{article.date | limitTo : 4}}

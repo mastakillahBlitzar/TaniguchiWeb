@@ -22,31 +22,13 @@ body{
     font-family: mplusmedium;
 }
 
-.title-page{
-    text-align: center;
-    position: relative;
-    padding: 20px;
+.main-page-header .wrapper{
+    margin: 0 auto;
 }
 
-.title-page h3{
+.main-page-header .title.down{
     font-family: 'Fira Sans';
     font-weight: 300;
-    color: #FEFFFD;
-    transform: skew(30deg);
-    margin: 0;
-}
-
-.title-page .title-bg{
-    height: auto;
-    display: inline-block;
-    margin: auto;
-    transform: skew(-30deg);
-    background-color: #0052A5;
-
-    padding: 14px;
-    padding-right: 18px;
-    padding-left: 18px;
-    box-shadow: 0px 4px 15px 1px rgba(0, 0, 0, 168);
 }
 
 .info-container .row{

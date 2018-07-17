@@ -24,34 +24,29 @@
 <body>
 
     <div class="main-page-header">
-        <div class="title">会社概要</div>
-    </div>
-
-    <div class="title-page">
-        <div class="title-bg">
-
-            <h3>COMPANY</h3>
+        <div class="wrapper">
+                <div class="title">会社概要</div>
+                <div class="title down">COMPANY</div>
         </div>
-
     </div>
 
     <div class="info-container" ng-controller="mpAddressCtrl">
         <div class="row">
             <div class="info-row col-xs-10 col-sm-8 col-md-8 col-lg-8
             col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-1" ng-repeat="info in infoCompany">
-            <div class="row">
-                    <div class="icon col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                            <img ng-src="{{info.icon}}" />
+                <div class="row">
+                    <div class="icon col-xs-6 col-sm-3 col-md-3 col-lg-2">
+                        <img ng-src="{{info.icon}}" />
+                    </div>
+                    <div class="description col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                        {{info.infoName}}
+                    </div>
+                    <div class="info-content col-xs-12 col-sm-6 col-md-6 col-lg-7">
+                        <div ng-repeat="desc in info.infoDesc">
+                            {{desc}}
                         </div>
-                        <div class="description col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                            {{info.infoName}}
-                        </div>
-                        <div class="info-content col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                            <div ng-repeat="desc in info.infoDesc">
-                                {{desc}}
-                            </div>
-                        </div>
-            </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -73,16 +68,16 @@
                                         <div class="row-itm col-lg-10 col-md-10 col-sm-6 col-xs-12">
                                             {{address.address}}
                                         </div>
-                                        <div class="row-itm ic col-lg-2 col-sm-6 col-xs-12">
+                                        <div class="row-itm ic col-lg-2 col-md-2 col-sm-6 col-xs-12">
                                             <img src="../R/addressbox/call.png">
                                         </div>
-                                        <div class="row-itm num col-lg-10 col-sm-6 col-xs-12">
+                                        <div class="row-itm num col-lg-10 col-md-10 col-sm-6 col-xs-12">
                                             {{address.num}}
                                         </div>
-                                        <div class="row-itm ic col-lg-2 col-sm-6 col-xs-12">
+                                        <div class="row-itm ic col-lg-2 col-md-2 col-sm-6 col-xs-12">
                                             <img src="../R/addressbox/fax.png">
                                         </div>
-                                        <div class="row-itm num col-lg-10 col-sm-6 col-xs-12">
+                                        <div class="row-itm num col-lg-10 col-md-10 col-sm-6 col-xs-12">
                                             {{address.fax}}
                                         </div>
                                     </div>

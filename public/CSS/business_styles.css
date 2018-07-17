@@ -31,9 +31,10 @@ body{
 }
 
 .title-page{
-    text-align: center;
+    text-align: end;
     position: relative;
     padding: 20px;
+    margin-right: 9%;
 }
 
 .title-page h3{
@@ -91,13 +92,36 @@ body{
 
 .service .service-title{
     color: rgb(34, 121, 207);
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-family: mpluslight;
 }
 
 .service .service-body{
-    font-family: mplusregular;
+    font-family: Meiryo;
     margin-top: 10px;
+    font-size: 2rem;
+}
+
+.circle-img{
+    max-width: 100%;
+}
+.serv-container .services-title{
+    font-size: 2rem;
+    color: #001942 ;
+}
+
+.serv-container .services-body{
+    max-width: 100%;
+}
+
+.services-body .service-name{
+    font-size: 1.8rem;
+    color: #5AAD69;
+}
+
+.services-body .service-description{
+    font-size: 1.6rem;
+    color: #647066;
 }
 
 .gallery .gallery-title{

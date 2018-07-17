@@ -41,7 +41,7 @@
 .row .right-container .info-container  h5 {
     color: #0052A6;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
     margin: 0px;
     cursor: pointer;
 }
@@ -49,7 +49,7 @@
 .right-container .info-container p{
     color: darkgray;
     margin: 0px;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .menu ul {
@@ -68,7 +68,7 @@
     color: darkgray;
     margin: 0px;
     float: left;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .social .social-icons{
@@ -96,10 +96,16 @@
     padding-bottom: 40px;
 }
 
-.logo-img{
+.logo-left{
     position: relative;
     width: 30%;
+    max-width: 122px;
 }
+
+.logo-right{
+    max-width: 160px;
+}
+
 
 .info-container img{
     padding: 3.5px;

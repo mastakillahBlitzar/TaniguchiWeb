@@ -21,6 +21,10 @@ body {
     cursor: pointer;
 }
 
+.row .thumbnail .logo-container img.arch_img{
+    cursor: unset;
+}
+
 body .header .main-title{
     text-align: center;
     padding: 15px;

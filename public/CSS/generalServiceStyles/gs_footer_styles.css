@@ -11,6 +11,11 @@
 	padding: 0px;
 }
 
+.about-txt{
+	font-family: Meiryo;
+	font-size: 1.1rem;
+	color: white;
+}
 .footer-distributed{
 	background-color: transparent;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -134,6 +139,7 @@
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 20px;
+	font-family: Meiryo;
 }
 
 .footer-distributed .footer-icons{
@@ -156,6 +162,8 @@
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
+
+.footer
 
 /* If you don't want the footer to be responsive, remove these media queries */
 

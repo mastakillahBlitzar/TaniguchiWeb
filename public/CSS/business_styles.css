@@ -78,7 +78,7 @@ body{
 
 .service .bullet-point-container .bulletpoint{
     height: 2px;
-    margin-top: 55px;
+    margin-top: 82px;
     margin-left: 20px;
     margin-right: 8px;
     background-color: #272727;
@@ -93,13 +93,16 @@ body{
 .service .service-title{
     color: rgb(34, 121, 207);
     font-size: 2.4rem;
-    font-family: mpluslight;
+    font-family: Meiryo;
+    border: solid 1px #0052A5;
+    padding: 5px 20px;
+    box-shadow: -2px 3px 7px 0px #00356aab;
 }
 
 .service .service-body{
     font-family: Meiryo;
-    margin-top: 10px;
-    font-size: 2rem;
+    margin-top: 38px;
+    font-size: 1.5rem;
 }
 
 .circle-img{
@@ -135,13 +138,10 @@ body{
     font-size: 36px;
 }
 
-#thumbnail-slider ul li {
-}
-
 @media screen and (max-width: 770px) {
     .service .service-title{
         font-size: 3rem;
-        font-family: mplusregular;
+        font-family: Meiryo;
     }
 
     .service .service-body{

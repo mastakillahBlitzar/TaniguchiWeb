@@ -67,6 +67,9 @@ app.use('/user/', routes);
 var articleroutes = require('./routes/articlerouter');
 app.use('/user/edit/', articleroutes);
 
+var newsroutes = require('./routes/newsrouter');
+app.use('/user/gs/', newsroutes);
+
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });

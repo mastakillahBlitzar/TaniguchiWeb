@@ -1,0 +1,62 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>
+        General service company
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_company_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_header_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_menu_styles.css" />
+    <link rel="stylesheet" href="../CSS/generalServiceStyles/gs_footer_styles.css" />
+    <link rel="stylesheet" href="../CSS/tn_webfonts.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700" rel="stylesheet">
+</head>
+<header>
+    <div ng-include src="'partials/gs_header.html'"></div>
+
+
+</header>
+
+<body>
+    <div class="gs-title-container">
+        <div class="title">
+                会社概要
+        </div>
+    </div>
+    <div class="company-main-body" ng-controller="CompanyPgCtrl">
+        <div class="row">
+            <div class="company-info col-lg-10 col-md-10 col-sm-10 col-xs-10
+            col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+<div class="row info-row" ng-repeat="info in gsInfo">
+    <div class="info col-xs-3 col-sm-3 col-md-3 col-lg-3">
+{{info.name}}
+    </div>
+    <div class="info-desc col-xs-9 col-sm-9 col-md-9 col-lg-9" >
+        <div class="inner" ng-repeat="desc in info.desc">
+{{desc}}
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div ng-include="'partials/gs_footer.html'"></div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            var hash = window.location.hash;
+            console.log(window.location.hash);
+            $('.nav > li > a[href="' + hash + '"]').parent().addClass('active');
+        });
+
+    </script>
+
+    <!-- bxSlider Javascript file -->
+    <script src="../plugins/facebooklikeslider/js/jquery.bxslider.js"></script>
+</body>
+
+</html>

@@ -3,14 +3,6 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var ArticleModel = require('../schemas/articles');
 
-
-
-/* router.all('/*', function(req, resp, next){
-
-    console.log('he caido aca');
-    next();
-});  */
-
 //POST route
 router.post('/addArticle', function(req, res, next){
 

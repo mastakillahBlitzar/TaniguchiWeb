@@ -54,14 +54,14 @@ body{
 .info-row .description{
     margin-top: 12px;
     color: #0052A4;
-    font-family: mplusregular;
+    font-family: Meiryo;
     font-size: 1.8rem;
 }
 
 .info-row .info-content{
     color: #2C2C2C;
     padding: 10px;
-    font-family: mplusregular;
+    font-family: Meiryo;
 }
 
 

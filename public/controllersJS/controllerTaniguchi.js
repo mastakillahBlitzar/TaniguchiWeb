@@ -1,197 +1,8 @@
 var myApp = angular.module('myApp');
 
-
-myApp.controller('loginController',
-  ['$scope', '$location', 'AuthService',
-    function($scope, $location, AuthService) {
-
-      $scope.login = () => {
-
-        // initial values
-        $scope.error = false;
-        $scope.disabled = true;
-
-        // call login from service
-        AuthService.login($scope.user.email, $scope.user.password)
-          // handle success  
-          .then(() => {
-            $location.path('/adminprofile');
-            $scope.disabled = false;
-            $scope.user = {};
-          })
-          // handle error
-          .catch(() => {
-            $scope.error = true;
-            $scope.errorMessage = "Invalid username and/or password";
-            $scope.disabled = false;
-            $scope.loginForm = {};
-          });
-
-      };
-
-    }]);
-
-myApp.controller('logoutController',
-  ['$scope', '$location', 'AuthService',
-    ($scope, $location, AuthService) => {
-
-      $scope.logout = () => {
-
-        // call logout from service
-        AuthService.logout()
-          .then(() => {
-            $location.path('/login');
-          });
-
-      };
-
-    }]);
-
-myApp.controller('registerController',
-  ['$scope', '$location', 'AuthService',
-    ($scope, $location, AuthService) => {
-
-      $scope.register = () => {
-
-        // initial values
-        $scope.error = false;
-        $scope.disabled = true;
-
-        // call register from service
-        AuthService.register($scope.registerForm.username, $scope.registerForm.password)
-          // handle success
-          .then(() => {
-            $location.path('/login');
-            $scope.disabled = false;
-            $scope.registerForm = {};
-          })
-          // handle error
-          .catch(() => {
-            $scope.error = true;
-            $scope.errorMessage = "Something went wrong!";
-            $scope.disabled = false;
-            $scope.registerForm = {};
-          });
-
-      };
-
-    }]);
-
-myApp.controller('ArticleDetailController',
-  ['$scope', '$routeParams', '$location', 'ArticleService',
-    function($scope, $routeParams, $location, ArticleService) {
-
-      var id = $routeParams._id;
-
-      if (id !== "null") {
-        $scope.isEdit = true;
-        //TODO: llamar metodo que trae el articulo por el atributo id
-        ArticleService.getOneArticle(id)
-          .then((data) => {
-            $scope.article = data;
-          })
-          .catch(() => {
-            $scope.error = "error en el servidor, intente recargar la pagina de nuevo";
-          });
-      } else {
-        $scope.isEdit = false;
-      }
-
-      $scope.labels = [
-        { id: '1' },
-        { id: '2' },
-        { id: '3' },
-        { id: '4' },
-        { id: '5' }
-      ];
-
-      $scope.addArticle = () => {
-
-        $scope.submitted = true;
-
-        var title = $scope.article.title;
-        var content = $scope.article.content;
-        var pictures = $scope.article.pictures;
-
-        ArticleService.addArticle(title, content, pictures)
-
-          .then((response) => {
-            if (response.status === 200) {
-              $scope.articleForm.$setPristine();
-              $scope.article = {};
-              $location
-                .path('/table')
-                .search({
-                  param: 'All good, is added!'
-                });
-            } else {
-              $scope.error = true;
-              $scope.errorMessage = "Something went wrong!";
-            }
-          })
-          .catch(() => {
-            $scope.error = true;
-            $scope.errorMessage = "Something went wrong!";
-          });
-      };
-
-      $scope.updateArticle = (article) => {
-        ArticleService.updateArticle(article._id, article)
-          .then((response) => {
-            if (response.status === 200) {
-              $scope.article = {};
-              $location
-                .path('/table')
-                .search({
-                  param: 'All good, is edited!'
-                });
-            } else {
-              $scope.errorMessage = "Ops!, something went wrong";
-            }
-          })
-          .catch(() => {
-            $scope.errorMessage = "Ops!, something went wrong";
-          });
-      };
-
-
-    }]);
-
-myApp.controller('ArticleController',
-  ['$scope', '$location', '$routeParams', 'ArticleService',
-    function($scope, $location, $routeParams, ArticleService) {
-
-      refresh();
-      /* obtain param from url */
-      $scope.outputMsg = $routeParams.param;
-
-      $scope.redirectToForm = (id) => {
-        var _id = id;
-        $location.path('/forms/' + _id);
-      };
-
-      $scope.remove = (id) => {
-        ArticleService.deleteArticle(id)
-          .then(() => {
-            refresh();
-          });
-      };
-
-      function refresh() {
-        ArticleService.getArticles()
-          .then((data) => {
-            $scope.articleList = data;
-          })
-          .catch(() => {
-
-          });
-      };
-    }]);
-
-
 myApp.controller('mpHomeController',
-  ['$scope', '$location',  '$routeParams', 'ArticleService', 'smoothScrollService',
-    ($scope, $location, $routeParams, ArticleService, $smoothScrollService) => {
+  ['$scope', '$location', '$window', '$routeParams', 'ArticleService', 'smoothScrollService',
+    ($scope, $location, $window, $routeParams, ArticleService, $smoothScrollService) => {
       refresh();
 
       var months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
@@ -199,9 +10,7 @@ myApp.controller('mpHomeController',
 
       function refresh() {
         ArticleService.getArticles()
-
           .then((data) => {
-            //
             data.forEach((element) => {
               //split the string
               var dateArray = element.date.split("-");
@@ -214,15 +23,14 @@ myApp.controller('mpHomeController',
 
               element.daymonth = day.concat(" ").concat(month);
             });
-            $scope.articleList = data;
+            $scope.newsList = data;
             data.forEach(() => {
               console.log(data);
-            })
-            console.log($scope.articleList);
-            //scrollToHash();
+            });
+            console.log($scope.newsList);
           })
-          .catch(() => {
-
+          .catch((err) => {
+            console.log(JSON.stringify(err));
           });
       }
 
@@ -231,10 +39,11 @@ myApp.controller('mpHomeController',
       };
 
       $scope.scrollToHash = () => {
-        console.log($routeParams.scrollTo);
-        if($routeParams.scrollTo){
+        if ($routeParams.scrollTo) {
           $location.hash($routeParams.scrollTo);
           $smoothScrollService.scrollTo($routeParams.scrollTo);
+        } else {
+          $window.scrollTo(0, 0);
         }
       };
 
@@ -248,55 +57,56 @@ myApp.controller('mpHomeController',
       };
 
     }]);
-    
-    myApp.controller('businessCtrl',
-  ['$scope', '$location',
-    ($scope, $location) => {
-    
-      $scope.clearParams = () => {
-        $location.path('/business');
+
+myApp.controller('businessCtrl',
+  ['$scope', '$location', '$window',
+    ($scope, $location, $window) => {
+
+      $scope.actionInit = function () {
+        $window.scrollTo(0, 0);
       };
+
     }]);
 
-    myApp.controller('businessMainCtrl',
-    ['$scope', '$location',
-      ($scope, $location) => {
-      
-        $scope.servicesArray = [
-          {
-            serviceName: 'JFE鋼板 株式会社',
-            serviceInfo: [
-              'JFE GLカラー鋼板'
-            ]
-          },
-          {
-            serviceName: '株式会社 淀川製作所',
-            serviceInfo: [
-              'ヨドGLカラー鋼板',
-              'ヨドルーフ'
-            ]
-          },
-          {
-            serviceName: '日新製鋼 株式会社',
-            serviceInfo: [
-              '月星GLカラー'
-            ]
-          },
-          {
-            serviceName: '株式会社 アイジー工業',
-            serviceInfo: [
-              'アイジーヴァンド'
-            ]
-          },
-          {
-            serviceName: 'ロンシール工業 株式会社',
-            serviceInfo: [
-              'ベストプルーフ'
-            ]
-          },
-        ];
-      }]);
-    
+myApp.controller('businessMainCtrl',
+  ['$scope', '$location',
+    ($scope, $location) => {
+
+      $scope.servicesArray = [
+        {
+          serviceName: 'JFE鋼板 株式会社',
+          serviceInfo: [
+            'JFE GLカラー鋼板'
+          ]
+        },
+        {
+          serviceName: '株式会社 淀川製作所',
+          serviceInfo: [
+            'ヨドGLカラー鋼板',
+            'ヨドルーフ'
+          ]
+        },
+        {
+          serviceName: '日新製鋼 株式会社',
+          serviceInfo: [
+            '月星GLカラー'
+          ]
+        },
+        {
+          serviceName: '株式会社 アイジー工業',
+          serviceInfo: [
+            'アイジーヴァンド'
+          ]
+        },
+        {
+          serviceName: 'ロンシール工業 株式会社',
+          serviceInfo: [
+            'ベストプルーフ'
+          ]
+        },
+      ];
+    }]);
+
 
 myApp.controller('redirectController',
   ['$scope', '$location',
@@ -335,31 +145,24 @@ myApp.controller('mpMenuController',
 
       $scope.scrollTo = (id) => {
         let i = '#'.concat(id);
-        if(angular.element(i).length){
+        // if element exists
+        if (angular.element(i).length) {
           $location.hash(id);
           console.log(id);
           $smoothScrollService.scrollTo(id);
         } else {
-          $location.path('/metalplatehome/').search({scrollTo: id});
+          $location.path('/metalplatehome#mp-news');
         }
       };
 
     }]);
 
 
-myApp.controller('gsHeaderController',
-  ['$scope', '$window', 'ActionService',
-    ($scope, $window, ActionService) => {
 
-      $scope.openNewTabLoc = () => {
-        ActionService.openNewTabLoc($window);
-      };
-
-    }]);
 
 myApp.controller('mpFooterController',
-  ['$scope', '$window', 'ActionService',
-    ($scope, $window, ActionService) => {
+  ['$scope', '$window', '$location', 'smoothScrollService', 'ActionService',
+    ($scope, $window, $location, $smoothScrollService, ActionService) => {
 
       $scope.openNewTabLoc = () => {
         ActionService.openNewTabLoc($window);
@@ -391,33 +194,16 @@ myApp.controller('mpFooterController',
         }
       };
 
-    }]);
-
-myApp.controller('gsFooterController',
-  ['$scope', '$window', 'ActionService',
-    ($scope, $window, ActionService) => {
-
-      $scope.openNewTabLoc = () => {
-        ActionService.openNewTabLoc($window);
-      };
-
-    }]);
-
-myApp.controller('gsContactFormCtrl',
-  ['$scope', '$window', 'ActionService',
-    ($scope, $window, ActionService) => {
-
-      $scope.sendContactForm = (msg) => {
-        var email = "juano.diy@gmail.com";
-        var message = msg;
-        ActionService.sendEmail(message, email)
-          .then((res) => {
-            if (res.status === 200) {
-              $scope.gsContactForm.$setPristine();
-              $scope.gscontact = {};
-            }
-            $scope.message = res.data.status;
-          });
+      $scope.scrollTo = (id) => {
+        let i = '#'.concat(id);
+        // if element exists
+        if (angular.element(i).length) {
+          $location.hash(id);
+          console.log(id);
+          $smoothScrollService.scrollTo(id);
+        } else {
+          $location.path('/metalplatehome#mp-news');
+        }
       };
 
     }]);
@@ -441,50 +227,22 @@ myApp.controller('mpFormCtrl',
 
     }]);
 
-myApp.controller('OwnersPgCtrl',
-  ['$scope', '$window', 'ActionService',
-    ($scope, $window, ActionService) => {
-
-      $scope.ownersInfo = [
-        {
-          id: '1',
-          msg: '空室ばかり、入居者とのトラブルばかり、雑草などで荒れ放題、等々ではせっかくの大切なご資産がもったいないです。オーナー様お一人では手に負えないことを私たちにお任せください！ ～入居者様に対しては末永く心地よくお住まい頂くために、オーナー様に対しては様々な煩わしさから開放され安心して物件をおまかせ頂くために、私たちがいます～もちろん、新規入居者募集および賃貸借契約締結の仲介業務のみも承ります。費用・詳細等についてはお気軽にお問い合わせください。'
-        }
-      ];
-
-      $scope.reviews = [
-        {
-          houseImgPath: '../R/gsreviewers/mg_property.jpg',
-          reviewerPath: '../R/gsreviewers/mg.jpg',
-          title: '栗山市在住　M.G.様',
-          text: '初めての不動産から谷口総合サービスさんにお世話になっております。もう長いお付き合いになりますが、管理していただいて一度も困った事はありません。滝川市では一番の不動産屋さんです。'
-        },
-        {
-          houseImgPath: '../R/gsreviewers/tn_property.jpg',
-          reviewerPath: '../R/gsreviewers/tn.jpg',
-          title: '滝川市在住　T.N.様',
-          text: '谷口総合サービス　最高です！<br> 仕事柄、国内外の移動が多くなかなか物件管理が難しく、アパート経営を始めた当初から入居者募集及び家賃管理、物件の管理までお願いしておりますが、今まで何の問題もなく、逆に自社物件かのように大切に管理していただいて、大変感謝しております。これからも、賃貸物件を増やすことがあれば、もちろん谷口総合サービスだと決めております。<br>滝川市での賃貸物件の管理は谷口総合サービスがお勧めです。'
-        },
-        {
-          houseImgPath: '../R/gsreviewers/yu_property.jpg',
-          reviewerPath: '../R/gsreviewers/yu.jpg',
-          title: '滝川市在住　Y.U.様',
-          text: '自営の仕事が忙しく、またアパート経営に関しては素人なので管理をやってもらって助かってます。'
-        },
-      ];
-
-    }]);
-
-myApp.controller('GsHomeCtrl',
-  ['$scope', '$window', 'ActionService',
-    ($scope, $window, ActionService) => {
 
 
+
+myApp.controller('mpCompanyCtrl',
+  ['$scope', '$location', '$window',
+    function ($scope, $location, $window) {
+      $scope.actionInit = function () {
+        console.log('I\'m here');
+        console.log($window);
+        $window.scrollTo(0, 0);
+      };
     }]);
 
 myApp.controller('mpAddressCtrl',
-  ['$scope', '$window',
-    ($scope, $window) => {
+  ['$scope',
+    ($scope) => {
 
       $scope.infoCompany = [
         {

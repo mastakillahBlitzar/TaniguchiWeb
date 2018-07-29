@@ -28,7 +28,8 @@
     padding: 0px;
     color: #7F7F7F;
     line-height: 46px;
-    font-family: mplusregular;
+    font-family: Meiryo;
+    font-size: 1.2rem;
 }
 
 .row.top-info .right-container{
@@ -55,10 +56,18 @@
     margin: 0px 5px;
 }
 
-.row .info-container p.right-text{
+.row .info-container .right-text .top{
+    margin: 0;
+    padding: 3px 4px;
+    font-family: Meiryo;
+    font-size: 1.2rem;
+}
+
+.row .info-container .right-text .bottom{
     margin: 0;
     padding: 3px 4px;
     font-family: 'Fira Sans';
+    font-size: 1.2rem;
 }
 
 .row.rc-row{

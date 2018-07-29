@@ -1,0 +1,62 @@
+/* titles por every page */
+.gs-title-container{
+    height: 240px;
+    text-align: center;
+    background-image: url('../../R/gsbg/contact_bg.png');
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.gs-title-container .title{
+    color: white;
+    margin: 0 auto;
+    font-size: 3.3em;
+    font-family: Meiryo;
+}
+
+body .company-main-body .row{
+    background-color: transparent;
+}
+
+body .company-main-body .row .company-info{
+    display: block;
+}
+
+.company-info .info{
+    font-family: Meiryo;
+    font-size: 1.4rem;
+    color: #0052A4;
+}
+
+.company-info .info-desc{
+    font-family: Meiryo;
+    font-size: 1.2rem;
+    color: #373D38;
+}
+
+.info-row{
+    border-bottom: solid 1px #373D38;
+    padding: 30px 0;
+}
+
+.info-row:last-child{
+    border: none;
+}
+
+
+@media all and (max-width: 770px){
+    .gs-title-container .title{
+        font-size: 2.3em;
+    }
+
+    body .company-main-body .row{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }    
+
+
+
+}

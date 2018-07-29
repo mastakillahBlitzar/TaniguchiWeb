@@ -24,6 +24,10 @@ body .home-main-body .for-customers .wrapper #to-sell .inner{
     display: inline-flex;
     align-items: center;
     width: 100%;
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0052A4, #2d71af, #00364c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0052A4, #2d71af, #00364c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 body .home-main-body .for-customers .wrapper #to-buy .inner {
@@ -33,6 +37,10 @@ body .home-main-body .for-customers .wrapper #to-buy .inner {
     display: inline-flex;
     align-items: center;
     width: 100%;
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #282828, #203A43, #182226);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #282828, #203A43, #182226); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }   
 
 body .home-main-body .for-customers .wrapper #to-sell .inner .text{
@@ -42,13 +50,14 @@ body .home-main-body .for-customers .wrapper #to-sell .inner .text{
 }
 
 body .home-main-body .for-customers .wrapper #to-sell .inner .text h3{
-    font-size: 47px;
-    font-family: mplusregular;
+    font-size: 25px;
+    font-family: Meiryo;
+    font-weight: 900;
 }
 
 body .home-main-body .for-customers .wrapper #to-sell .inner .text p{
-    font-size: 22px;
-    font-family: mpluslight;
+    font-size: 14px;
+    font-family: Meiryo;
 }
 
 body .home-main-body .for-customers .wrapper #to-sell .inner .btn-container{
@@ -73,16 +82,18 @@ body .home-main-body .for-customers .wrapper #to-buy .inner .text{
     margin: 0 auto;
     color: white;
     transform: skewX(-30deg);
+    padding: 0 25px;
 }
 
 body .home-main-body .for-customers .wrapper #to-buy .inner .text h3{
-    font-size: 47px;
-    font-family: mplusregular;
+    font-size: 25px;
+    font-family: Meiryo;
+    font-weight: 900;
 }
 
 body .home-main-body .for-customers .wrapper #to-buy .inner .text p{
-    font-size: 22px;
-    font-family: mpluslight;
+    font-size: 14px;
+    font-family: Meiryo;
 }
 
 body .home-main-body .for-customers .wrapper #to-buy .inner .btn-container{
@@ -107,35 +118,6 @@ body .home-main-body .gs-mission{
     padding: 25px 0px;
 }
 
-body .home-main-body .gs-mission .left{
-    padding: 0px;
-}
-
-body .home-main-body .gs-mission  .left h2{
-    color: #282828;
-    font-weight: 900;
-}
-
-body .home-main-body .gs-mission  .left h2 #custom-border{
-    border-bottom: 2px solid #0052A5;
-    position: absolute;
-    left: 0;
-    right: 80%;
-    margin-top: 4px;
-}
-
-body .home-main-body .gs-mission  .left p{
-    color: #555555;
-    margin-bottom: 22px;
-    padding-right: 20px;
-}
-
-body .home-main-body .gs-mission  .left p.darker{
-    margin-top: 22px;
-    font-weight: 700;
-}
-
-
 body .home-main-body .gs-mission  .right{
     padding: 0px;
 }   
@@ -144,19 +126,66 @@ body .home-main-body .gs-mission  .right .column-1{
     overflow-x: hidden;
     padding: 0;
     padding-left: 20px;
+    display: inline-block;
 }  
 
 body .home-main-body .gs-mission  .right .column-2{
     overflow-x: hidden;
     margin-top: 13rem;
     padding: 0;
+    padding-left: 20px;
+    display: inline-block;
 }   
 
 body .home-main-body .gs-mission  .right .h-img{
-    max-width: 305px;
     margin-top: 2rem;
-    max-height: 230px;
+    max-width: 100%;
 }   
+
+body .home-main-body .gs-mission  .right .desc{
+    margin-top: 2rem;
+    font-family: Meiryo;
+    color: 282828;
+    font-weight: 500;
+    font-size: 1rem;
+}   
+
+/* news card styles */
+.news-title{
+    font-family: 'Fira Sans';
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.__wrapper{
+    margin: 30px 0;
+}
+
+.news-card{
+    display: inline-flex;
+    border-radius: 8px;
+    box-shadow: 0px 0px 9px 1px #e3e3e3;
+    padding: 15px 30px;
+    margin: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.news-card .date{
+    font-family: Meiryo;
+    font-size: 1.2rem;
+    color: rgb(51, 50, 50);
+    padding: 5px 0;
+}
+
+.news-card .content{
+    font-family: Meiryo;
+    font-size: 1.2rem;
+    color: #0F2027;
+    padding: 5px 0;
+}
 
 @media screen and (max-width: 770px) {
     body .home-main-body .for-customers .wrapper #to-sell .inner,
@@ -178,12 +207,22 @@ body .home-main-body .gs-mission  .right .h-img{
     body .home-main-body .for-customers .wrapper #to-sell .inner .text h3,
     body .home-main-body .for-customers .wrapper #to-buy .inner .text h3{
         font-size: 32px;
-        font-family: mpluslight;
+        font-family: Meiryo;
     }
     
     body .home-main-body .for-customers .wrapper #to-sell .inner .text p,
     body .home-main-body .for-customers .wrapper #to-buy .inner .text p{
         font-size: 18px;
-        font-family: mplusregular;
+        font-family: Meiryo;
     }
+    body .home-main-body .gs-mission  .right .column-1{
+        padding-left: 10px;
+        padding-right: 10px;
+    } 
+
+    body .home-main-body .gs-mission  .right .column-2{
+        margin-top: 6rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    } 
 }

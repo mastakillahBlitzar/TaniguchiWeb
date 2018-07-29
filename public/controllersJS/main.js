@@ -49,6 +49,10 @@ myApp.config(function ($routeProvider, $locationProvider) {
         templateUrl: '../partials/gs_home.html',
         isLoggedIn: false
       })
+      .when('/generalservice/company', {
+        templateUrl: '../partials/gs_company.html',
+        isLoggedIn: false
+      })
       .when('/generalservice/owners', {
         templateUrl: '../partials/gs_owners.html',
         isLoggedIn: false
@@ -61,6 +65,11 @@ myApp.config(function ($routeProvider, $locationProvider) {
         templateUrl: '../admin/forms.html',
         controller: 'ArticleDetailController',
         isLoggedIn: true
+      })
+      .when('/newsform/:_id', {
+        templateUrl: '../admin/newsform.html',
+        controller: 'NewsDetailController',
+        isLoggedIn: true 
       })
       .when('/profile', {
         templateUrl: '../admin/profile.html',

@@ -63,10 +63,10 @@ myApp.factory('ArticleService',
                         deferred.resolve(result.data);
                         /* article = result.data;
                         return article; */
-                    }, 
-                    (error) => {
+                    },
+                        (error) => {
 
-                    });
+                        });
 
                 return deferred.promise;
             }
@@ -100,8 +100,8 @@ myApp.factory('ArticleService',
                 return deferred.promise;
             }
 
-            getDatetime = () => {
+            function getDatetime() {
                 return (new Date());
-            };
+            }
 
         }]);

@@ -17,3 +17,12 @@
 #description-area{
     height: auto;
 }
+
+.__ind{
+    display: inline-flex;
+}
+
+.__ind .identifier{
+    color: darkblue;
+    margin: 0 10px;
+}

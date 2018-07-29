@@ -1,11 +1,11 @@
 var mongoose = require('mongoose'),
-Schema = mongoose.Schema,
-autoIncrement = require('mongoose-auto-increment');
+    Schema = mongoose.Schema,
+    autoIncrement = require('mongoose-auto-increment');
 
 autoIncrement.initialize(mongoose);
 
 const ArticleSchema = new Schema({
-    
+
     title: {
         type: String,
         required: true,
@@ -15,11 +15,12 @@ const ArticleSchema = new Schema({
         type: String,
         required: true,
     },
-    pictures: [{
-        url: String,
-        description: String
-    }],
-    date:{
+    pictures: [
+        {
+            url: String,
+            description: String
+        }],
+    date: {
         type: Date,
         required: true
     }

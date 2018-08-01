@@ -1,8 +1,8 @@
 var myApp = angular.module('myApp');
 
 myApp.controller('mpHomeController',
-  ['$scope', '$location', '$window', '$routeParams', 'ArticleService', 'smoothScrollService',
-    ($scope, $location, $window, $routeParams, ArticleService, $smoothScrollService) => {
+  ['$scope', '$location', '$window', '$routeParams', 'ArticleService', 'smoothScrollService', 'Lightbox',
+    ($scope, $location, $window, $routeParams, ArticleService, $smoothScrollService, Lightbox) => {
       refresh();
 
       var months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
@@ -23,11 +23,11 @@ myApp.controller('mpHomeController',
 
               element.daymonth = day.concat(" ").concat(month);
             });
-            $scope.newsList = data;
+            $scope.articleList = data;
             data.forEach(() => {
               console.log(data);
             });
-            console.log($scope.newsList);
+            console.log($scope.articleList);
           })
           .catch((err) => {
             console.log(JSON.stringify(err));
@@ -54,6 +54,18 @@ myApp.controller('mpHomeController',
 
       $scope.redirectTo = (page) => {
         $location.path(page);
+      };
+
+      $scope.openLightBoxModal = function (index) {
+        $scope.images = $scope.articleList[index].pictures.map((e) => {
+          console.log(e);
+          return {
+            url: e.url,
+            caption: e.description
+          };
+        });
+        console.log($scope.images);
+        Lightbox.openModal($scope.images, 0);
       };
 
     }]);

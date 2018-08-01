@@ -163,53 +163,15 @@
             <div class="row">
                 <div class="main-col col-lg-10 col-md-10 col-sm-12 col-xs-12 
                         col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0">
-                    <div class="child-col col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-repeat="article in articleList | limitTo : 3">
+                    <div class="child-col col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-repeat="article in articleList">
                         <div class="container-fluid" style="padding: 0;">
                             <div class="row thumbnail">
-                                <div class="top-card col-lg-12 col-md-12 col-sm-5 col-xs-5">
+                                <div class="top-card col-lg-12 col-md-12 col-sm-5 col-xs-5" ng-if="article.pictures[0].url">
                                     <img class="main-img" ng-src="{{article.pictures[0].url}}" alt="...">
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-7 col-xs-7 caption">
                                     <div class="article-title">{{article.title}}</div>
                                     <div class="content">{{article.content}}</div>
-                                    <!-- Modal -->
-                                    <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">{{article.title}}</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-
-                                                    <div class="slider">
-                                                        <div ng-repeat="picture in article.pictures | limitTo : 4 : 1">
-                                                            <img ng-src="{{picture.url}}" ng-attr-title="{{picture.description}}" />
-                                                        </div>
-
-                                                    </div>
-                                                    <script>
-                                                        $(".btnClick").click(function () {
-                                                            setTimeout(function () {
-                                                                $('.slider').bxSlider({
-                                                                    mode: 'fade',
-                                                                    captions: true,
-                                                                    touchEnabled: true
-                                                                });
-                                                            }, 320);
-                                                        });
-                                                    </script>
-                                                </div>
-
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                 </div>
 
                                 <div class="article-footer col-lg-12 col-md-12 col-sm-10 col-xs-12">
@@ -217,7 +179,7 @@
                                         {{article.daymonth}} {{article.date | limitTo : 4}}
                                     </div>
                                     <div class="line"></div>
-                                    <div class="btn-round" data-toggle="modal" data-target="#myModal">
+                                    <div class="btn-round" ng-click="openLightBoxModal($index)">
                                         <a class="btnClick">
                                             <img src="../R/icons/path-3.svg">
                                         </a>

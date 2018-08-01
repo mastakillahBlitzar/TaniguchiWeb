@@ -6,23 +6,14 @@ autoIncrement.initialize(mongoose);
 
 const NewsSchema = new Schema({
 
-    title: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    content: {
-        type: String,
-    },
+    title: String,
+    content: String,
     pictures: [
         {
             url: String,
             description: String
         }],
-    date: {
-        type: Date,
-    }
-
+    date: Date
 });
 
 NewsSchema.plugin(autoIncrement.plugin, 'News');

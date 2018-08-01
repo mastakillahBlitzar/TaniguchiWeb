@@ -159,6 +159,12 @@ body .home-main-body .gs-mission  .right .desc{
     margin-bottom: 30px;
 }
 
+.news-title .jap-title{
+    font-family: Meiryo;
+    font-size: 1.8rem;
+    margin-left: 5px;
+}
+
 .__wrapper{
     margin: 30px 0;
 }

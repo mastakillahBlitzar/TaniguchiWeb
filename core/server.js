@@ -14,19 +14,18 @@ var localStrategy = require('passport-local').Strategy;
 var app = express();
 
 //connect to mongodb
-//mongoose.connect('mongodb://localhost/taniguchisitedb');
-mongoose.connect('mongodb://admin:admin123@ds161856.mlab.com:61856/heroku_8nqqqsmt' || 'mongodb://localhost/taniguchisitedb');
+mongoose.connect('mongodb://localhost/taniguchisitedb')
+//mongoose.connect('mongodb://admin:admin123@ds161856.mlab.com:61856/heroku_8nqqqsmt')
+    .then(
+        () => {
+            console.log("connected");
+        }, err => {
+            console.log(JSON.stringify);
+        });
 var db = mongoose.connection;
 
 //get model
 var User = require('./schemas/user');
-
-//handle mongo error
-db.on('error', console.error.bind(console, 'connection error: '));
-db.once('open', function(){
-    //connected
-    console.log("connected");
-});
 
 //define middleware
 app.use(express.static(__dirname + "/../public"));
@@ -70,7 +69,7 @@ app.use('/user/edit/', articleroutes);
 var newsroutes = require('./routes/newsrouter');
 app.use('/user/gs/', newsroutes);
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
@@ -79,32 +78,32 @@ app.use(function (req, res, next) {
     var err = new Error('File Not Found');
     err.status = 404;
     next(err);
-  });
-  
+});
+
 // error handler
 // define as the last app.use callback
 app.use(logErrors);
 app.use(clientErrorHandler);
 app.use(errorHandler);
-  
-function logErrors (err, req, res, next) {
+
+function logErrors(err, req, res, next) {
     console.error(err.stack);
     next(err);
 }
 
 function clientErrorHandler(err, req, res, next) {
-    if(req.xhr){
-        res.status(500).send({ error: err});
+    if (req.xhr) {
+        res.status(500).send({ error: err });
     } else {
         next(err);
     }
 }
 
-function errorHandler(err, req, res, next){
+function errorHandler(err, req, res, next) {
     res.status(err.status || 500);
-    res.render({error: err});
+    res.render({ error: err });
 }
 
-app.listen(settings.webPort, function(){
+app.listen(settings.webPort, function () {
     console.log("running on :" + settings.webPort);
 });

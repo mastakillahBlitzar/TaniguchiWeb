@@ -5,11 +5,17 @@ var ArticleModel = require('../schemas/articles');
 
 //POST route
 router.post('/addArticle', function(req, res, next){
+    var picturesArray;
+    if(req.body.pictures){
+        picturesArray = Object.values(req.body.pictures);
+    } else {
+        picturesArray = [];
+    }
 
     var articleModel = new ArticleModel({
         title : req.body.title,
         content : req.body.content,
-        pictures : req.body.pictures,
+        pictures : picturesArray,
         date : req.body.date
     });
     

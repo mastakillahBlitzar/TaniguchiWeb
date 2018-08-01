@@ -9,21 +9,14 @@ const ArticleSchema = new Schema({
     title: {
         type: String,
         required: true,
-        trim: true
     },
-    content: {
-        type: String,
-        required: true,
-    },
+    content: String,
     pictures: [
         {
             url: String,
             description: String
         }],
-    date: {
-        type: Date,
-        required: true
-    }
+    date: Date
 
 });
 

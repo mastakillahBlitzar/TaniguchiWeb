@@ -10,7 +10,7 @@ myApp.controller('gsHeaderController',
 
     }]);
 
-    myApp.controller('CompanyPgCtrl',
+myApp.controller('CompanyPgCtrl',
   ['$scope', '$window',
     ($scope, $window) => {
       $scope.gsInfo = [
@@ -84,7 +84,7 @@ myApp.controller('gsHeaderController',
       ];
     }]);
 
-    myApp.controller('OwnersPgCtrl',
+myApp.controller('OwnersPgCtrl',
   ['$scope', '$window', 'ActionService',
     ($scope, $window, ActionService) => {
 
@@ -118,7 +118,7 @@ myApp.controller('gsHeaderController',
 
     }]);
 
-    myApp.controller('gsFooterController',
+myApp.controller('gsFooterController',
   ['$scope', '$window', 'ActionService',
     ($scope, $window, ActionService) => {
 
@@ -129,7 +129,7 @@ myApp.controller('gsHeaderController',
     }]);
 
 
-    myApp.controller('gsContactFormCtrl',
+myApp.controller('gsContactFormCtrl',
   ['$scope', '$window', 'ActionService',
     ($scope, $window, ActionService) => {
 
@@ -148,41 +148,52 @@ myApp.controller('gsHeaderController',
 
     }]);
 
-    myApp.controller('gsNewsCtrl',
-  ['$scope', '$window', 'NewsService',
-    ($scope, $window, NewsService) => {
+myApp.controller('gsNewsCtrl',
+  ['$scope', '$window', 'NewsService', 'Lightbox',
+    ($scope, $window, NewsService, Lightbox) => {
       refresh();
       $scope.text = 'Hello from controller!';
+      $scope.images = [];
 
       var months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
-      "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+        "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 
-    function refresh() {
-      NewsService.getArticles()
-        .then((data) => {
-          data.forEach((element) => {
-            //split the string
-            var dateArray = element.date.split("-");
-            //extract the month from the resulting array
-            var year = dateArray[0];
-            var currentMonth = dateArray[1];
-            var month = months[currentMonth - 1];
-            //get day
-            var dayArray = dateArray[2].split("T");
-            day = dayArray[0];
-
-            element.daymonth = `${day} ${month} ${year}`;
-          });
-          $scope.newsList = data;
-          data.forEach(() => {
+      function refresh() {
+        NewsService.getArticles()
+          .then((data) => {
             console.log(data);
+            data.forEach((element) => {
+              //split the string
+              var dateArray = element.date.split("-");
+              //extract the month from the resulting array
+              var year = dateArray[0];
+              var currentMonth = dateArray[1];
+              var month = months[currentMonth - 1];
+              //get day
+              var dayArray = dateArray[2].split("T");
+              day = dayArray[0];
+
+              element.daymonth = `${day} ${month} ${year}`;
+            });
+            $scope.newsList = data;
+            console.log($scope.newsList);
+            console.log($scope.images);
+          })
+          .catch((err) => {
+            console.log(JSON.stringify(err));
           });
-          console.log($scope.newsList);
-        })
-        .catch((err) => {
-          console.log(JSON.stringify(err));
+      }
+
+      $scope.openLightBoxModal = function (index) {
+        $scope.images = $scope.newsList[index].pictures.map((e) => {
+          console.log(e);
+          return {
+            url: e.url,
+            caption: e.description
+          };
         });
-    }
+        console.log($scope.images);
+        Lightbox.openModal($scope.images, 0);
+      };
     }]);
 
-    

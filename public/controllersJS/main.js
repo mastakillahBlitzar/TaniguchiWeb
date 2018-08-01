@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'bootstrapLightbox']);
 
 myApp.config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -73,7 +73,6 @@ myApp.config(function ($routeProvider, $locationProvider) {
       })
       .when('/profile', {
         templateUrl: '../admin/profile.html',
-        controller: 'profileController',
         isLoggedIn: true
       })
       .when('/404', {
